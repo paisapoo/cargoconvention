@@ -15,7 +15,7 @@
 			  </li>
 			  
 		</ul>
-		<button class="btn0 btn3">register now</button>
+		<button class="btn0 btn3">book now <img src="images/icon/home-icons/register-arrow.svg" class="reg-arrow"/></button>
 	</div>
 	<div class="shape-white">
 		<img src="images/home/top-whiteshape.svg">
@@ -70,7 +70,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<p class="t-40 t-title">
+				<p class="t-40 t-title c-blue">
 					Bringing the Logistics World together with a Cargo Convention
 				</p>
 				<hr class="or-line" align="left">
@@ -82,7 +82,7 @@
 			</div>
 			<div class="col-md-6 align-self-end">
 				<div class="video-wrapper">
-                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.png" src="images/video/network-management.mp4">
+                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.png" src="images/video/X2globalmedia-showreel.mp4">
   						</video>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 		<div class="row">
 			<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/register.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-register.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>register</span>
 					  </div>
@@ -99,7 +99,7 @@
 			</div>
 				<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/agenda.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-agenda.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>agenda</span>
 					  </div>
@@ -107,7 +107,7 @@
 			</div>
 				<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/travel.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-accomodation.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>traveling & lodging</span>
 					  </div>
@@ -115,7 +115,7 @@
 			</div>
 				<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/how-get-there.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-how-there.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>how to get there</span>
 					  </div>
@@ -123,7 +123,7 @@
 			</div>
 				<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/attractions.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-attractions.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>attractions</span>
 					  </div>
@@ -131,7 +131,7 @@
 			</div>
 				<div class="col-md-2">
 				<div class="card">
-					  <img src="images/icon/home-icons/sponsorship.svg" class="card-img-top" alt="...">
+					  <img src="images/icon/home-icons/icons-sponsorship.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>sponsorship</span>
 					  </div>
@@ -146,10 +146,250 @@
 <section class="home4">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				
+			<div class="col-md-6 why-right">
+				<div class="why-should">
+					<p class="t-title t-40 text-white">
+						Why you should attend
+					</p>
+					<hr class="or-line" align="left">
+					<p class="text-white">The must-attend event of the year for all involved in the transport and logistics sector.</p>
+					<a href="/" class="explore">explore <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></a>
+				</div>
+			</div>
+				<div class="col-md-6 why-left">
+				<div class="why-should ">
+					<p class="t-title t-40 text-white">
+						Why you should sponsor
+					</p>
+					<hr class="or-line" align="left">
+						<p class="text-white">Put your company in the front of the cargo world to find new business.</p>
+						<a href="/" class="explore">explore <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></a>
+				</div>
 			</div>
 		</div>
 	</div>
 	
 </section>
+ 
+<section class="home5">
+	<div class="container">
+		<div class="counting">
+			<hr class="or-line">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="box-clock">
+						<span id="day"></span><br>
+						<span >days</span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-clock">
+						<span id="hr"></span><br>
+						<span >hours</span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-clock">
+						<span id="min"></span><br>
+						<span >minutes</span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-clock">
+						<span id="sec"></span><br>
+						<span >seconds</span>
+					</div>
+				</div>
+
+			</div>
+			<button class="btn0 btn4">book now</button>
+		</div>
+	</div>
+</section>
+<section class="homenews">
+	<div class="container">
+		<p class="t-title c-blue t-40 text-center">Industry News</p>
+		<hr class="or-line" >
+		 <div class="row">
+		 	<div class="col-md-3">
+		 		<a href="" class="link-news">
+		 		<div class="card">
+				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="news-date"><?=Date("dS F Y")?></p>
+				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
+</p>
+				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
+				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
+				  </div>
+				</div>
+				</a>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<a href="" class="link-news">
+		 		<div class="card">
+				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="news-date"><?=Date("dS F Y")?></p>
+				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
+</p>
+				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
+				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
+				  </div>
+				</div>
+			</a>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<a href="" class="link-news">
+		 		<div class="card">
+				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="news-date"><?=Date("dS F Y")?></p>
+				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
+</p>
+				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
+				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
+				  </div>
+				</div>
+				</a>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<a href="" class="link-news">
+		 		<div class="card">
+				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="news-date"><?=Date("dS F Y")?></p>
+				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
+</p>
+				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
+				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
+				  </div>
+				</div>
+			</a>
+		 	</div>
+		 </div>
+		 <!-- row -->
+	</div>
+</section>
+<section class="sponsors">
+	<div class="container">
+		<p class="t-title t-40 c-blue">Sponsors</p>
+		<hr class="or-line" >
+		<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+				<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="sponsors">
+	<div class="container">
+		<p class="t-title t-40 c-blue">Media Partners</p>
+		<hr class="or-line" >
+		<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+				<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="sponsors">
+	<div class="container">
+		<p class="t-title t-40 c-blue">Endorsement Partners</p>
+		<hr class="or-line" >
+		<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+				<div class="row">
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+			<div class="col">
+				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+

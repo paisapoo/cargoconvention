@@ -3,7 +3,7 @@
 
 	<div class="container">
 		<ul class="list-inline h-button">
-		  <li class="list-inline-item"><button class="btn0 h-btn1">register now</button></li>
+		  <li class="list-inline-item"><button class="btn0 h-btn1">book now</button></li>
 		  <li class="list-inline-item"><button class="btn0 h-btn2">become a sponsor</button></li>
 		  
 		</ul>

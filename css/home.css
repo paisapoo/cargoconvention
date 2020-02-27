@@ -118,3 +118,117 @@ video.has-media-controls-hidden::-webkit-media-controls {
 	text-transform: uppercase;
 }
 
+.home4{
+	margin-top:3em;
+	background-color: #0a395a;
+}
+.why-should{
+	
+	padding:4em 1em 4em 2em;
+}
+.why-left{
+	border-left:10px solid #fff;
+}
+.why-right{
+	border-right:10px solid #fff;
+}
+.explore{
+	color:#fff;
+	float:  right;
+}
+.expl-arrow{
+	width: 12px;
+	margin-left:5px;
+}
+.explore:hover{
+	color: #fff;
+}
+.explore:hover .expl-arrow{
+	animation: move-arrow 1s ease infinite;
+}
+.home5{
+	margin-top:20px;
+	padding:40px 0;
+	background-color: #e8f0f7;
+	background-image: url("../images/home/orange-shape.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+.counting{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	text-align: center;
+	padding :1em 3em 2em 3em ;
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.12);
+}
+.counting button{
+	margin-top:2em;
+}
+.box-clock{
+	padding:1em 0.5em;
+	margin:1em 1em 0 1em;
+	background-color: #0a395a;
+	text-transform: uppercase;	
+}
+.box-clock span:first-child{
+	font-size: 50px;
+	font-weight: 500;
+	color:#f37422;
+}
+.box-clock span:last-child{
+	color:#fff;
+}
+.homenews{
+	position: relative;
+	
+	padding:4em 0 2em 0;
+	background-color: #e8f0f7;
+}
+.homenews .row{
+	margin-top:2em;
+}
+.homenews .card{
+	border:transparent;
+	background-color: transparent;
+}
+.homenews .card .card-img-top{
+	width:100%;
+	background-color: #0a395a;
+}
+.homenews .card .card-body{
+	padding:1em 0 1em 0;
+	font-size: 14px;
+	line-height: 1.29;
+}
+
+.homenews .card .card-body p{
+	margin-bottom:0.5em;
+}
+.homenews .card .news-date{
+	 font-style: italic;
+	 color: #949494;
+}
+.homenews .card .news-title{
+		 color: #f37422;
+		 font-weight: 700;
+}
+.homenews .card .news-conent{
+	color:#000;
+}
+.homenews .card .read-m{
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #0a395a;
+}
+.sponsors{
+	padding-top:3em;
+	padding-bottom: 2em;
+	text-align: center;
+	border-bottom: solid 1px #d8d8d8;
+}
+.logo-link{
+	width: 100%;
+}

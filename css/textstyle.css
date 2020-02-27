@@ -23,11 +23,21 @@
 
 /*--------*/
 .t-title{
-	color: #0a395a;
+	
 	line-height: 1.5;
 	font-weight: 500;
 }
 .t-content{
 	font-weight: 14px;
 	line-height: 1.29;
+}
+
+
+/*--------*/
+
+.c-blue{
+	color: #0a395a;
+}
+.c-org{
+	color: #f37422;
 }

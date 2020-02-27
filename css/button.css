@@ -35,11 +35,44 @@
 	bottom: 0;
 	left:20px;
 	z-index: 2;
-	width: 230px;
+	width: 250px;
 	height: 55px;
 	background-color: #F37422;
 	color:#fff;
 	font-weight: 500;
 	font-size: 25px;
 	transition: background-color 0.2s linear;
+	padding-right: 30px;
+}
+.reg-arrow{
+	position: absolute;
+	top:20px;
+	right: 10px;
+}
+.btn3:hover .reg-arrow{
+	animation: move-arrow 1s ease infinite;
+}
+@keyframes move-arrow{
+	0%{
+		transform: translateX(-10px);
+	}
+	80%{
+		transform: translateX(10px);
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.btn4{
+	background-color: #F37422;
+	color:#fff;
+	padding :0.5em 2em;
+	transition: background-color 0.2s linear;
+	border: 1px solid transparent;
+}
+.btn4:hover{
+	background-color: #0A395A;
+	color:#fff;
+	border:1px solid #F37422;
 }
