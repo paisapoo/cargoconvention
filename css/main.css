@@ -1,17 +1,87 @@
 @import "nav.css";
 @import "button.css";
 @import "textstyle.css";
-
+	<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(imgs/logo/load.svg) center no-repeat #fff; 
+}
+.wrapper{
+  display: none;
+}
+</style>
 
 html, body{
 	font-family: 'Roboto', ;
 	margin:0 auto;
 }
-.header{
-	margin-top:2em;
-}
+
 .container{
 	position: relative;
 	
 }
+.foot1{
+	padding:0.5em 0 .3em 0;
+	background-color: #f37422;	
+	color:#fff;
+}
+.foot-logo{
+	width: 140px;
+}
+.foot2{
+	padding:2em 0;
+	background-color: #0a395a;
+	color:#fff;	
+}
+.foot1 .list-inline{
+	text-align: right;
+}
+.foot1 .list-inline .list-inline-item:not(:last-child) .foot-link{
+	
+	margin-right: .6rem;
+} 
+.foot-link, .foot-link:hover{
+	color:#fff;
+}
 
+.newletter{
+	background-color: #0a395a;
+	padding:2em 0 3.5em 0;
+}
+.newletter-email{
+	color:#fff;
+	width: 100%;
+	background: transparent;
+	border:transparent;
+	border-bottom: 1px solid #fff;
+	padding :0.3em 0em;
+}
+.newletter-email::placeholder{
+	color: #949494;
+	font-size: 14px;
+	font-style: italic;
+}
+.newletter-email:focus{
+	background: #e8f0f7;
+	color:#000;
+
+}
+.sponsors{
+	padding-top:3em;
+	padding-bottom: 2em;
+	text-align: center;
+	border-bottom: solid 1px #d8d8d8;
+}
+.logo-link{
+	width: 100%;
+}

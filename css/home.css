@@ -223,12 +223,3 @@ video.has-media-controls-hidden::-webkit-media-controls {
 	font-weight: 500;
 	color: #0a395a;
 }
-.sponsors{
-	padding-top:3em;
-	padding-bottom: 2em;
-	text-align: center;
-	border-bottom: solid 1px #d8d8d8;
-}
-.logo-link{
-	width: 100%;
-}

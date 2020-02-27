@@ -71,7 +71,14 @@
 	transition: background-color 0.2s linear;
 	border: 1px solid transparent;
 }
-.btn4:hover{
+.btn5{
+	 background-color: #ffffff;
+	color: #f37422;
+	padding :0.5em 2em;
+	transition: background-color 0.2s linear;
+	border: 1px solid transparent;
+}
+.btn4:hover, .btn5:hover{
 	background-color: #0A395A;
 	color:#fff;
 	border:1px solid #F37422;

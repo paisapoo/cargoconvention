@@ -12,12 +12,34 @@ gtag('config', 'UA-148996872-1');
 
 <!-- main.js -->
 <script src="js/jquery.min.js" type="text/javascript"></script>
+
 <!-- bootstrap js -->
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
  <!-- add js -->
 <script src="js/wow.min.js" type="text/javascript"></script>
 <script>
 new WOW().init();
+
+
+     $(window).bind('scroll', function() {
+     var navHeight = 0;
+       if ($(window).scrollTop() > navHeight) {
+         $('.header').addClass('fixed-head');
+         
+         $(".img-main-logo-top2").css("display","block").addClass('fadeIn animated');
+         $(".img-main-logo-top1").css("display","none");
+       }
+       else {
+         $('.header').removeClass('fixed-head');
+       
+         $(".img-main-logo-top2").css("display","none");
+         $(".img-main-logo-top1").css("display","block").addClass('fadeIn animated');
+       }
+    });
+
+
+
+
 </script>
 
 <?php
@@ -25,5 +47,9 @@ new WOW().init();
 if ($countpage == 0) {
 	include 'error_SCR.php';
 }
+
+
+
+
 if (file_exists(stream_resolve_include_path($alias . "_SCR.php"))) {include $alias . "_SCR.php";}
 ?>

@@ -29,8 +29,17 @@ if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $a
   <meta property="og:description"   content="<?=substr(preg_replace('/<(.*?)>/', '', $news['content']),0,200).'...'?>" />
   <meta property="og:image" content="<?=$news['full_img']?>" />
   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+    $(window).load(function() {
+    
+      $(".se-pre-con").fadeOut("slow");
+      $(".wrapper").css("display","block"); 
+         
+  });
 
-
+</script>
 
 
 </head>
