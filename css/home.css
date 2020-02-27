@@ -1,0 +1,120 @@
+.home1{
+	color:#fff;
+	background: #0a395a;
+	background-image: url("../images/home/Home1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+}
+
+
+
+.home1 .container{
+	
+	padding-top: 5em;
+	padding-bottom: 4em;
+}
+.orenge-class li{
+	padding: 0.5em 1em 1em 1em;
+	text-align: center;
+	background-color: rgba(243, 116, 34, 0.6);
+	border: 1px solid #f37422;
+}
+.orenge-class .list-inline-item:not(:last-child){
+	margin-right:-5px;
+	border-right: none;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+.shape-white{
+	position: relative;
+	margin-top:-5em;
+	height: 200px;
+	overflow-y: hidden;
+}
+.shape-white img{
+	width: 100%;	
+}
+.home2 .card{
+	border:none;
+	text-align: center;
+}
+.home2 .card .card-img-top{
+	width: 90px;
+	margin:0 auto;	
+}
+.home2 .card .card-body span:first-child{
+	font-size: 50px;
+	font-weight: 700;
+	color:#f37422;
+}
+.home2 .card .card-body span:last-child{
+
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #0a395a;
+}
+.home3{
+	margin-top:3em;
+}
+.or-line{
+	width: 120px;
+	height: 8px;
+	background-color: #f37422;
+}
+.video-wrapper{
+
+}
+.video-1 {
+    position: static;
+    width: 95%;
+    vertical-align: middle;
+    margin-bottom: 2em;
+}
+.video-overlay-play-button {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 25%;
+    left: 0rem;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 150ms;
+    z-index: 1;
+}
+video.has-media-controls-hidden::-webkit-media-controls {
+    display: none;
+}
+.video-overlay-play-button:hover {
+    opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+    display: none;
+}
+.home3 .row:nth-child(2) {
+	margin-top: 4em;
+}
+.home3 .row:nth-child(2) .card{
+	border: none;
+	text-align: center;
+}
+.home3 .row:nth-child(2) .card .card-img-top{
+	width: 80px;
+	margin:0 auto;
+}
+.home3 .row:nth-child(2) .card .card-body{
+	color: #0a395a;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+

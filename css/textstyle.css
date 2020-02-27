@@ -1,0 +1,33 @@
+.t-ban{
+	font-size: 40px;
+}
+.t-light{
+ font-weight: 300;
+}
+.t-bold{
+ font-weight: 500;
+}
+.t-bolder{
+ font-weight: 700;
+}
+.t-40{
+ font-size: 40px;
+}
+.t-20{
+ font-size: 20px;
+}
+
+
+
+
+
+/*--------*/
+.t-title{
+	color: #0a395a;
+	line-height: 1.5;
+	font-weight: 500;
+}
+.t-content{
+	font-weight: 14px;
+	line-height: 1.29;
+}

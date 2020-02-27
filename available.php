@@ -1,0 +1,9 @@
+<?php
+$siteTitle = "X2 Group";
+$siteLink = "https://www.x2group.com/";
+$mainImage = "";
+$youtube = "https://www.youtube.com/channel/UCoAQBzkP7K3qfjVvlMPR1Rw/";
+$facebook = "https://www.facebook.com/TheX2Group/";
+$linkedin= "https://www.linkedin.com/company/6574538/";
+$flickr = "https://www.flickr.com/photos/164507224@N08/albums/";
+?>

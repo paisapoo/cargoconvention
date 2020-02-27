@@ -1,0 +1,45 @@
+.btn0{
+	text-transform: uppercase;
+	background-color: transparent;
+	border:transparent;
+	font-size: 14px;
+
+
+}
+.h-btn1{
+
+	width: 160px;
+	height: 35px;
+	background-color: #F37422;
+	font-weight: 400;
+	color:#fff;
+	transition: background-color 0.2s linear;
+}
+.h-btn2{
+	padding-left:2px;
+	padding-right:2px;
+	width: 160px;
+	height: 35px;
+	border:1px solid #F37422;
+	font-weight: 400;
+	color:#0A395A;
+	transition: background-color 0.2s linear;
+}
+.h-btn1:hover, .h-btn2:hover, .btn3:hover{
+	background-color: #0A395A;
+	color:#fff;
+	border:1px solid #F37422;
+}
+.btn3{
+	position: absolute;
+	bottom: 0;
+	left:20px;
+	z-index: 2;
+	width: 230px;
+	height: 55px;
+	background-color: #F37422;
+	color:#fff;
+	font-weight: 500;
+	font-size: 25px;
+	transition: background-color 0.2s linear;
+}
