@@ -1,9 +1,4 @@
-<?php 
-if ($_GET['page']==''){$_GET['page']=1;}
-	$page = ($_GET['page']-1)*8;
-	$newslist = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"],"status"=>"y","LIMIT"=>[$page,8]]);
-	$allnews = $database->count("news","*",["status"=>"y"]);
-?>
+
 <section class="banner">
 	<div class="container">
 		<p class="t-banner text-center wow fadeInUp">
@@ -34,7 +29,7 @@ if ($_GET['page']==''){$_GET['page']=1;}
 				</a>
 		 	</div>
 		 <?php } ?>
-		<?=$r."879" ?>
+		
 		 </div>
 		 <!-- row -->
 		<div class="pagination-bottom">
