@@ -11,7 +11,7 @@
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="home">
 				<img src="images/logo/logo-border-02.svg">
 			</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,28 +20,28 @@
 			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 			    <ul class="navbar-nav ml-auto">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home </a>
+			        <a class="nav-link" href="home">Home </a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">About</a>
+			        <a class="nav-link" href="about">About</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Agenda</a>
+			        <a class="nav-link" href="agenda">Agenda</a>
 			      </li>
 			         <li class="nav-item">
-			        <a class="nav-link" href="#">Visit</a>
+			        <a class="nav-link" href="visit">Visit</a>
 			      </li>
 			         <li class="nav-item">
-			        <a class="nav-link" href="#">Meeting Scheduler</a>
+			        <a class="nav-link" href="scheduler">Meeting Scheduler</a>
 			      </li>
 			         <li class="nav-item">
-			        <a class="nav-link" href="#">Sponsorships</a>
+			        <a class="nav-link" href="sponsorships">Sponsorships</a>
 			      </li>
 			         <li class="nav-item">
-			        <a class="nav-link" href="#">News</a>
+			        <a class="nav-link" href="news">News</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Contact</a>
+			        <a class="nav-link" href="contact">Contact</a>
 			      </li>
 			      <!-- <li class="nav-item dropdown">
 			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

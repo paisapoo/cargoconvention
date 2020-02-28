@@ -1,4 +1,6 @@
 <?php
+include "function.php";
+use PHPMailer\PHPMailer\PHPMailer;
 
 $alias = $_GET['alias'];
 if($alias == 'admin'){
@@ -14,6 +16,7 @@ if($alias == 'admin'){
 
 				if ($alias == '') {$alias = 'home';}else {
 					$alias = $alias;}
+
 				include 'app/index.php';
 		}
 
@@ -37,7 +40,14 @@ switch ($alias) {
 	break;
 	case "logout_admin":
 	session_destroy();
-	location.reload();
+	
+	break;
+	case "home":
+
+	break;
+	case "news":
+	$r = "home";
+		
 	break;
 }
 // end switch 

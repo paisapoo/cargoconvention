@@ -24,16 +24,12 @@ new WOW().init();
      $(window).bind('scroll', function() {
      var navHeight = 0;
        if ($(window).scrollTop() > navHeight) {
-         $('.header').addClass('fixed-head');
+         $('.header').addClass('fixed-head fadeInDown animated');
          
-         $(".img-main-logo-top2").css("display","block").addClass('fadeIn animated');
-         $(".img-main-logo-top1").css("display","none");
        }
        else {
-         $('.header').removeClass('fixed-head');
-       
-         $(".img-main-logo-top2").css("display","none");
-         $(".img-main-logo-top1").css("display","block").addClass('fadeIn animated');
+         $('.header').removeClass('fixed-head fadeInDown animated')
+    
        }
     });
 

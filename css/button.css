@@ -77,8 +77,26 @@
 	padding :0.5em 2em;
 	transition: background-color 0.2s linear;
 	border: 1px solid transparent;
+	font-weight: 500;
 }
-.btn4:hover, .btn5:hover{
+.btn6{
+	width: 250px;
+	height: 55px;
+	background-color: #F37422;
+	color:#fff;
+	font-weight: 500;
+	font-size: 25px;
+	transition: background-color 0.2s linear;
+}
+.btn7{
+   color: #f37422;;
+   border: solid 1px #0a395a;
+   background-color: #ffffff;
+   padding:1em 3.5em;
+   	transition: background-color 0.2s linear;
+
+}
+.btn4:hover, .btn5:hover, .btn6:hover, .btn7:hover{
 	background-color: #0A395A;
 	color:#fff;
 	border:1px solid #F37422;

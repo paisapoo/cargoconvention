@@ -1,0 +1,41 @@
+.banner{
+	background-image: url("../images/banner/about.jpg");
+
+}
+.home2 .card{
+	border:none;
+	text-align: center;
+}
+.home2 .card .card-img-top{
+	width: 100px;
+	margin:0 auto;	
+}
+.home2 .card .card-body span:first-child{
+	font-size: 60px;
+	font-weight: 700;
+	color:#f37422;
+	margin-left:5px;
+}
+.home2 .card .card-body span:last-child{
+
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #0a395a;
+}
+.button-regis{
+	margin-top:3em;
+	padding:80px 0; 
+	text-align: center;
+	background-image: url("../images/about/blue-shape.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+.btn3{
+	position: static;
+}
+.onemo-logo{
+	width: 200px;
+	margin:0 auto;
+}

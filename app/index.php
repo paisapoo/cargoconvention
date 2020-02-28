@@ -22,7 +22,7 @@ if ($countpage == 0 or empty($countpage) ) {
 		
 			<?php
 
-
+include "sponsor.php";
 include "footer.php";
 include "mainjava.php";
 

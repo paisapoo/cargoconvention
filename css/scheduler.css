@@ -1,0 +1,53 @@
+.banner {
+    background-image: url("../images/banner/meet_sch.jpg");
+}
+.home5{
+	margin-top:20px;
+	padding:40px 0 10rem 0;
+
+	background-color: #fff;
+	
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	position: relative;
+}
+.counting{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	text-align: center;
+	padding :2em 3em 2em 3em ;
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.12);
+	position: relative;
+	z-index: 2;
+}
+.counting button{
+	margin-top:2em;
+}
+.box-clock{
+	padding:1em 0.5em;
+	background-color: #0a395a;
+	text-transform: uppercase;	
+}
+.box-clock span:first-child{
+	font-size: 50px;
+	font-weight: 500;
+	color:#f37422;
+}
+.box-clock span:last-child{
+	color:#fff;
+}
+.counting .row{
+	margin-top:2em;
+}
+
+.counting .row .col-md-3{
+	max-width: 20%;
+}
+.lite_blue{
+	position: absolute;
+
+	bottom: 0;
+	z-index: 0;
+}

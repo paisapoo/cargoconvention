@@ -1,6 +1,6 @@
 <section class="home1">
 	<div class="container">
-		<p class="t-ban">
+		<p class="t-ban wow fadeInLeft">
 			A Unique Experience of Meeting & <br>Networking for the Cargo Industry.
 		</p>
 		<ul class="list-inline orenge-class">
@@ -23,7 +23,7 @@
 </section>
 <section class="home2">
 	<div class="container">
-		<div class="row">
+		<div class="row ">
 			<div class="col-md-3">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-delegates.svg" class="card-img-top" alt="...">
@@ -175,7 +175,7 @@
 	<div class="container">
 		<div class="counting">
 			<hr class="or-line">
-			<div class="row">
+			<div class="row justify-content-md-center">
 				<div class="col-md-3">
 					<div class="box-clock">
 						<span id="day"></span><br>
@@ -269,141 +269,6 @@
 		 	</div>
 		 </div>
 		 <!-- row -->
-	</div>
-</section>
-<section class="newletter">
-	<div class="container">
-		<p class="t-40 t-title text-white">Sign up to receive <br>Cargo Convention's Latest Updates!</p>
-		<form >
-			<div class="row">
-				<div class="col-md-10">
-					<input type="email" name="email-new" class="newletter-email" placeholder="Enter your email here" required="">
-				</div>
-				<div class="col-md-2">
-					<button class="btn0 btn5">sign me up</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</section>
-<section class="sponsors">
-	<div class="container">
-		<p class="t-title t-40 c-blue">Sponsors</p>
-		<hr class="or-line" >
-		<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
-				<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="sponsors">
-	<div class="container">
-		<p class="t-title t-40 c-blue">Media Partners</p>
-		<hr class="or-line" >
-		<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
-				<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="sponsors">
-	<div class="container">
-		<p class="t-title t-40 c-blue">Endorsement Partners</p>
-		<hr class="or-line" >
-		<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
-				<div class="row">
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-			<div class="col">
-				<a href="#" target="_blank"><img src="images/logo/sponser/lpartner__breakbulk.png" class="logo-link"></a>
-			</div>
-		</div>
 	</div>
 </section>
 
