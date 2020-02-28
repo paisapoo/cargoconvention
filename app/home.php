@@ -5,7 +5,7 @@
 		</p>
 		<ul class="list-inline orenge-class">
 			  <li class="list-inline-item">
-			  	<span class="t-40 t-bold">27-28</span><br>
+			  	<span class="t-40 t-bold">27-29</span><br>
 			  	<span class="t-20 t-light">SEP 2020</span>
 			  </li>
 			  <li class="list-inline-item">

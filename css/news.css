@@ -25,16 +25,40 @@
 .homenews .card .card-body p{
 	margin-bottom:0.5em;
 }
+.homenews .card .news-flame{
+	width: 100%;
+	height: 100px;
+	overflow:hidden;
+}
+.homenews .card .news-flame .card-img-top{
+	width: 100%;
+}
 .homenews .card .news-date{
 	 font-style: italic;
 	 color: #949494;
 }
 .homenews .card .news-title{
-		 color: #f37422;
-		 font-weight: 700;
+color: #f37422;
+ font-weight: 700;
+display: -webkit-box;
+   max-width: 100%;
+   height: 36px;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 .homenews .card .news-conent{
-	color:#000;
+	color:#0a395a;;
+
+   display: -webkit-box;
+   max-width: 100%;
+   -webkit-line-clamp: 7;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   line-height: 1.43;
+
 }
 .homenews .card .read-m{
 	margin-top:1em;

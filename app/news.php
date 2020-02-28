@@ -17,12 +17,14 @@
 		 	<div class="col-md-3">
 		 		<a href="singlenews?id=<?=$news['id']?>" class="link-news">
 		 		<div class="card">
+		 		<div class="news-flame">
 				  <img src="<?=$news['image']?>" class="card-img-top" alt="...">
+				  </div>
 				  <div class="card-body">
 				    <p class="news-date"><?=$formattime?></p>
 				    <p class="news-title"><?=$news['title']?>
 </p>
-				    <p class="news-conent"><?php echo substr(preg_replace("/<(.*?)>/", "", $news['content']),0,200)."...";?></p></p>
+				    <div class="news-conent"><?php echo preg_replace("/<(.*?)>/", "", $news['content']);?></div>
 				    <p class="read-m">read more  <img src="images/icon/home-icons/blue-arrow.svg" class="expl-arrow"/></p>
 				  </div>
 				</div>
