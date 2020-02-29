@@ -1,4 +1,41 @@
-.banner{
-	background-image: url("../images/banner/whats_on.jpg");
+.banner {
+    background-image: url("../images/banner/whats_on.jpg");
 
+}
+
+table tr td {
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+
+table tr td:first-child {
+    width: 230px;
+    padding-top: 0;
+
+}
+
+.agen-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.96;
+    color: #0a395a;
+}
+.agen-title-org {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.96;
+    color: #f37422;
+}
+
+.agen-des {
+	margin-top:-5px;
+    color: #000;
+    line-height: 1.43;
+}
+.sec-content p.t-bolder{
+	margin-top:1em;
+}
+.sec-content{
+	padding-bottom: 4em;
 }

@@ -57,8 +57,8 @@ if ($_GET['page']==''){$_GET['page']=1;}
 					break;
 					case "singlenews":
 						$news = $database->get("news","*",["id"=>$_GET["id"]]);
-						$right_news = $database->select("news","*",["id[!]"=>$_GET['id'],"status"=>1,"LIMIT"=>3,"ORDER"=>["date"=>"DESC"]]);
-						echo $news;
+						$right_news = $database->select("news","*",["id[!]"=>$_GET['id'],"status"=>'y',"LIMIT"=>4,"ORDER"=>["date_time"=>"DESC"]]);
+						
 					break;
 				}
 				// end switch 
