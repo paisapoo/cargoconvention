@@ -18,7 +18,12 @@
 				echo $date->format('dS F Y');?>
 				</div>
 				<div class="col-md-6">
-					social
+					<ul class="list-inline share-social">
+						<li class="list-inline-item">share</li>
+						  <li class="list-inline-item"><img src="images/icon/social-icons/soc_f.svg"></li>
+						  <li class="list-inline-item"><img src="images/icon/social-icons/soc_in.svg"></li>
+						  <li class="list-inline-item"><img src="images/icon/social-icons/soc_t.svg"></li>
+						</ul>
 				</div>
 			</div>
 			<p class="t-title t-28 c-org"><?=$news['title']?></p>
@@ -57,4 +62,5 @@
 		 <!-- row -->
 		
 	</div>
+ 
 </section>
