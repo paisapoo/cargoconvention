@@ -68,7 +68,7 @@
             </table>
           </div>
          
-          <p class="b-center"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next step</button></p>
+          <p class="b-center"><a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next step</button></a></p>
         </div>
       </div>
     </div>
