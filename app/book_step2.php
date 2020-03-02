@@ -323,8 +323,8 @@ Everning Sponsor</span>
         </div>
         <div class="col-md-12"  >
     	<p class="b-center">
-          <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Previous</button>
-          <button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next</button>
+          <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button>
+          <button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next Step</button>
       	</p>
       </div>
     </div>
