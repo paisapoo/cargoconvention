@@ -1,0 +1,42 @@
+.banner {
+    background-image: url("../images/banner/about.jpg");
+
+}
+
+.form-steps {
+    padding: 3em 0;
+    background-color: #e8f0f7;
+}
+
+#msform {
+    box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+    background-color: #0a395a;
+    padding: 2em;
+
+}
+
+.setup-content {
+    background-color: #fff;
+    padding:2em 8em; 
+}
+.b-center{
+	text-align: center;
+	
+}
+.setup-content .btn{
+	width:140px; 
+	text-transform: uppercase;
+}
+.btn-active-form
+ {
+    background-color: #f37422;
+    color: #fff;
+    border-radius: 0;
+
+}

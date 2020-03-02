@@ -10,7 +10,7 @@
 <div class="form-steps">
 	<div class="container">
 		<div class="w-80">
-			<form id="msform">
+			<div id="msform">
   <!-- progressbar -->
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
@@ -37,7 +37,7 @@
     </div>
   </div>
   
-  <form role="form" action="" method="post">
+  <form role="form" action="book_done" method="post">
   	<?php include "book_step1.php" ;?>
     <?php include "book_step2.php" ;?>
     <?php include "book_step3.php" ;?>
@@ -47,6 +47,7 @@
 			
 		</div>
 	</div>	
+</div>
 </div>
 
    
