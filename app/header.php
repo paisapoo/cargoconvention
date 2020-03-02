@@ -17,11 +17,11 @@
 	<!-- google font  -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 	<!-- main.css -->
-	<link rel="stylesheet" type="text/css" href="css/main.css?v=1.03">
+	<link rel="stylesheet" type="text/css" href="css/main.css?v=1.05">
 	<link rel="stylesheet" href="css/animate.css">
 
 		<link rel="stylesheet" type="text/css" href="<?php
-if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $alias . '.css?v=1.03';}
+if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $alias . '.css?v=1.05';}
 ?>">
   <meta property="og:url"           content="https://x2globalmedia.com<?=$_SERVER['REQUEST_URI']?>" />
   <meta property="og:type"          content="article" />

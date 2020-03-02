@@ -89,7 +89,10 @@ display: -webkit-box;
 	width: 8px;
 	margin-left:5px;
 }
-.share-socialP img{
+.share-social img{
 	width: 20px;
 	height: 20px;
+}
+.share-social .list-inline-item:not(:last-child){
+	margin-right:1em;
 }

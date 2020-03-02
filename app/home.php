@@ -147,7 +147,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 why-right">
+				<img src="images/home/home_why.jpg" class="home_why">
 				<div class="why-should">
+
 					<p class="t-title t-40 text-white">
 						Why you should attend
 					</p>
@@ -157,6 +159,7 @@
 				</div>
 			</div>
 				<div class="col-md-6 why-left">
+					<img src="images/home/home_why_spons.jpg" class="home_why">
 				<div class="why-should ">
 					<p class="t-title t-40 text-white">
 						Why you should sponsor

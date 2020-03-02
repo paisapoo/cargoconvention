@@ -3,8 +3,8 @@
 
 	<div class="container">
 		<ul class="list-inline h-button">
-		  <li class="list-inline-item"><button class="btn0 h-btn1">book now</button></li>
-		  <li class="list-inline-item"><button class="btn0 h-btn2">become a sponsor</button></li>
+		  <li class="list-inline-item"><a href="register"><button class="btn0 h-btn1">book now</button></a></li>
+		  <li class="list-inline-item"><a href="become"><button class="btn0 h-btn2">become a sponsor</button></a></li>
 		  
 		</ul>
 	
