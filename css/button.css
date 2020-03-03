@@ -30,6 +30,14 @@
 	color:#fff;
 	border:1px solid #F37422;
 }
+.btn2{
+	font-size: 14px;
+	border:1px solid #F37422;
+	font-weight: 400;
+	color:#0A395A;
+	transition: background-color 0.2s linear;
+	padding:0.2em  1.5em;
+}
 .btn3{
 	position: absolute;
 	bottom: 0;
@@ -96,7 +104,7 @@
    	transition: background-color 0.2s linear;
 
 }
-.btn4:hover, .btn5:hover, .btn6:hover, .btn7:hover{
+.btn2:hover, .btn4:hover, .btn5:hover, .btn6:hover, .btn7:hover{
 	background-color: #0A395A;
 	color:#fff;
 	border:1px solid #F37422;

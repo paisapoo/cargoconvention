@@ -21,8 +21,9 @@ if ($countpage == 0 or empty($countpage) ) {
 ?>
 		
 			<?php
-
+if($alias != 'register'){
 include "sponsor.php";
+}
 include "footer.php";
 include "mainjava.php";
 
