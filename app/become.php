@@ -36,7 +36,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 					    	<div class="col-5">
 					    		<div class="price-tag">
 					    			<img src="images/icon/sponsor-icons/platinum.svg">
-					    			<span>$6000</span>
+					    			<span>$4,000</span>
 					    		</div>
 					    	</div>	
 					    </div>
@@ -70,7 +70,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 					    	<div class="col-5">
 					    		<div class="price-tag">
 					    			<img src="images/icon/sponsor-icons/gold.svg">
-					    			<span>$3000</span>
+					    			<span>$3,000</span>
 					    		</div>
 					    	</div>	
 					    </div>
@@ -104,7 +104,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 					    	<div class="col-5">
 					    		<div class="price-tag">
 					    			<img src="images/icon/sponsor-icons/silver.svg">
-					    			<span>$2000</span>
+					    			<span>$2,000</span>
 					    		</div>
 					    	</div>	
 					    </div>
