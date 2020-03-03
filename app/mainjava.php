@@ -33,7 +33,25 @@ new WOW().init();
        }
     });
 
+ var navDrop = $(".navbar-nav .dropdown");
+      navDrop.each(function(){
+              var $this = $(this);
+           $(this).mouseover(function (){
+                $this.addClass('show');
 
+                let navLink =$this.find('.nav-link');
+                navLink.attr('aria-expanded','true');
+                $this.find('.dropdown-menu').addClass('show');
+              });
+           $(this).mouseleave(function (){
+            $this.removeClass('show');
+                let navLink =   $this.find('.nav-link');
+                navLink.attr('aria-expanded','false');
+                $this.find('.dropdown-menu').removeClass('show');
+
+           });
+
+      });
 
 
 </script>

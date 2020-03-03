@@ -40,4 +40,31 @@
   background-color:#fff;
   
 }
+.dropdown-menu {
 
+    position: absolute;
+    top:2em;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 1rem 0.5rem;
+    padding-top:2em;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #0a395a;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 0;
+   box-shadow: 0 9px 7px -6px rgba(0,0,0,0.2);
+    
+}
+.dropdown-item{
+	color:#0a395a;
+	font-size: 16px;
+	font-weight: 500;
+}

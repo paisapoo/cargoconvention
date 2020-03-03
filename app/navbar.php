@@ -28,14 +28,37 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="agenda">Agenda</a>
 			      </li>
-			         <li class="nav-item">
-			        <a class="nav-link" href="visit">Visit</a>
+			  
+			       <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Visit
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="become">Why Attend Cargo Convention</a>
+			          <a class="dropdown-item" href="parner">Pricing</a>
+			           <a class="dropdown-item" href="parner">Venue</a>
+			            <a class="dropdown-item" href="parner">Accommadation</a>
+			             <a class="dropdown-item" href="parner">Attendee List</a>
+			              <a class="dropdown-item" href="parner">Practical Info</a>
+			               <a class="dropdown-item" href="parner">Attractions</a>
+			                <a class="dropdown-item" href="parner">How to get there</a>
+			                 <a class="dropdown-item" href="parner">FAQ</a>
+			          
+			        </div>
 			      </li>
 			         <li class="nav-item">
 			        <a class="nav-link" href="scheduler">Meeting Scheduler</a>
 			      </li>
-			         <li class="nav-item">
-			        <a class="nav-link" href="sponsorships">Sponsorships</a>
+			    
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Sponsorships
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="become">Sponsors</a>
+			          <a class="dropdown-item" href="pricing">Pricing</a>
+			          
+			        </div>
 			      </li>
 			         <li class="nav-item">
 			        <a class="nav-link" href="news">News</a>
@@ -43,16 +66,7 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="contact">Contact</a>
 			      </li>
-			      <!-- <li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Dropdown link
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			          <a class="dropdown-item" href="#">Action</a>
-			          <a class="dropdown-item" href="#">Another action</a>
-			          <a class="dropdown-item" href="#">Something else here</a>
-			        </div>
-			      </li> -->
+			      
 			    </ul>
 			  </div>
 		</div>
