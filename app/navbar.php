@@ -42,7 +42,7 @@
 			              <a class="dropdown-item" href="practical">Practical Info</a>
 			               <a class="dropdown-item" href="parner">Attractions</a>
 			                <a class="dropdown-item" href="parner">How to get there</a>
-			                 <a class="dropdown-item" href="parner">FAQ</a>
+			                 <a class="dropdown-item" href="faq">FAQ</a>
 			          
 			        </div>
 			      </li>

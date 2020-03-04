@@ -1,0 +1,46 @@
+.banner {
+    background-image: url("../images/banner/FAQ-banner.jpg");
+}
+
+.faq {
+    padding: 3rem 0;
+}
+
+.faq .card {
+    box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.1);
+    border:none;
+    border-radius: 0;
+
+}
+
+.faq .card:first-child {
+    margin-top: 3em;
+}
+
+.faq .card:not(:first-child) {
+    margin-top: 2em;
+}
+
+
+.faq .card .card-header {
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #f37422;
+     border-bottom: 1px solid transparent;
+}
+.faq .faq-arrow-up{
+	width:12px;
+	margin-right: 0.5rem;
+
+}
+.faq .card .card-body{
+	background-color: #e8f0f7;
+	font-size: 14px;
+	color:#000;
+	line-height: 1.29;
+	padding:2rem;
+	padding-left: 3em;
+
+}

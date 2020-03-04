@@ -11,34 +11,35 @@
 
 
 .t-light{
- font-weight: 300;
+ 	font-weight: 300;
 }
 .t-bold{
- font-weight: 500;
+ 	font-weight: 500;
 }
 .t-bolder{
- font-weight: 700;
-}
-.t-50{
-	font-size: 50px;
+ 	font-weight: 700;
 }
 .t-16{
 	font-size: 16px;
-}
-.t-40{
- font-size: 40px;
 }
 .t-25{
 	font-size: 25px;
 }
 .t-20{
- font-size: 20px;
+ 	font-size: 20px;
 }
 .t-28{
 	font-size: 28px;
 }
-
-
+.t-30{
+	font-size: 30px;
+}
+.t-40{
+ 	font-size: 40px;
+}
+.t-50{
+	font-size: 50px;
+}
 
 
 /*--------*/

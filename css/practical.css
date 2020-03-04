@@ -1,3 +1,54 @@
-.banner{
-	background-image: url("../images/banner/about.jpg");
+.banner {
+    background-image: url("../images/banner/about.jpg");
+}
+
+.t-time {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #000;
+}
+.timing .media img{
+	width: 100px;
+	height: 100px;
+}
+.timing{
+	margin-bottom: 3em;
+}
+.hotel-info{
+	background-color: #e8f0f7;
+	background-image: url('../images/shape/blue-shape.svg');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100%;
+	padding:3em 0;
+}
+.hotel-info .list-inline{
+	text-align: center;
+}
+.hotel-info .btn0.btn4{
+	position: relative;
+	padding-left: 1em;
+	padding-right: 3em;
+}
+.expl-arrow {
+    width: 16px;
+    margin-left: 5px;
+    position: absolute;
+    right: 16px;
+    top:12px;
+}
+.code-hotel{
+	padding:0.7rem 1em;
+	background-color: #fff;
+}
+.code-hotel span:first-child{
+	text-transform: uppercase;
+	color:#0a395a;
+	font-weight: 500;
+	margin-right: 10px;
+}
+.flight {
+	padding:3em 0;
+	background-color:#e8f0f7;
 }
