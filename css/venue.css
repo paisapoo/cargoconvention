@@ -1,0 +1,32 @@
+.banner {
+    background-image: url("../images/banner/venue2.jpg");
+}
+.img-avani{
+	margin-top:3em;
+}
+.img-avani img{
+	width: 150px;
+}
+.hotel-img-full{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 280px;
+}
+.full-1{
+	background-image: url("../images/venue/ava1.jpg");
+}
+.full-2{
+	background-image: url("../images/venue/ava2.jpg");
+}
+.hotel-img{
+	width: 100%;
+}
+.restaurant .card{
+	border-radius: 0;
+	border:1px solid transparent;
+	margin-top:1em;
+	margin-bottom: 1em;
+}
+.restaurant .card .card-body{
+	padding-left:0;
+}

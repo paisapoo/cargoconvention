@@ -34,10 +34,11 @@
 			          Visit
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			          <a class="dropdown-item" href="become">Why Attend Cargo Convention</a>
+			          <a class="dropdown-item" href="why_attendee">Why Attend </a>
+			           <a class="dropdown-item" href="why_sponsor">Why Sponsor </a>
 			          <a class="dropdown-item" href="pricing">Pricing</a>
-			           <a class="dropdown-item" href="parner">Venue</a>
-			            <a class="dropdown-item" href="parner">Accommadation</a>
+			           <a class="dropdown-item" href="venue">Venue</a>
+			            <a class="dropdown-item" href="accommadation">Accommadation</a>
 			             <a class="dropdown-item" href="parner">Attendee List</a>
 			              <a class="dropdown-item" href="practical">Practical Info</a>
 			               <a class="dropdown-item" href="parner">Attractions</a>

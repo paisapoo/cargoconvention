@@ -1,0 +1,68 @@
+.banner {
+    background-image: url("../images/banner/venue2.jpg");
+}
+.img-avani{
+	margin-top:3em;
+}
+.img-avani img{
+	width: 150px;
+}
+
+
+.hotel-img{
+	width: 100%;
+}
+.accom .card{
+	border-radius: 0;
+	border:1px solid transparent;
+	margin-top:1em;
+	margin-bottom: 1em;
+}
+.accom .card .card-body{
+	padding-left:0;
+}
+.accom-icon{
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+.hotel-code{
+	background-color: rgba(82,115,138,0.7);
+	font-size: 16px;
+	padding:0.5rem 1rem;
+	position: absolute;
+	right: 0;
+}
+.accom .btn3{
+	position: static;
+	height: 70px;
+}
+.code-bottom{
+	background-color:#0a395a;
+	font-size: 16px;
+	color:#fff;
+	width: 200px;
+	word-wrap: break-word;
+	border-radius: 0;
+
+}
+.code-button
+ {
+    background-color: #f37422;
+    color: #fff;
+    border-radius: 0;
+    width: 200px;
+    font-size: 16px;
+    padding-top:18px;
+    text-transform: uppercase;
+    height: 60.5px;
+
+}
+.code-button:hover{
+	background-color: #0A395A;
+	color:#fff;
+	border:1px solid #F37422;
+}
+.code-bottom:hover{
+	color:#fff;
+}

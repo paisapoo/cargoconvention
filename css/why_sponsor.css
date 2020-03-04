@@ -1,0 +1,44 @@
+.banner {
+    background-image: url("../images/banner/why attend.jpg");
+}
+
+.sec-content .or-line{
+    margin-bottom: 4em;
+}
+
+.expland img {
+    width: 100%;
+}
+
+.home2 .card {
+    border: none;
+    text-align: center;
+}
+
+.home2 .card .card-img-top {
+    width: 90px;
+    margin: 0 auto;
+}
+
+.home2 .card .card-body span:first-child {
+    font-size: 50px;
+    font-weight: 700;
+    color: #f37422;
+}
+
+.home2 .card .card-body span:last-child {
+
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #0a395a;
+}
+
+.home2.why-icon .card .card-body span:last-child {
+    font-weight: 700;
+}
+
+.home2.why-icon {
+    margin-top: 1em;
+
+}
