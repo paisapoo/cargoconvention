@@ -41,8 +41,8 @@
 			            <a class="dropdown-item" href="accommadation">Accommadation</a>
 			             <a class="dropdown-item" href="parner">Attendee List</a>
 			              <a class="dropdown-item" href="practical">Practical Info</a>
-			               <a class="dropdown-item" href="parner">Attractions</a>
-			                <a class="dropdown-item" href="parner">How to get there</a>
+			               <a class="dropdown-item" href="attraction">Attractions</a>
+			                <a class="dropdown-item" href="howtoget">How to get there</a>
 			                 <a class="dropdown-item" href="faq">FAQ</a>
 			          
 			        </div>
@@ -57,7 +57,8 @@
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 			          <a class="dropdown-item" href="become">Sponsors</a>
-			          <a class="dropdown-item" href="partner">Partner</a>
+			          <a class="dropdown-item" href="mediapart">Media Partner</a>
+			          <a class="dropdown-item" href="endorsementpart">Endorsement Partner</a>
 			          
 			        </div>
 			      </li>

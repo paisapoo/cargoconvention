@@ -1,0 +1,27 @@
+.banner {
+    background-image: url("../images/banner/howtoget.jpg");
+}
+.img-avani img{
+	width: 150px;
+}
+.map-avani{
+	margin-top:2em;
+	margin-bottom: 2.5em;
+}
+.choose-best .card{
+	border-radius: 0;
+	border:1px solid transparent;
+	height: 490px;
+	background-color: #e8f0f7;
+	margin-top:1em;
+
+	}
+.btn0.btn6{
+	margin-top:2em;
+}
+.choose-best .card-img-top{
+	width: 100px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:2em;
+}

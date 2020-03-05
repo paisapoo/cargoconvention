@@ -1,0 +1,16 @@
+.banner {
+    background-image: url("../images/banner/howtoget.jpg");
+
+}
+.attract{
+	margin-top:2em;
+}
+.attract .card{
+	border-radius: 0;
+	border:1px solid transparent;
+	margin-top:1em;
+	margin-bottom: 1em;
+}
+.attract .card .card-body{
+	padding-left:0;
+}

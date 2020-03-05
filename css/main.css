@@ -105,6 +105,11 @@ html, body{
 	height: 8px;
 	background-color: #f37422;
 }
+.or-line-thin{
+	width: 100px;
+	height: 4px;
+	background-color: #f37422;
+}
 
 
 /*content*/
