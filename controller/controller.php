@@ -60,6 +60,7 @@ if ($_GET['page']==''){$_GET['page']=1;}
 						$right_news = $database->select("news","*",["id[!]"=>$_GET['id'],"status"=>'y',"LIMIT"=>4,"ORDER"=>["date_time"=>"DESC"]]);
 						
 					break;
+			
 				}
 				// end switch 
 

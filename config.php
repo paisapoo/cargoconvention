@@ -3,7 +3,7 @@ use Medoo\Medoo;
 
 $database = new Medoo([
 	'database_type' => "mysql",
-	'database_name' => "dashboard",
+	'database_name' => "x2dash",
 	'server' => "localhost",
 	'username' => "root",
 	'password' => "",

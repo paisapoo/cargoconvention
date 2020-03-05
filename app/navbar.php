@@ -39,7 +39,7 @@
 			          <a class="dropdown-item" href="pricing">Pricing</a>
 			           <a class="dropdown-item" href="venue">Venue</a>
 			            <a class="dropdown-item" href="accommadation">Accommadation</a>
-			             <a class="dropdown-item" href="parner">Attendee List</a>
+			             <a class="dropdown-item" href="attendee">Attendee List</a>
 			              <a class="dropdown-item" href="practical">Practical Info</a>
 			               <a class="dropdown-item" href="attraction">Attractions</a>
 			                <a class="dropdown-item" href="howtoget">How to get there</a>

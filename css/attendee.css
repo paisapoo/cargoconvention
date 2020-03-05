@@ -1,0 +1,60 @@
+.banner {
+    background-image: url("../images/banner/whats_on.jpg");
+
+}
+
+.table-data {
+    background-color: #e9eff5;
+    padding: 1.5rem 0;
+}
+
+#datatable {
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+
+}
+
+#datatable th {
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #1b3857;
+    padding: 1em; 
+    cursor: pointer;
+}
+#datatable tbody tr:nth-of-type(odd){
+	background-color: #eaedef;
+}
+#datatable td{
+	padding:0.5em 1em; 
+}
+
+.search-box {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.search-box .col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.search {
+    width: 100%;
+    padding: 0.5em 0.5rem;
+    border: 8px solid #f37422;
+}
+
+.search::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    color: #939393;
+    font-style: italic;
+    line-height: 1.43;
+}
+#sorttable_sortfwdind{
+	color:#f37422;
+}
