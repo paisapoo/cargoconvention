@@ -100,7 +100,7 @@ Here is what you need to know.
 			</p>
 			<ul class="list-inline">
 			  <li class="list-inline-item"><span class="code-hotel"><span>Booking code:</span><span>CARGOCON20</span></span></li>
-			  <li class="list-inline-item"><button class="btn0 btn4">book now <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"></button></li>
+			  <li class="list-inline-item"><a href="https://www.avanihotels.com/en/riverside-bangkok" target="_blank"><button class="btn0 btn4">book romms now <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"></button></a></li>
 			</ul>
 		</div>
 	</div>

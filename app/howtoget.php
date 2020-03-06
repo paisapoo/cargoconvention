@@ -78,7 +78,7 @@ Telephone: +66 2 535 1192</p>
 			</div>
 		</div>
 		<p class="text-center">
-		<a href="register"><button class="btn0 btn6">book now</button></a>
+		<a href="register"><button class="btn0 btn6">register now</button></a>
 	</p>
 	</div>
 </section>

@@ -12,7 +12,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="platinum" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -20,14 +20,14 @@
                   <span class="label-t-form">Platinum Sponsor (x1)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$4,000</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="gold" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -35,36 +35,6 @@
                   <span class="label-t-form">Gold Sponsor (x2)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$5,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Silver Sponsor (x1)</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$5,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Landyard Sponsor</span>
-                </td>
-                <td>
                   <span class="label-t-form">$3,000</span>
                 </td>
                 <td></td>
@@ -72,7 +42,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="welcome" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -85,89 +55,10 @@ Everning Sponsor</span>
                 </td>
                 <td></td>
               </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Fixed Table Sponsor</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$3,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Coffee Break Sponsor</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$3,000</span>
-                </td>
-                <td></td>
-              </tr>
-            </table>
-              </div>
-              <div class="col-md-6">
-                             <table>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Directory Sponsor</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$3,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Beer-zone Sponsor</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$3,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
-                  <span class="checkmark"></span>
-                </label>
-                </td>
-                <td>
-                  <span class="label-t-form">Key Card Sponsor</span>
-                </td>
-                <td>
-                  <span class="label-t-form">$3,000</span>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="meeting" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -179,10 +70,62 @@ Everning Sponsor</span>
                 </td>
                 <td></td>
               </tr>
+               <tr>
+                <td>
+                  <label class="check-input">
+                  <input type="checkbox" name="silver" class="form-check-input">
+                  <span class="checkmark"></span>
+                </label>
+                </td>
+                <td>
+                  <span class="label-t-form">Silver Sponsor (x1)</span>
+                </td>
+                <td>
+                  <span class="label-t-form">$2,000</span>
+                </td>
+                <td></td>
+              </tr>
+              
+            </table>
+              </div>
+              <div class="col-md-6">
+                             <table>
+               <tr>
+                <td>
+                  <label class="check-input">
+                  <input type="checkbox" name="coffee" class="form-check-input">
+                  <span class="checkmark"></span>
+                </label>
+                </td>
+                <td>
+                  <span class="label-t-form">Coffee Break Sponsor</span>
+                </td>
+                <td>
+                  <span class="label-t-form">$2,000</span>
+                </td>
+                <td></td>
+              </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="beer" class="form-check-input">
+                  <span class="checkmark"></span>
+                </label>
+                </td>
+                <td>
+                  <span class="label-t-form">Beer-zone Sponsor</span>
+                </td>
+                <td>
+                  <span class="label-t-form">$2,000</span>
+                </td>
+                <td></td>
+              </tr>
+             
+
+              <tr>
+                <td>
+                  <label class="check-input">
+                  <input type="checkbox" name="shirt" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -190,22 +133,22 @@ Everning Sponsor</span>
                   <span class="label-t-form">T-shirt Sponsor</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$2,000</span>
                 </td>
                 <td></td>
               </tr>
-              <tr>
+                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="landyard" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Charging Station Sponsor</span>
+                  <span class="label-t-form">Landyard Sponsor</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$1,500</span>
                 </td>
                 <td></td>
               </tr>
@@ -227,7 +170,7 @@ Everning Sponsor</span>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="insideFront" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -235,14 +178,14 @@ Everning Sponsor</span>
                   <span class="label-t-form">Inside Front Cover</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$1,500</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="insideBack" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -250,14 +193,14 @@ Everning Sponsor</span>
                   <span class="label-t-form">Inside Back Cover</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$1,500</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="spread" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -265,14 +208,14 @@ Everning Sponsor</span>
                   <span class="label-t-form">Spread</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$1,000</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="fullPage" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -280,14 +223,14 @@ Everning Sponsor</span>
                   <span class="label-t-form">Full Page</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$800</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="halfPage" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -295,14 +238,14 @@ Everning Sponsor</span>
                   <span class="label-t-form">Half Page</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$600</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="earlyBird" class="form-check-input">
+                  <input type="checkbox" name="quarterPage" class="form-check-input">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -310,7 +253,7 @@ Everning Sponsor</span>
                   <span class="label-t-form">Quarter Page</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$400</span>
                 </td>
                 <td></td>
               </tr>

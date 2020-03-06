@@ -1,6 +1,6 @@
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -11,17 +11,17 @@
     <meta name="keywords" content="<?=$meta_keywords?>"> 
     <meta name="description" content="<?=$meta_descri?>"> 
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
-	<!-- google font  -->
+  <!-- google font  -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
-	<!-- main.css -->
-	<link rel="stylesheet" type="text/css" href="css/main.css?v=1.05">
-	<link rel="stylesheet" href="css/animate.css">
+  <!-- main.css -->
+  <link rel="stylesheet" type="text/css" href="css/main.css?v=2.02">
+  <link rel="stylesheet" href="css/animate.css">
 
-		<link rel="stylesheet" type="text/css" href="<?php
-if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $alias . '.css?v=1.05';}
+    <link rel="stylesheet" type="text/css" href="<?php
+if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $alias . '.css?v=2.02';}
 ?>">
   <meta property="og:url"           content="https://x2globalmedia.com<?=$_SERVER['REQUEST_URI']?>" />
   <meta property="og:type"          content="article" />
@@ -43,4 +43,3 @@ if (file_exists(stream_resolve_include_path($alias . '.php'))) {echo 'css/' . $a
 
 
 </head>
-

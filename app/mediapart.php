@@ -108,7 +108,7 @@ Email blasts to promote the above captioned convention. <br>
 				If you are interested in becoming a Media Partner,
 please download the below registration form and send to <a href="mailto:<?=$adminemail?>">info@cargoconventions.com</a>
 <br>
-<a href="mailto:<?=$adminemail?>"><button class="btn0 btn-partner">become a media partner</button></a>
+<a href="mailto:<?=$adminemail?>"><button class="btn0 btn-partner">let's partner</button></a>
 			</p>
 			</div>
 			 <!-- /media ben -->

@@ -25,9 +25,12 @@
     padding: 2em;
 
 }
-.btn.disabled, .btn:disabled{
-	opacity: 1;
+
+.btn.disabled,
+.btn:disabled {
+    opacity: 1;
 }
+
 .stepwizard .row {
     margin-left: 0;
     margin-right: 0;
@@ -80,140 +83,164 @@
 
 .setup-content {
     background-color: #fff;
-    padding-top:2em;
+    padding-top: 2em;
     padding-bottom: 2em;
 }
 
-.setup-content .btn{
-	width:140px; 
+.setup-content .btn {
+    width: 140px;
 }
-.setup-content table{
-	width: 50%;
+
+.setup-content table {
+    width: 50%;
 }
-.setup-content .col-md-6 table{
-width: 100%;
+
+.setup-content .col-md-6 table {
+    width: 100%;
 }
-.setup-content table tr td{
-	padding-bottom: 1em;
+
+.setup-content table tr td {
+    padding-bottom: 1em;
 }
+
 .form-steps .row {
     margin-left: 0;
     margin-right: 0;
 }
-.form-title{
-	font-size: 30px;
-	font-weight: 500;
-	line-height: 1.5;
-	color:#0a395a;
-	text-align: center;
+
+.form-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #0a395a;
+    text-align: center;
 }
-.b-center{
-	text-align: center;
+
+.b-center {
+    text-align: center;
 }
+
 .checkmark {
-  position: absolute;
-  top: -2px;
-  left: 12px;
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
-  border:0.5px solid #0a395a;
-}
-.check-input{
-display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.check-input input:checked ~ .checkmark {
-  background-color: #fff;
-}
-.check-input input:checked ~ .checkmark:after {
-  display: block;
-}
-.check-input:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.checkmark:after {
-  left: 8px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid #f37422;
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+    position: absolute;
+    top: -2px;
+    left: 12px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 0.5px solid #0a395a;
 }
 
-.label-t-form{
-	font-size: 14px;
-  	font-weight: 400;
-	color: #0a395a;
-}
-.disform-check{
-	 border: solid 1px #d5d5d5;
-}
-.disform{
-	color: #d5d5d5; 
-}
-.form-group{
-	padding :0 3em;
-}
-.b-center button{
-	text-transform: uppercase;
-}
-.btn-active-pre{
-	color: #0a395a;
-	border:1px solid #f37422;
-	background: transparent;
-	 border-radius: 0;
+.check-input {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.form-title-sec{
-	font-size: 25px;
-	color:#0a395a;
-	font-weight: 500;
-	line-height: 1.8;
-	cursor: pointer;
+.check-input input:checked~.checkmark {
+    background-color: #fff;
 }
-.form-title-th{
-	font-size: 18px;
-	color:#0a395a;
-	font-weight: 500;
-	line-height: 1.8;
+
+.check-input input:checked~.checkmark:after {
+    display: block;
 }
-.form-title-thx{
-	font-size: 20px;
-	color:#0a395a;
-	font-weight: 500;
-	line-height: 1.8;
+
+.check-input:hover input~.checkmark {
+    background-color: #ccc;
 }
-.form-boder{
-	border-bottom:1px solid #d8d8d8;
-	margin-bottom: 2em;
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
 }
+
+.checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #f37422;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.label-t-form {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0a395a;
+}
+
+.disform-check {
+    border: solid 1px #d5d5d5;
+}
+
+.disform {
+    color: #d5d5d5;
+}
+
+.form-group {
+    padding: 0 3em;
+}
+
+.b-center button {
+    text-transform: uppercase;
+}
+
+.btn-active-pre {
+    color: #0a395a;
+    border: 1px solid #f37422;
+    background: transparent;
+    border-radius: 0;
+}
+
+.form-title-sec {
+    font-size: 25px;
+    color: #0a395a;
+    font-weight: 500;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.form-title-th {
+    font-size: 18px;
+    color: #0a395a;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.form-title-thx {
+    font-size: 20px;
+    color: #0a395a;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.form-boder {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 2em;
+}
+
 .form-control::placeholder {
-  color: #d5d5d5; 
-  font-size: 14px;
-  font-style: italic;
+    color: #d5d5d5;
+    font-size: 14px;
+    font-style: italic;
 }
-.select-placeholder{
-	  color: #d5d5d5; 
-  font-size: 14px;
-  font-style: italic;
+
+.select-placeholder {
+    color: #d5d5d5;
+    font-size: 14px;
+    font-style: italic;
 }
+
 .btn-active-form,
 .btn-circle:hover,
 .btn-active-form:hover {
@@ -241,25 +268,58 @@ display: block;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
-.title-re.text-bold{
-	font-weight: 700;
-	margin-right: 20px;
+
+.title-re.text-bold {
+    font-weight: 700;
+    margin-right: 20px;
 }
-.title-re{
-	font-weight: 500;
-	padding-right: 5px;
-	color:#0a395a;
+
+.title-re {
+    font-weight: 500;
+    padding-right: 5px;
+    color: #0a395a;
 }
-.price{
-	font-weight: 700;
-	margin-left: 20px;
+
+.price {
+    font-weight: 700;
+    margin-left: 20px;
 }
+
 #step-5 .list-inline .list-inline-item:not(:last-child) {
-	margin-right: 3em;
+    margin-right: 3em;
 }
-.table-100{
-	width: 100%!important;
+
+.table-100 {
+    width: 100% !important;
 }
-.table-100 td:nth-child(2){
-	padding-left:20px;
+
+.table-100 td:nth-child(2) {
+    padding-left: 20px;
+}
+
+.multi-select {
+    color: #0a395a;
+    font-style: italic;
+}
+
+.multi-select input {
+    height: 25px;
+    width: 50px;
+    padding-left:5px;
+    margin-left: 10px;
+    border: solid 1px #d5d5d5;
+    color:#f37422;
+}
+
+.multi1,
+.multi2,
+.multi3 {
+    display: none;
+}
+
+.multi1 .amount,
+.multi2 .amount,
+.multi3 .amount {
+ color:#0a395a;
+
 }

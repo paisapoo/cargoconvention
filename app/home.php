@@ -6,7 +6,7 @@
 		<ul class="list-inline orenge-class">
 			  <li class="list-inline-item">
 			  	<span class="t-40 t-bold">27-29</span><br>
-			  	<span class="t-20 t-light">SEP 2020</span>
+			  	<span class="t-20 t-light">SEPT 2020</span>
 			  </li>
 			  <li class="list-inline-item">
 			  	<span class="t-40 t-bold">Bangkok</span><br>
@@ -15,7 +15,7 @@
 			  </li>
 			  
 		</ul>
-		<button class="btn0 btn3">book now <img src="images/icon/home-icons/register-arrow.svg" class="reg-arrow"/></button>
+		<button class="btn0 btn3"> register now <img src="images/icon/home-icons/register-arrow.svg" class="reg-arrow"/></button>
 	</div>
 	<div class="shape-white">
 		<img src="images/home/top-whiteshape.svg">
@@ -82,7 +82,7 @@
 			</div>
 			<div class="col-md-6 align-self-end">
 				<div class="video-wrapper">
-                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.png" src="images/video/X2globalmedia-showreel.mp4">
+                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.png" src="images/video/Cargo-Con-full_1.mp4">
   						</video>
 				</div>
 			</div>
@@ -205,7 +205,7 @@
 				</div>
 
 			</div>
-			<button class="btn0 btn4">book now</button>
+			<button class="btn0 btn4">register now</button>
 		</div>
 	</div>
 </section>

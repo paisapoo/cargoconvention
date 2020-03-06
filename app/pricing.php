@@ -10,7 +10,7 @@
 <section class="sec-content">
 	<div class="container">
 		<p class="t-title t-40 c-blue text-center">
-			Shoose your best plan
+			Choose your best plan
 		</p>
 		<hr class="or-line">
 		<div class="w-80">
@@ -50,7 +50,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 				    	<li>Lunches Included</li>
 				    </ul>
 				    
-				<a href="register"><button class="btn0 btn2">book now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -79,7 +79,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 				    	<li>Lunches Included</li>
 				    </ul>
 
-				<button class="btn0 btn2 dis">book now</button>
+				<button class="btn0 btn2 dis">register now</button>
 					
 				  </div>
 				</div>
@@ -109,7 +109,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 				    	<li>Lunches Included</li>
 				    </ul>
 				    
-				<a href="register"><button class="btn0 btn2">book now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -136,7 +136,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 				    </ul>
 
 				    
-				<a href="register"><button class="btn0 btn2">book now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -164,7 +164,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 				    	<li>Fixed location for all your meetings.</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">book now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -202,7 +202,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Free Fixed Table</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -231,7 +231,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Free Fixed Table</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -260,7 +260,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Free Fixed Table</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -289,7 +289,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Logo printing on the badge lanyard</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -318,7 +318,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Free Fixed Table</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -345,7 +345,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Logo printed on all convention collateral</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -372,7 +372,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Logo printed on all convention collateral</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -400,7 +400,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Logo printed on all convention collateral</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>
@@ -428,7 +428,7 @@ Cargo Convention is an open networking event for all to join, a one stop shop of
 	<li>Free Fixed Table</li>
 				    	
 				    </ul>
-				<a href="register"><button class="btn0 btn2">sign up now</button></a>
+				<a href="register"><button class="btn0 btn2">register now</button></a>
 					
 				  </div>
 				</div>

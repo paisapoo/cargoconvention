@@ -20,10 +20,9 @@
 		</div>
 	</div>
 </section>
-
+<section class="hotel-img-full full-1"></section>
 <section class="sec-content">
 	<div class="container">
-		
 		<div class="w-70">
 			
 			<p>Elevate your city escape: contemporary design meets comfort from the lobby to the rooftop poolside bar and restaurant. The Avani+ experience awaits riverside.</p>

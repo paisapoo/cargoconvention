@@ -71,7 +71,7 @@
 </section>
 <section class="button-regis">
 	<div class="container">
-		<button class="btn0 btn6">book now</button>
+		<button class="btn0 btn6">register now</button>
 	</div>
 </section>
 <section class="sec-content">

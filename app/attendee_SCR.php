@@ -1,6 +1,8 @@
 <script src="js/sorttable.js"></script>
 <script>
 function addNameFunc() {
+	document.getElementById("addCompany").value = '';
+	document.getElementById("addCountry").value = '';
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("addName");
   filter = input.value.toUpperCase();
@@ -19,6 +21,8 @@ function addNameFunc() {
   }
 }
 function addCompanyFunc() {
+	document.getElementById("addName").value = '';
+	document.getElementById("addCountry").value = '';
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("addCompany");
   filter = input.value.toUpperCase();
@@ -37,6 +41,8 @@ function addCompanyFunc() {
   }
 }
 function addCountryFunc() {
+	document.getElementById("addCompany").value = '';
+	document.getElementById("addName").value = '';
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("addCountry");
   filter = input.value.toUpperCase();

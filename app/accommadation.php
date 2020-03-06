@@ -160,9 +160,8 @@ Spread out and soak up the view from your bed or your bathtub.
 		
 		</div>
 		<p class="text-center">
-          <span class="btn code-bottom">BOOKING CODE:
-CARGOCON2020</span>
-          <a href="register"><span class="btn code-button">book now</span></a>
+         
+          <a href="https://www.avanihotels.com/en/riverside-bangkok" target="_blank"><span class="btn code-button">book rooms now</span></a>
       	</p>
 	</div>
 </section>

@@ -9,7 +9,7 @@
 <!-- banner heade -->
 <section class="sec-content">
 	<div class="container">
-		<p class="text-center t-bold t-40 c-blue">Meet Out Attendees</p>
+		<p class="text-center t-bold t-40 c-blue">Meet Our Attendees</p>
 		<hr class="or-line">
 	<div class="row search-box">
 		<div class="col-md-4">

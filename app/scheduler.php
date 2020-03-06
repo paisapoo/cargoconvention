@@ -49,7 +49,7 @@
 				</div>
 
 			</div>
-			<button class="btn0 btn4">book now</button>
+			<button class="btn0 btn4">register now</button>
 		</div>
 	</div>
 	<img src="images/scheduler/lite_blue.svg" class="lite_blue">

@@ -122,7 +122,7 @@ promote the above convention till the end of the campaign at no cost.
 				If you are interested in becoming an Endorsement Partner,
 please download the below registration form and send to <a href="mailto:<?=$adminemail?>">info@cargoconventions.com</a>
 <br>
-<a href="mailto:<?=$adminemail?>"><button class="btn0 btn-partner">become an endorsement partner</button></a>
+<a href="mailto:<?=$adminemail?>"><button class="btn0 btn-partner">let's partner</button></a>
 			</p>
 			</div>
 			 <!-- /media ben -->

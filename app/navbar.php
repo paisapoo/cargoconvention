@@ -3,7 +3,7 @@
 
 	<div class="container">
 		<ul class="list-inline h-button">
-		  <li class="list-inline-item"><a href="register"><button class="btn0 h-btn1">book now</button></a></li>
+		  <li class="list-inline-item"><a href="register"><button class="btn0 h-btn1">rigister now</button></a></li>
 		  <li class="list-inline-item"><a href="become"><button class="btn0 h-btn2">become a sponsor</button></a></li>
 		  
 		</ul>
@@ -34,7 +34,7 @@
 			          Visit
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			          <a class="dropdown-item" href="why_attendee">Why Attend </a>
+			          <a class="dropdown-item" href="why_attend">Why Attend </a>
 			           <a class="dropdown-item" href="why_sponsor">Why Sponsor </a>
 			          <a class="dropdown-item" href="pricing">Pricing</a>
 			           <a class="dropdown-item" href="venue">Venue</a>
