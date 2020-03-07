@@ -46,7 +46,7 @@
             	</tr>
             	<tr class="multi1">
                     <td></td>
-                    <td><span class="multi-select">select amount <input type="number" name="multiple-number" min="2" value="" /></span></td> 
+                    <td><span class="multi-select">select amount <input type="number" name="multiple-number" min="1" value="" /></span></td> 
                     <td><span class="amount">$0</span></td>    
                 </tr>
             	<tr>

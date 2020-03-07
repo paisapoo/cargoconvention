@@ -37,7 +37,7 @@
     </div>
   </div>
   
-  <form role="form" action="book_done" method="post">
+  <form role="form" action="confirm_booking" method="post">
   	<?php include "book_step1.php" ;?>
     <?php include "book_step2.php" ;?>
     <?php include "book_step3.php" ;?>

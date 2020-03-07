@@ -58,9 +58,7 @@ new WOW().init();
 
 <?php
 
-if ($countpage == 0) {
-	include 'error_SCR.php';
-}
+
 
 
 

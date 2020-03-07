@@ -39,6 +39,10 @@
                           '<label for="inputPassword4">Last Name</label>'+
                           '<input type="text" class="form-control"  placeholder="Please enter your last name" name="lastName[]">'+
                         '</div>'+
+                        '<div class="form-group col-md-5">'+
+                          '<label for="inputPassword4">Position</label>'+
+                          '<input type="text" class="form-control"  placeholder="Your Position" name="position[]">'+
+                        '</div>'+
                       '</div>'+
                    '</div>'+
                    '<!-- end form-firstname -->'+

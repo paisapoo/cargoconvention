@@ -38,13 +38,13 @@ if($alias == 'admin'){
 						}else{
 							header('location:admin');
 						}
-					
-					
 
 					break;
-				
 					case "home":
 
+					break;
+					case "confirm_booking":
+						echo $_POST['nameCom']."\\".$_POST['firstName'][0];
 					break;
 					case "news":
 					
