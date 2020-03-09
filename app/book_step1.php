@@ -1,3 +1,7 @@
+    <?php
+           echo print_r($_SESSION['booking1']); 
+    ?>
+    <form action="book_step2" method="POST">
     <div class="row setup-content" id="step-1" >
       <div class="col-md-12">
         <div class="col-md-12">
@@ -9,7 +13,7 @@
             	<tr>
             		<td>
             			<label class="check-input">
-            			<input type="checkbox" name="earlyBird" class="form-check-input" value="849" required="">
+            			<input type="checkbox" name="earlyBird" class="form-check-input" value="849" checked >
             			<span class="checkmark"></span>
             		</label>
             		</td>
@@ -82,7 +86,8 @@
             </table>
           </div>
          
-          <p class="b-center"><a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next step</button></a></p>
+          <p class="b-center"><a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="submit">Next step</button></a></p>
         </div>
       </div>
     </div>
+    </form>

@@ -1,4 +1,31 @@
-    <div class="row setup-content" id="step-2">
+<?php
+$_SESSION['booking1']= array(["pass"=>$_POST['earlyBird'],
+  "multi"=>$_POST['multiple-number'],
+  "spouse"=>$_POST['multiple-spouse'],
+  "fixed"=>$_POST['multiple-table']
+]);
+echo print_r($_SESSION['booking1']); 
+?>
+
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<section class="banner" >
+  <div class="container">
+    <p class="t-banner text-center wow fadeInUp">
+      Online Registration
+    </p>
+    <hr class="or-line-140" id="top-form">
+  </div>
+</section>
+<!-- banner heade -->
+<div class="form-steps" >
+  <div class="container">
+    <div class="w-80">
+      <div id="msform">
+  <!-- progressbar -->
+  <?php include "register_progress.php"?>
+  
+  <form action="book_step3" method="POST">
+     <div class="row setup-content" id="step-2">
       <div class="col-md-12 form-boder">
         
            <p class="form-title"> Become a Sponsor</p>
@@ -12,7 +39,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="platinum" class="form-check-input">
+                  <input type="checkbox" name="platinum" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -27,7 +54,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="gold" class="form-check-input">
+                  <input type="checkbox" name="gold" class="form-check-input" value="true" >
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -42,7 +69,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="welcome" class="form-check-input">
+                  <input type="checkbox" name="welcome" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -58,7 +85,7 @@ Everning Sponsor</span>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="meeting" class="form-check-input">
+                  <input type="checkbox" name="meeting" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -73,7 +100,7 @@ Everning Sponsor</span>
                <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="silver" class="form-check-input">
+                  <input type="checkbox" name="silver" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -93,7 +120,7 @@ Everning Sponsor</span>
                <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="coffee" class="form-check-input">
+                  <input type="checkbox" name="coffee" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -108,7 +135,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="beer" class="form-check-input">
+                  <input type="checkbox" name="beer" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -125,7 +152,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="shirt" class="form-check-input">
+                  <input type="checkbox" name="shirt" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -140,7 +167,7 @@ Everning Sponsor</span>
                      <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="landyard" class="form-check-input">
+                  <input type="checkbox" name="landyard" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -170,7 +197,7 @@ Everning Sponsor</span>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="insideFront" class="form-check-input">
+                  <input type="checkbox" name="insideFront" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -185,7 +212,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="insideBack" class="form-check-input">
+                  <input type="checkbox" name="insideBack" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -200,7 +227,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="spread" class="form-check-input">
+                  <input type="checkbox" name="spread" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -215,7 +242,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="fullPage" class="form-check-input">
+                  <input type="checkbox" name="fullPage" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -230,7 +257,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="halfPage" class="form-check-input">
+                  <input type="checkbox" name="halfPage" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -245,7 +272,7 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="quarterPage" class="form-check-input">
+                  <input type="checkbox" name="quarterPage" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -265,9 +292,18 @@ Everning Sponsor</span>
           </div>
         </div>
         <div class="col-md-12"  >
-    	<p class="b-center">
+      <p class="b-center">
           <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button>
-          <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next Step</button></a>
-      	</p>
+          <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="submit">Next Step</button></a>
+        </p>
       </div>
     </div>
+    
+  </form>
+      
+    </div>
+  </div>  
+</div>
+</div>
+
+   

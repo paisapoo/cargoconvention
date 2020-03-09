@@ -38,5 +38,12 @@ function paginate($item_per_page, $current_page, $total_records, $total_pages) {
 }
 
 
+function booking($x){
+
+	$booking_data = [];
+	return $booking_data;
+
+}
+
 
 ?>

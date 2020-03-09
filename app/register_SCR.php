@@ -1,61 +1,61 @@
 
 <script>
-$(document).ready(function () {
-  var navListItems = $('div.setup-panel div a'),
-      navNext = $('div.setup-panel div'),
-          allWells = $('.setup-content'),
-          allNextBtn = $('.nextBtn'),
-          allPrevBtn = $('.prevBtn');
+// $(document).ready(function () {
+//   var navListItems = $('div.setup-panel div a'),
+//       navNext = $('div.setup-panel div'),
+//           allWells = $('.setup-content'),
+//           allNextBtn = $('.nextBtn'),
+//           allPrevBtn = $('.prevBtn');
 
-  allWells.hide();
+//   allWells.hide();
 
-  navListItems.click(function (e) {
-      e.preventDefault();
-      var $target = $($(this).attr('href')),
-              $item = $(this);
+//   navListItems.click(function (e) {
+//       e.preventDefault();
+//       var $target = $($(this).attr('href')),
+//               $item = $(this);
 
-      if (!$item.hasClass('disabled')) {
-          navListItems.addClass('btn-default').removeClass('btn-active-form');
-          $item.addClass('btn-active-form');
-          allWells.hide();
-          $target.show();
-          $target.find('input:eq(0)').focus();
-      }
-  });
+//       if (!$item.hasClass('disabled')) {
+//           navListItems.addClass('btn-default').removeClass('btn-active-form');
+//           $item.addClass('btn-active-form');
+//           allWells.hide();
+//           $target.show();
+//           $target.find('input:eq(0)').focus();
+//       }
+//   });
   
-  allPrevBtn.click(function(){
-      var curStep = $(this).closest(".setup-content"),
-          curStepBtn = curStep.attr("id"),
-          prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+//   allPrevBtn.click(function(){
+//       var curStep = $(this).closest(".setup-content"),
+//           curStepBtn = curStep.attr("id"),
+//           prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
           
          
-          prevStepWizard.removeClass('disabled').trigger('click');
-  });
+//           prevStepWizard.removeClass('disabled').trigger('click');
+//   });
 
-  allNextBtn.click(function(){
-      var curStep = $(this).closest(".setup-content"),
-          curStepBtn = curStep.attr("id"),
-          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-          curInputs = curStep.find("input[type='checkbox'],input[type='url'],input[type='text']"),
-          isValid = true;
+//   allNextBtn.click(function(){
+//       var curStep = $(this).closest(".setup-content"),
+//           curStepBtn = curStep.attr("id"),
+//           nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+//           curInputs = curStep.find("input[type='checkbox'],input[type='url'],input[type='text']"),
+//           isValid = true;
 
-      $(".form-group").removeClass("has-error");
-      for(var i=0; i<curInputs.length; i++){
-          if (!curInputs[i].validity.valid){
-              isValid = false;
-              $(curInputs[i]).closest("tr").addClass("has-error");
+//       $(".form-group").removeClass("has-error");
+//       for(var i=0; i<curInputs.length; i++){
+//           if (!curInputs[i].validity.valid){
+//               isValid = false;
+//               $(curInputs[i]).closest("tr").addClass("has-error");
 
-          }else{
-             $(curInputs[i]).closest("tr").removeClass("has-error");
-          }
-      }
+//           }else{
+//              $(curInputs[i]).closest("tr").removeClass("has-error");
+//           }
+//       }
 
-      if (isValid)
-          nextStepWizard.removeClass('disabled').trigger('click');
-  });
+//       if (isValid)
+//           nextStepWizard.removeClass('disabled').trigger('click');
+//   });
 
-  $('div.setup-panel div a.btn-active-form').trigger('click');
-});
+//   $('div.setup-panel div a.btn-active-form').trigger('click');
+// });
 
 // check box step 1
 $(".multi-check1").change(function() {
@@ -73,9 +73,10 @@ var price1 = $("input[name='earlyBird']").val();
        
        $(".multi1 input[name='multiple-number']").change(function (){
         let attendee = $(this).val(); 
-        let amount = attendee * price1;
+        let amount = (attendee * parseInt(price1));
+
        
-       $('.multi1 .amount').html("$"+numberWithCommas(amount)+ " - (10%) : "+"<b>$"+numberWithCommas(amount - (amount*0.10))+"</b>");
+       $('.multi1 .amount').html("$"+numberWithCommas(amount));
        })
 $(".multi-check2").change(function() {
     if(this.checked) {

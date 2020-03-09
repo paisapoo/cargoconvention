@@ -1,4 +1,50 @@
-    <div class="row setup-content" id="step-4">
+<?php
+$_SESSION['booking3']= array([
+"attendee_title"=>$_POST['titleName'],
+"attendee_first"=>$_POST['firstName'],
+"attendee_last"=>$_POST['lastName'],
+"attendee_position"=>$_POST['position'],
+"vegetarian"=>$_POST['vegetarian'],
+"vegan"=>$_POST['vegan'],
+"halal"=>$_POST['halal'],
+"kosher"=>$_POST['kosher'],
+"glute"=>$_POST['glute'],
+"lactose"=>$_POST['lactose'],
+"otherStep3"=>$_POST['otherStep3'],
+"allergies"=>$_POST['allergies'],
+"spouse_title"=>$_POST['titleS'],
+"spouse_name"=>$_POST['fistS'],
+"spouse_last"=>$_POST['lastS'],
+"vegetarianS"=>$_POST['vegetarianS'],
+"veganS"=>$_POST['veganS'],
+"halalS"=>$_POST['halalS'],
+"kosherS"=>$_POST['kosherS'],
+"gluteS"=>$_POST['gluteS'],
+"lactoseS"=>$_POST['lactoseS'],
+"otherStep3S"=>$_POST['otherStep3S'],
+"allergiesS"=>$_POST['allergiesS'],
+]);
+print_r($_session['booking3'])
+?>
+
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<section class="banner" >
+  <div class="container">
+    <p class="t-banner text-center wow fadeInUp">
+      Online Registration
+    </p>
+    <hr class="or-line-140" id="top-form">
+  </div>
+</section>
+<!-- banner heade -->
+<div class="form-steps" >
+  <div class="container">
+    <div class="w-80">
+      <div id="msform">
+    <!-- progressbar -->
+  <?php include "register_progress.php"?>
+  <form action="book_step5" method="POST">
+      <div class="row setup-content" id="step-4">
       <div class="col-md-12 form-boder">
         
            <p class="form-title">Company Information</p>
@@ -23,17 +69,17 @@
             </div>
           </div>
             <div class="form-row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
                   <label for="inputEmail4">Mobile Phone</label>
                   <input type="text" name="mobileCom" class="form-control" placeholder="Company Mobile No.">
             </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                   <label for="inputEmail4">Website</label>
-                  <input type="text" name="websiteCome" class="form-control" placeholder="Company Website">
+                  <input type="text" name="websiteCom" class="form-control" placeholder="Company Website">
             </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                   <label for="inputEmail4">IATA Number</label>
-                  <input type="text" name="iataCome" class="form-control" placeholder="IATA No.">
+                  <input type="text" name="iataCom" class="form-control" placeholder="IATA No.">
             </div>
           
           </div>
@@ -73,7 +119,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="courier" class="form-check-input">
+                  <input type="checkbox" name="courier" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -85,7 +131,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="dangerous" class="form-check-input">
+                  <input type="checkbox" name="dangerous" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -98,7 +144,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="events" class="form-check-input">
+                  <input type="checkbox" name="events" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -110,7 +156,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="exhibition" class="form-check-input">
+                  <input type="checkbox" name="exhibition" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -123,7 +169,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="household" class="form-check-input">
+                  <input type="checkbox" name="household" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -136,7 +182,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="liquid" class="form-check-input">
+                  <input type="checkbox" name="liquid" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -149,7 +195,7 @@
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="live" class="form-check-input">
+                  <input type="checkbox" name="live" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -162,7 +208,7 @@
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="nvocc" class="form-check-input">
+                  <input type="checkbox" name="nvocc" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -175,7 +221,7 @@
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="perishable" class="form-check-input">
+                  <input type="checkbox" name="perishable" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -188,7 +234,7 @@
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="pharmaceuticals" class="form-check-input">
+                  <input type="checkbox" name="pharmaceuticals" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -205,7 +251,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="project" class="form-check-input">
+                  <input type="checkbox" name="project" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -217,7 +263,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="ships" class="form-check-input">
+                  <input type="checkbox" name="ships" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -229,7 +275,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="time" class="form-check-input">
+                  <input type="checkbox" name="time" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -242,7 +288,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="wholesale" class="form-check-input">
+                  <input type="checkbox" name="wholesale" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -255,7 +301,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="customs" class="form-check-input">
+                  <input type="checkbox" name="customs" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -268,7 +314,7 @@
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="seafreight" class="form-check-input">
+                  <input type="checkbox" name="seafreight" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -281,7 +327,7 @@
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="airfreight" class="form-check-input">
+                  <input type="checkbox" name="airfreight" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -294,7 +340,7 @@
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="importer" class="form-check-input">
+                  <input type="checkbox" name="importer" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -307,7 +353,7 @@
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="exporter" class="form-check-input">
+                  <input type="checkbox" name="exporter" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -320,7 +366,7 @@
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="ecommerce" class="form-check-input">
+                  <input type="checkbox" name="ecommerce" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -349,7 +395,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="courierSe" class="form-check-input">
+                  <input type="checkbox" name="courierSe" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -361,7 +407,7 @@
                 <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightMeSe" class="form-check-input">
+                  <input type="checkbox" name="freightMeSe" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -373,7 +419,7 @@
                               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightPaSe" class="form-check-input">
+                  <input type="checkbox" name="freightPaSe" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -389,7 +435,7 @@
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightTeSe" class="form-check-input">
+                  <input type="checkbox" name="freightTeSe" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -401,7 +447,7 @@
                 <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightEvSe" class="form-check-input">
+                  <input type="checkbox" name="freightEvSe" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -413,7 +459,7 @@
                               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="nom-profit" class="form-check-input">
+                  <input type="checkbox" name="nom-profit" class="form-check-input" value="true">
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -450,10 +496,19 @@
         </div>
       </div>
         <div class="col-md-12">
-    	<p class="b-center">
+      <p class="b-center">
           <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button>
-          <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="button">Next Step</button>
+          <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="submit">Next Step</button>
           </a>
-      	</p>
+        </p>
       </div>
     </div>
+  
+  
+    
+  </form>
+      
+    </div>
+  </div>  
+</div>
+</div>
