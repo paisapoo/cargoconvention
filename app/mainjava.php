@@ -33,6 +33,21 @@ new WOW().init();
        }
     });
 
+var loca = window.location.pathname;
+
+
+$('.nav-item').find('a').each(function() {
+     var link = "/"+$(this).attr('href');
+         if(loca == "/"){
+      loca = "/home";
+         }
+      var parentTag = $(this).parent();
+     console.log(loca);
+     parentTag.toggleClass('active', link == loca);  
+
+  });
+
+
  var navDrop = $(".navbar-nav .dropdown");
       navDrop.each(function(){
               var $this = $(this);

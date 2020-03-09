@@ -15,7 +15,9 @@
             	<tr>
             		<td>
             			<label class="check-input">
-            			<input type="checkbox" name="att_pass[]" class="form-check-input" value="<?=$pass['price']?>" <?=$pass['status']=='no'?'disabled=""':'required'?> <?=in_array($pass['price'],$_SESSION['booking1'][0]['pass'])?'checked':''?>>
+            			<input type="checkbox" name="att_pass[]" class="form-check-input" value="<?=$pass['price']?>" <?=$pass['status']=='no'?'disabled=""':'required'?> <?php
+                            if($_SESSION['booking1'][0]['pass']){
+                        echo in_array($pass['price'],$_SESSION['booking1'][0]['pass'])?'checked':'';}?>>
             			<span class="checkmark <?=$pass['status']=='no'?'disform-check':''?>"></span>
             		</label>
             		</td>
