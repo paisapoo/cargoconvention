@@ -28,7 +28,7 @@
 
 .btn.disabled,
 .btn:disabled {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .stepwizard .row {

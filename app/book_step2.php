@@ -1,11 +1,3 @@
-<?php
-$_SESSION['booking1']= array(["pass"=>$_POST['earlyBird'],
-  "multi"=>$_POST['multiple-number'],
-  "spouse"=>$_POST['multiple-spouse'],
-  "fixed"=>$_POST['multiple-table']
-]);
-echo print_r($_SESSION['booking1']); 
-?>
 
 <link rel="stylesheet" type="text/css" href="css/register.css">
 <section class="banner" >
@@ -24,7 +16,7 @@ echo print_r($_SESSION['booking1']);
   <!-- progressbar -->
   <?php include "register_progress.php"?>
   
-  <form action="book_step3" method="POST">
+  <form action="save_step2" method="POST">
      <div class="row setup-content" id="step-2">
       <div class="col-md-12 form-boder">
         
@@ -33,82 +25,83 @@ echo print_r($_SESSION['booking1']);
           <div class="form-group">
             <p class="form-title-sec">Sign up as a Sponsor</p>
             <p>The more you invest into your branding, the better you connect with the community. Take the chance to get more exposure at The 1st Cargo Convention by availing any of the sponsorship items below.</p>
+
             <div class="row">
+
               <div class="col-md-6">
                 <table>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="platinum" class="form-check-input" value="true">
+                  <input type="checkbox" name="platinum" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['platinum']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Platinum Sponsor (x1)</span>
+                  <span class="label-t-form"><?=getSponsor('platinum')['name']?> (x<?=getSponsor('platinum')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$4,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('platinum')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="gold" class="form-check-input" value="true" >
+                  <input type="checkbox" name="gold" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['gold']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Gold Sponsor (x2)</span>
+                  <span class="label-t-form"><?=getSponsor('gold')['name']?> (x<?=getSponsor('gold')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('gold')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="welcome" class="form-check-input" value="true">
+                  <input type="checkbox" name="welcome" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['welcome']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Welcome Network
-Everning Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('welcome')['name']?> (x<?=getSponsor('welcome')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('welcome')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="meeting" class="form-check-input" value="true">
+                  <input type="checkbox" name="meeting" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['meeting']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Meeting Scheduler Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('meeting')['name']?> (x<?=getSponsor('meeting')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$3,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('meeting')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
                <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="silver" class="form-check-input" value="true">
+                  <input type="checkbox" name="silver" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['silver']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Silver Sponsor (x1)</span>
+                  <span class="label-t-form"><?=getSponsor('silver')['name']?> (x<?=getSponsor('silver')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$2,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('silver')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
@@ -120,30 +113,30 @@ Everning Sponsor</span>
                <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="coffee" class="form-check-input" value="true">
+                  <input type="checkbox" name="coffee" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['coffee']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Coffee Break Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('coffee')['name']?> (x<?=getSponsor('coffee')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$2,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('coffee')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="beer" class="form-check-input" value="true">
+                  <input type="checkbox" name="beer" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['beer']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Beer-zone Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('beer')['name']?> (x<?=getSponsor('beer')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$2,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('beer')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
@@ -152,30 +145,30 @@ Everning Sponsor</span>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="shirt" class="form-check-input" value="true">
+                  <input type="checkbox" name="shirt" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['shirt']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">T-shirt Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('shirt')['name']?> (x<?=getSponsor('shirt')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$2,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('shirt')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
                      <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="landyard" class="form-check-input" value="true">
+                  <input type="checkbox" name="landyard" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['landyard']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Landyard Sponsor</span>
+                  <span class="label-t-form"><?=getSponsor('landyard')['name']?> (x<?=getSponsor('landyard')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$1,500</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('landyard')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
@@ -197,90 +190,90 @@ Everning Sponsor</span>
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="insideFront" class="form-check-input" value="true">
+                  <input type="checkbox" name="insideFront" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['insideFront']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Inside Front Cover</span>
+                  <span class="label-t-form"><?=getSponsor('insideFront')['name']?> (x<?=getSponsor('insideFront')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$1,500</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('insideFront')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="insideBack" class="form-check-input" value="true">
+                  <input type="checkbox" name="insideBack" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['insideBack']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Inside Back Cover</span>
+                  <span class="label-t-form"><?=getSponsor('insideBack')['name']?> (x<?=getSponsor('insideBack')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$1,500</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('insideBack')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="spread" class="form-check-input" value="true">
+                  <input type="checkbox" name="spread" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['spread']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Spread</span>
+                  <span class="label-t-form"><?=getSponsor('spread')['name']?> (x<?=getSponsor('spread')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$1,000</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('spread')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="fullPage" class="form-check-input" value="true">
+                  <input type="checkbox" name="fullPage" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['fullPage']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Full Page</span>
+                  <span class="label-t-form"><?=getSponsor('fullPage')['name']?> (x<?=getSponsor('fullPage')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$800</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('fullPage')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="halfPage" class="form-check-input" value="true">
+                  <input type="checkbox" name="halfPage" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['halfPage']=='true'?"checked":""?>> 
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Half Page</span>
+                  <span class="label-t-form"><?=getSponsor('halfPage')['name']?> (x<?=getSponsor('halfPage')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$600</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('halfPage')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="quarterPage" class="form-check-input" value="true">
+                  <input type="checkbox" name="quarterPage" class="form-check-input" value="true" <?=$_SESSION['booking_adver'][0]['quarterPage']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form">Quarter Page</span>
+                  <span class="label-t-form"><?=getSponsor('quarterPage')['name']?> (x<?=getSponsor('quarterPage')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$400</span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('quarterPage')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
@@ -293,7 +286,8 @@ Everning Sponsor</span>
         </div>
         <div class="col-md-12"  >
       <p class="b-center">
-          <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button>
+        <a href="register">
+          <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button></a>
           <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="submit">Next Step</button></a>
         </p>
       </div>

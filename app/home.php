@@ -82,7 +82,7 @@
 			</div>
 			<div class="col-md-6 align-self-end">
 				<div class="video-wrapper">
-                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.png" src="images/video/Cargo-Con-full_1.mp4">
+                  		<video id="video-1" class="video-1 mx-auto "  poster="images/video/network-management-cover.jpg" src="images/video/Cargo-Con-full_1.mp4">
   						</video>
 				</div>
 			</div>

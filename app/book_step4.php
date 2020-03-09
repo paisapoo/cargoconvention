@@ -1,31 +1,3 @@
-<?php
-$_SESSION['booking3']= array([
-"attendee_title"=>$_POST['titleName'],
-"attendee_first"=>$_POST['firstName'],
-"attendee_last"=>$_POST['lastName'],
-"attendee_position"=>$_POST['position'],
-"vegetarian"=>$_POST['vegetarian'],
-"vegan"=>$_POST['vegan'],
-"halal"=>$_POST['halal'],
-"kosher"=>$_POST['kosher'],
-"glute"=>$_POST['glute'],
-"lactose"=>$_POST['lactose'],
-"otherStep3"=>$_POST['otherStep3'],
-"allergies"=>$_POST['allergies'],
-"spouse_title"=>$_POST['titleS'],
-"spouse_name"=>$_POST['fistS'],
-"spouse_last"=>$_POST['lastS'],
-"vegetarianS"=>$_POST['vegetarianS'],
-"veganS"=>$_POST['veganS'],
-"halalS"=>$_POST['halalS'],
-"kosherS"=>$_POST['kosherS'],
-"gluteS"=>$_POST['gluteS'],
-"lactoseS"=>$_POST['lactoseS'],
-"otherStep3S"=>$_POST['otherStep3S'],
-"allergiesS"=>$_POST['allergiesS'],
-]);
-print_r($_session['booking3'])
-?>
 
 <link rel="stylesheet" type="text/css" href="css/register.css">
 <section class="banner" >
@@ -43,7 +15,7 @@ print_r($_session['booking3'])
       <div id="msform">
     <!-- progressbar -->
   <?php include "register_progress.php"?>
-  <form action="book_step5" method="POST">
+  <form action="save_step4" method="POST">
       <div class="row setup-content" id="step-4">
       <div class="col-md-12 form-boder">
         
@@ -53,7 +25,7 @@ print_r($_session['booking3'])
           <div class="form-row">
             <div class="form-group col-md-4">
                   <label for="inputEmail4">Company</label>
-                  <input type="text" name="nameCom" class="form-control" placeholder="Company Name">
+                  <input type="text" name="nameCom" class="form-control" placeholder="Company Name" value="<?=$_SESSION['booking4'][0]['nameCom']?>">
             </div>
                 <!-- <div class="form-group col-md-3">
                   <label for="inputEmail4">Position</label>
@@ -61,44 +33,46 @@ print_r($_session['booking3'])
             </div> -->
                 <div class="form-group col-md-4">
                   <label for="inputEmail4">Email</label>
-                  <input type="email" name="emailCom" class="form-control" placeholder="Your Business Email">
+                  <input type="email" name="emailCom" class="form-control" placeholder="Your Business Email" value="<?=$_SESSION['booking4'][0]['emailCom']?>">
             </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4">Company Phone</label>
-                  <input type="text" name="phoneCom" class="form-control" placeholder="Company Telephone No.">
+                  <input type="text" name="phoneCom" class="form-control" placeholder="Company Telephone No." value="<?=$_SESSION['booking4'][0]['phoneCom']?>">
             </div>
           </div>
             <div class="form-row">
             <div class="form-group col-md-4">
                   <label for="inputEmail4">Mobile Phone</label>
-                  <input type="text" name="mobileCom" class="form-control" placeholder="Company Mobile No.">
+                  <input type="text" name="mobileCom" class="form-control" placeholder="Company Mobile No." value="<?=$_SESSION['booking4'][0]['mobileCom']?>">
             </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4">Website</label>
-                  <input type="text" name="websiteCom" class="form-control" placeholder="Company Website">
+                  <input type="text" name="websiteCom" class="form-control" placeholder="Company Website" value="<?=$_SESSION['booking4'][0]['websiteCom']?>">
             </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4">IATA Number</label>
-                  <input type="text" name="iataCom" class="form-control" placeholder="IATA No.">
+                  <input type="text" name="iataCom" class="form-control" placeholder="IATA No." value="<?=$_SESSION['booking4'][0]['iataCom']?>">
             </div>
           
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
                   <label for="inputEmail4">Address</label>
-                  <input type="text" name="addressCom" class="form-control" placeholder="Company Address">
+                  <input type="text" name="addressCom" class="form-control" placeholder="Company Address" value="<?=$_SESSION['booking4'][0]['addressCom']?>">
             </div>
                 <div class="form-group col-md-3">
                   <label for="inputEmail4">City</label>
-                  <input type="text" name="cityCom" class="form-control" placeholder="Based City">
+                  <input type="text" name="cityCom" class="form-control" placeholder="Based City" value="<?=$_SESSION['booking4'][0]['cityCom']?>">
             </div>
                 <div class="form-group col-md-3">
                   <label for="inputEmail4">Country</label>
                   <select class="custom-select" id="inputGroupSelect01" name="countryCom">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="">Choose...</option>
+                      <?php $country = $database->select("countries","*");
+                        foreach($country as $countries){
+                      ?>
+                      <option value="<?=$countries['id']?>" <?=$_SESSION['booking4'][0]['countryCom']==$countries['id']?'selected':''?>><?=$countries['name']?></option>
+                  <?php } ?>
                     </select>
             </div>
           </div>
@@ -106,7 +80,7 @@ print_r($_session['booking3'])
             <div class="form-group col-md-12">
                  
                   <label for="inputEmail4">Current Networks*</label>
-                  <input type="text" name="currentNetCom" class="form-control" placeholder="Please enter name of the network your company is in">
+                  <input type="text" name="currentNetCom" class="form-control" placeholder="Please enter name of the network your company is in" value="<?=$_SESSION['booking4'][0]['currentNetCom']?>">
           
             </div>
           </div>
@@ -119,7 +93,7 @@ print_r($_session['booking3'])
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="courier" class="form-check-input" value="true">
+                  <input type="checkbox" name="courier" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['courier']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -131,7 +105,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="dangerous" class="form-check-input" value="true">
+                  <input type="checkbox" name="dangerous" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['dangerous']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -144,7 +118,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="events" class="form-check-input" value="true">
+                  <input type="checkbox" name="events" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['events']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -156,7 +130,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="exhibition" class="form-check-input" value="true">
+                  <input type="checkbox" name="exhibition" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['exhibition']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -169,7 +143,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="household" class="form-check-input" value="true">
+                  <input type="checkbox" name="household" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['household']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -182,7 +156,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="liquid" class="form-check-input" value="true">
+                  <input type="checkbox" name="liquid" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['liquid']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -195,7 +169,7 @@ print_r($_session['booking3'])
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="live" class="form-check-input" value="true">
+                  <input type="checkbox" name="live" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['live']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -208,7 +182,7 @@ print_r($_session['booking3'])
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="nvocc" class="form-check-input" value="true">
+                  <input type="checkbox" name="nvocc" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['nvocc']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -221,7 +195,7 @@ print_r($_session['booking3'])
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="perishable" class="form-check-input" value="true">
+                  <input type="checkbox" name="perishable" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['perishable']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -234,7 +208,7 @@ print_r($_session['booking3'])
                     <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="pharmaceuticals" class="form-check-input" value="true">
+                  <input type="checkbox" name="pharmaceuticals" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['pharmaceuticals']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -251,7 +225,7 @@ print_r($_session['booking3'])
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="project" class="form-check-input" value="true">
+                  <input type="checkbox" name="project" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['project']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -263,7 +237,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="ships" class="form-check-input" value="true">
+                  <input type="checkbox" name="ships" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['ships']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -275,7 +249,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="time" class="form-check-input" value="true">
+                  <input type="checkbox" name="time" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['time']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -288,7 +262,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="wholesale" class="form-check-input" value="true">
+                  <input type="checkbox" name="wholesale" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['wholesale']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -301,7 +275,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="customs" class="form-check-input" value="true">
+                  <input type="checkbox" name="customs" class="form-check-input" value="true"  <?=$_SESSION['booking4'][0]['customs']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -314,7 +288,7 @@ print_r($_session['booking3'])
               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="seafreight" class="form-check-input" value="true">
+                  <input type="checkbox" name="seafreight" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['seafreight']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -327,7 +301,7 @@ print_r($_session['booking3'])
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="airfreight" class="form-check-input" value="true">
+                  <input type="checkbox" name="airfreight" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['airfreight']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -340,7 +314,7 @@ print_r($_session['booking3'])
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="importer" class="form-check-input" value="true">
+                  <input type="checkbox" name="importer" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['importer']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -353,7 +327,7 @@ print_r($_session['booking3'])
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="exporter" class="form-check-input" value="true">
+                  <input type="checkbox" name="exporter" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['exporter']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -366,7 +340,7 @@ print_r($_session['booking3'])
                        <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="ecommerce" class="form-check-input" value="true">
+                  <input type="checkbox" name="ecommerce" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['ecommerce']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -395,7 +369,7 @@ print_r($_session['booking3'])
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="courierSe" class="form-check-input" value="true">
+                  <input type="checkbox" name="courierSe" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['courierSe']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -407,7 +381,7 @@ print_r($_session['booking3'])
                 <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightMeSe" class="form-check-input" value="true">
+                  <input type="checkbox" name="freightMeSe" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['freightMeSe']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -419,7 +393,7 @@ print_r($_session['booking3'])
                               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightPaSe" class="form-check-input" value="true">
+                  <input type="checkbox" name="freightPaSe" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['freightPaSe']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -435,7 +409,7 @@ print_r($_session['booking3'])
                   <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightTeSe" class="form-check-input" value="true">
+                  <input type="checkbox" name="freightTeSe" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['freightTeSe']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -447,7 +421,7 @@ print_r($_session['booking3'])
                 <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="freightEvSe" class="form-check-input" value="true">
+                  <input type="checkbox" name="freightEvSe" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['freightEvSe']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -459,7 +433,7 @@ print_r($_session['booking3'])
                               <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="nom-profit" class="form-check-input" value="true">
+                  <input type="checkbox" name="nom-profit" class="form-check-input" value="true" <?=$_SESSION['booking4'][0]['nom-profit']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
@@ -479,10 +453,11 @@ print_r($_session['booking3'])
               <div class="form-row">
                <div class="col-md-4">
                  <select class="custom-select" id="inputGroupSelect01" name="howLearn">
-                  
-                  <option value="1">Email Invitation</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <?php $hows = $database->get("avalible","*",["name"=>'howdidyoulearn']);
+                  foreach(json_decode($hows['detail']) as $how){
+                  ?>
+                  <option value="<?=$how?>" <?=$how==$_SESSION['booking4'][0]['howLearn']?"selected":""?>><?=$how?></option>
+                 <?php } ?>
                 </select>
                </div>
               </div>
@@ -490,14 +465,14 @@ print_r($_session['booking3'])
                 <div class="col-md-12">
                   <br>
                 <label for="inputEmail" class="form-title-th">Your Message</label>
-                          <textarea class="form-control" placeholder="Please enter your message to us" rows="5" name="textMessage"></textarea>
+                          <textarea class="form-control" placeholder="Please enter your message to us" rows="5" name="textMessage"><?=$_SESSION['booking4'][0]['textMessage']?></textarea>
               </div>
             </div>
         </div>
       </div>
         <div class="col-md-12">
       <p class="b-center">
-          <button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button>
+          <a href="book_step3"><button class="btn btn-active-pre prevBtn btn-lg pull-left" type="button">Back</button></a>
           <a href="#top-form"><button class="btn btn-active-form nextBtn btn-lg pull-right" type="submit">Next Step</button>
           </a>
         </p>

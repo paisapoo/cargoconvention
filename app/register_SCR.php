@@ -1,63 +1,14 @@
+<script>
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+</script>
 
 <script>
-// $(document).ready(function () {
-//   var navListItems = $('div.setup-panel div a'),
-//       navNext = $('div.setup-panel div'),
-//           allWells = $('.setup-content'),
-//           allNextBtn = $('.nextBtn'),
-//           allPrevBtn = $('.prevBtn');
 
-//   allWells.hide();
 
-//   navListItems.click(function (e) {
-//       e.preventDefault();
-//       var $target = $($(this).attr('href')),
-//               $item = $(this);
-
-//       if (!$item.hasClass('disabled')) {
-//           navListItems.addClass('btn-default').removeClass('btn-active-form');
-//           $item.addClass('btn-active-form');
-//           allWells.hide();
-//           $target.show();
-//           $target.find('input:eq(0)').focus();
-//       }
-//   });
-  
-//   allPrevBtn.click(function(){
-//       var curStep = $(this).closest(".setup-content"),
-//           curStepBtn = curStep.attr("id"),
-//           prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-          
-         
-//           prevStepWizard.removeClass('disabled').trigger('click');
-//   });
-
-//   allNextBtn.click(function(){
-//       var curStep = $(this).closest(".setup-content"),
-//           curStepBtn = curStep.attr("id"),
-//           nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-//           curInputs = curStep.find("input[type='checkbox'],input[type='url'],input[type='text']"),
-//           isValid = true;
-
-//       $(".form-group").removeClass("has-error");
-//       for(var i=0; i<curInputs.length; i++){
-//           if (!curInputs[i].validity.valid){
-//               isValid = false;
-//               $(curInputs[i]).closest("tr").addClass("has-error");
-
-//           }else{
-//              $(curInputs[i]).closest("tr").removeClass("has-error");
-//           }
-//       }
-
-//       if (isValid)
-//           nextStepWizard.removeClass('disabled').trigger('click');
-//   });
-
-//   $('div.setup-panel div a.btn-active-form').trigger('click');
-// });
-
-// check box step 1
 $(".multi-check1").change(function() {
     if(this.checked) {
        $('.multi1').show(); 
@@ -69,7 +20,7 @@ $(".multi-check1").change(function() {
         $(".multi1 input").val(0);
       }
 });
-var price1 = $("input[name='earlyBird']").val();
+var price1 = $("input[name='att_pass[]']").val();
        
        $(".multi1 input[name='multiple-number']").change(function (){
         let attendee = $(this).val(); 
@@ -78,6 +29,18 @@ var price1 = $("input[name='earlyBird']").val();
        
        $('.multi1 .amount').html("$"+numberWithCommas(amount));
        })
+
+var check1 = $( ".multi-check1" ).prop( "checked");
+
+ if(check1){
+    $('.multi1').show();
+    let attendee = $(".multi1 input[name='multiple-number']").val();
+    let amount = (attendee * parseInt(price1));
+    console.log(amount);
+    $('.multi1 .amount').html("$"+numberWithCommas(amount)); 
+ }
+
+
 $(".multi-check2").change(function() {
     if(this.checked) {
        $('.multi2').show();
@@ -97,6 +60,17 @@ var price2 = $(".multi-check2").val();
        
        $('.multi2 .amount').html("$"+numberWithCommas(amount));
        });
+
+var check2 = $( ".multi-check2" ).prop( "checked");
+
+ if(check2){
+    $('.multi2').show();
+    let attendee = $(".multi2 input[name='multiple-spouse']").val();
+    let amount = (attendee * parseInt(price2));
+    console.log(amount);
+    $('.multi2 .amount').html("$"+numberWithCommas(amount)); 
+ }
+
 
 $(".multi-check3").change(function() {
     if(this.checked) {
@@ -118,14 +92,15 @@ var price3 = $(".multi-check3").val();
        $('.multi3 .amount').html("$"+numberWithCommas(amount));
        });
 
+var check3 = $( ".multi-check3" ).prop( "checked");
 
+ if(check3){
+    $('.multi3').show();
+    let attendee = $(".multi3 input[name='multiple-table']").val();
+    let amount = (attendee * parseInt(price3));
+    console.log(amount);
+    $('.multi3 .amount').html("$"+numberWithCommas(amount)); 
+ }
 
 </script>
 <!-- format comma -->
-<script>
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-}
-
-
-</script>
