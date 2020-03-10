@@ -34,19 +34,27 @@ new WOW().init();
     });
 
 var loca = window.location.pathname;
-
-
 $('.nav-item').find('a').each(function() {
      var link = "/"+$(this).attr('href');
          if(loca == "/"){
       loca = "/home";
          }
       var parentTag = $(this).parent();
-     console.log(loca);
+    
      parentTag.toggleClass('active', link == loca);  
 
   });
 
+$('.stepwizard-step').find('a').each(function() {
+     var link = "/"+$(this).attr('href');
+         if(loca == "/"){
+      loca = "/home";
+         }
+      var parentTag = $(this);
+  
+     parentTag.toggleClass('btn-active-form', link == loca);  
+
+  });
 
  var navDrop = $(".navbar-nav .dropdown");
       navDrop.each(function(){

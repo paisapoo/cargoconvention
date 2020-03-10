@@ -36,7 +36,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-2">
                           <label for="inputEmail4">Title</label>
-                           <select class="custom-select" id="inputGroupSelect02" name="titleName[]">
+                           <select class="custom-select" id="inputGroupSelect02" name="titleName[]" required="">
                             <option value="Mr" <?=$_SESSION['booking3'][0]['attendee_title'][$i]=='Mr'?"selected":""?>>Mr</option>
                             <option value="Miss" <?=$_SESSION['booking3'][0]['attendee_title'][$i]=='Miss'?"selected":""?>>Miss</option>
                             <option value="Mrs" <?=$_SESSION['booking3'][0]['attendee_title'][$i]=='Mrs'?"selected":""?>>Mrs</option>
@@ -45,15 +45,22 @@
                         </div>
                         <div class="form-group col-md-5">
                          <label for="inputPassword4">First Name</label>
-                          <input type="text" class="form-control" placeholder="Please enter your first name" name="firstName[]" value="<?=$_SESSION['booking3'][0]['attendee_first'][$i]?>">
+                          <input type="text" class="form-control" placeholder="Please enter your first name" name="firstName[]" value="<?=$_SESSION['booking3'][0]['attendee_first'][$i]?>" required="">
                         </div>
                         <div class="form-group col-md-5">
                           <label for="inputPassword4">Last Name</label>
-                          <input type="text" class="form-control"  placeholder="Please enter your last name" name="lastName[]" value="<?=$_SESSION['booking3'][0]['attendee_last'][$i]?>">
+                          <input type="text" class="form-control"  placeholder="Please enter your last name" name="lastName[]" value="<?=$_SESSION['booking3'][0]['attendee_last'][$i]?>" required="">
                         </div>
                         <div class="form-group col-md-5">
                           <label for="inputPassword4">Position</label>
-                          <input type="text" class="form-control"  placeholder="Your Position" name="position[]" value="<?=$_SESSION['booking3'][0]['attendee_position'][$i]?>">
+                          <input type="text" class="form-control"  placeholder="Your Position" name="position[]" value="<?=$_SESSION['booking3'][0]['attendee_position'][$i]?>" required=""> 
+                        </div>
+                        <div class="form-group col-md-5">
+                          <label for="inputPassword4">Size T-shirt</label>
+                          <input type="text" class="form-control"  placeholder="Your T-Shirt Size" name="t-shirt[]" value="<?=$_SESSION['booking3'][0]['attendee_t-shirt'][$i]?>" required="">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputPassword4">Size Charts</label>
                         </div>
                       </div>
                    </div>
@@ -200,7 +207,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-2">
                           <label for="inputEmail4">Title</label>
-                           <select class="custom-select" id="inputGroupSelect02" name="titleS[]">
+                           <select class="custom-select" id="inputGroupSelect02" name="titleS[]" required="">
 
                             <option value="Mr" <?=$_SESSION['booking3'][0]['spouse_title'][$i]=='Mr'?"selected":""?>>Mr</option>
                             <option value="Miss" <?=$_SESSION['booking3'][0]['spouse_title'][$i]=='Miss'?"selected":""?>>Miss</option>
@@ -210,11 +217,11 @@
                         </div>
                         <div class="form-group col-md-5">
                           <label for="inputPassword4">First Name</label>
-                          <input type="text" class="form-control" placeholder="Please enter your first name" name="fisrtS[]" value="<?=$_SESSION['booking3'][0]['spouse_name'][$i]?>">
+                          <input type="text" class="form-control" placeholder="Please enter your first name" name="fisrtS[]" value="<?=$_SESSION['booking3'][0]['spouse_name'][$i]?>" required=""> 
                         </div>
                         <div class="form-group col-md-5">
                           <label for="inputPassword4">Last Name</label>
-                          <input type="text" class="form-control"  placeholder="Please enter your last name" name="lastS[]" value="<?=$_SESSION['booking3'][0]['spouse_last'][$i]?>">
+                          <input type="text" class="form-control"  placeholder="Please enter your last name" name="lastS[]" value="<?=$_SESSION['booking3'][0]['spouse_last'][$i]?>" required="">
                         </div>
                       </div>
                    </div>
@@ -366,7 +373,7 @@
     </div>
   </div>  
 </div>
-
+</div>
    
          
             

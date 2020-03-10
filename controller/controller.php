@@ -1,6 +1,6 @@
 <?php
-include "function.php";
 use PHPMailer\PHPMailer\PHPMailer;
+include "function.php";
 
 $alias = $_GET['alias'];
 if($alias == 'admin'){
@@ -45,13 +45,13 @@ if($alias == 'admin'){
 					break;
 					case"save_step1":
 					$multi = $_POST['multiple-number']== 0 || $_POST['multiple-number']==''?1:$_POST['multiple-number'];
-$_SESSION['booking1']= array(["pass"=>$_POST['att_pass'],
-  "multi"=>$multi,
-  "spouse"=>$_POST['multiple-spouse'],
-  "fixed"=>$_POST['multiple-table']
-]);
+						$_SESSION['booking1']= array(["pass"=>$_POST['att_pass'],
+						  "multi"=>$multi,
+						  "spouse"=>$_POST['multiple-spouse']==''?0:$_POST['multiple-spouse'],
+						  "fixed"=>$_POST['multiple-table']==''?0:$_POST['multiple-table']
+						]);
 
-           header("location:book_step2");
+           			header("location:book_step2");
 					break;
 					case"save_step2":
 					$_SESSION['booking2'] = array(["platinum"=>$_POST['platinum'],
@@ -62,7 +62,7 @@ $_SESSION['booking1']= array(["pass"=>$_POST['att_pass'],
 "coffee"=>$_POST['coffee'],
 "beer"=>$_POST['beer'],
 "shirt"=>$_POST['shirt'],
-"landyard"=>$_POST['landyard']
+"lanyard"=>$_POST['lanyard']
 ]);
 $_SESSION['booking_adver'] = array(["insideFront"=>$_POST['insideFront'],
 "insideBack"=>$_POST['insideBack'],
@@ -71,7 +71,7 @@ $_SESSION['booking_adver'] = array(["insideFront"=>$_POST['insideFront'],
 "halfPage"=>$_POST['halfPage'],
 "quarterPage"=>$_POST['quarterPage']
 ]);
-print_r($_SESSION['booking2']);
+
 header("location:book_step3");
 					break;
 					case"save_step3":
@@ -80,6 +80,7 @@ header("location:book_step3");
 "attendee_first"=>$_POST['firstName'],
 "attendee_last"=>$_POST['lastName'],
 "attendee_position"=>$_POST['position'],
+"attendee_t-shirt"=>$_POST['t-shirt'],
 "vegetarian"=>$_POST['vegetarian'],
 "vegan"=>$_POST['vegan'],
 "halal"=>$_POST['halal'],
@@ -100,7 +101,7 @@ header("location:book_step3");
 "otherStep3S"=>$_POST['otherStep3S'],
 "allergiesS"=>$_POST['allergiesS'],
 ]);
-print_r($_session['booking3']);
+
 header("location:book_step4");
 					break;
 					case"save_step4":
@@ -144,21 +145,155 @@ header("location:book_step4");
 "howLearn"=>$_POST['howLearn'],
 "textMessage"=>$_POST['textMessage']
 ]);
-					header("location:book_step5");
+					header("location:book_step5");	
 					break;
-					case "clear_form":
+
+					case "book_done":
 					session_destroy();
-					header("location:register");
+					
 					break;
+
 					case "confirm_booking":
-						echo $_POST['nameCom']."\\".$_POST['firstName'][0];
+					
+					// insert company
+
+					$specialization = specialization();
+					$sevices = services();
+					$detail_com= array("How Learn"=>$_SESSION['booking4'][0]['howLearn'],"Message"=>$_SESSION['booking4'][0]['textMessage'],
+						"Current Network"=>$_SESSION['booking4'][0]['currentNetCom'],
+						"IATA"=>$_SESSION['booking4'][0]['iataCom']
+						);
+					$database->insert("companies",[
+						"companyname"=>$_SESSION['booking4'][0]['nameCom'],
+						"email"=>$_SESSION['booking4'][0]['emailCom'],
+						"address"=>$_SESSION['booking4'][0]['addressCom'],
+						"city"=>$_SESSION['booking4'][0]['cityCom'],
+						"country"=>getCountry($_SESSION['booking4'][0]['countryCom']),
+						"phone"=>$_SESSION['booking4'][0]['phoneCom'],
+						"mobile"=>$_SESSION['booking4'][0]['mobileCom'],
+						"specialization"=>json_encode($specialization),
+						"sevices"=>json_encode($sevices),
+						"detail"=>json_encode($detail_com)
+					]);
+
+					$company_id = $database->id();
+
+					//insert booking
+					$attendee_booking = array("quitity"=>$_SESSION['booking1'][0]['multi'],"price"=> $_SESSION['booking1'][0]['pass'][0]);
+					$spouse_booking = array("quitity"=>$_SESSION['booking1'][0]['spouse']==""?0:$_SESSION['booking1'][0]['spouse'],"price"=>$database->get("book_price","price",['type'=>'spo_pass']));
+					$fix_table = array("quitity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass']));
+					$sponsor = sponserCal();
+					$advertiser = advertiser();
+					$discount = $_SESSION['booking1'][0]['multi']>1?($_SESSION['booking1'][0]['pass'][0]*$_SESSION['booking1'][0]['multi'])*$database->get("avalible","*",["name"=>'discount']):0;
+
+					$database->insert("booking",[
+						"company_id"=>1,
+						"attendee"=>json_encode($attendee_booking),
+						"spouse"=>json_encode($spouse_booking),
+						"fix_table"=>json_encode($fix_table),
+						"sponsor"=>json_encode($sponsor),
+						"advertiser"=>json_encode($advertiser),
+						"discount"=>$discount,
+						"amount"=>$_SESSION['amount'],
+						"datetime"=>Date("Y-m-d H:i:s"),
+						"status"=>"yes"
+					
+					]);
+					$booking_id = $database->id();
+
+
+					// insert attendee
+				 for($i = 0; $i < $_SESSION['booking1'][0]['multi']; $i++){
+				 			$detail_att[] = "Size T-shirt:".$_SESSION['booking3'][0]['attendee_t-shirt'][$i];
+							$detail_att[] = $_SESSION['booking3'][0]['vegetarian'][$i]=='true'?'vegetarian':'';
+							$detail_att[] = $_SESSION['booking3'][0]['vegan'][$i]=='true'?'vegan':'';
+							$detail_att[] = $_SESSION['booking3'][0]['halal'][$i]=='true'?'halal':'';
+							$detail_att[] = $_SESSION['booking3'][0]['kosher'][$i]=='true'?'kosher':'';
+							$detail_att[] = $_SESSION['booking3'][0]['glute'][$i]=='true'?'glute':'';
+							$detail_att[] = $_SESSION['booking3'][0]['lactose'][$i]=='true'?'lactose':'';
+							$detail_att[] = "other:".$_SESSION['booking3'][0]['otherStep3'][$i];
+							$detail_att[] = "Allergies:".$_SESSION['booking3'][0]['allergies'][$i];
+							
+						      
+						$database->insert("attendee",[
+							"title"=>$_SESSION['booking3'][0]['attendee_title'][$i],
+							"first_name"=>$_SESSION['booking3'][0]['attendee_first'][$i],
+							"last_name"=>$_SESSION['booking3'][0]['attendee_last'][$i],
+							"position_name"=>$_SESSION['booking3'][0]['attendee_position'][$i],
+							"company_id"=>$company_id,
+							"type_member"=>'attendee',
+							"detail"=> json_encode($detail_att),
+							"status"=>"yes"
+					]);
+
+					 }
+					 					// insert spouse
+				 for($i = 0; $i < $_SESSION['booking1'][0]['multi']; $i++){
+				 			
+							$detail_spo[] = $_SESSION['booking3'][0]['vegetarianS'][$i]=='true'?'vegetarian':'';
+							$detail_spo[] = $_SESSION['booking3'][0]['veganS'][$i]=='true'?'vegan':'';
+							$detail_spo[] = $_SESSION['booking3'][0]['halalS'][$i]=='true'?'halal':'';
+							$detail_spo[] = $_SESSION['booking3'][0]['kosherS'][$i]=='true'?'kosher':'';
+							$detail_spo[] = $_SESSION['booking3'][0]['gluteS'][$i]=='true'?'glute':'';
+							$detail_spo[] = $_SESSION['booking3'][0]['lactoseS'][$i]=='true'?'lactose':'';
+							$detail_spo[] = "other:".$_SESSION['booking3'][0]['otherStep3S'][$i];
+							$detail_spo[] = "Allergies:".$_SESSION['booking3'][0]['allergiesS'][$i];
+							
+						    
+							$database->insert("attendee",[
+							"title"=>$_SESSION['booking3'][0]['spouse_title'][$i],
+							"first_name"=>$_SESSION['booking3'][0]['spouse_name'][$i],
+							"last_name"=>$_SESSION['booking3'][0]['spouse_last'][$i],
+							"company_id"=>$company_id,
+							"type_member"=>'spouse',
+							"detail"=> json_encode($detail_spo),
+							"status"=>"yes"
+					]);
+
+					 }
+
+					
+					// PDF file
+					 ob_start();
+					include ('app/pdf_export.php');
+					$pdf = ob_get_clean();
+					 include "pdf.php";
+					 $file_name = md5(rand()) . '.pdf';
+					 $html_code = '<link rel="stylesheet" type="text/css" href="css/register.css">';
+					 $html_code .= $pdf;
+					 $pdf = new Pdf();
+					 $pdf->load_html($html_code);
+					 $pdf->render();
+					 $file = $pdf->output();
+					 file_put_contents($file_name, $file);
+					 
+
+					//sent ivoice email 
+					
+
+					ob_start();
+					include ('app/email_register_template.php');
+					$body = ob_get_clean();
+				
+					$mail->setFrom($adminemail, "Cargo Convention");
+					$mail->addAddress($toemail,"Admin Cargo Convention");
+				
+					$mail->AddCC($_SESSION['booking4'][0]['emailCom']);
+					$mail->Subject = "Cargo Convention Registration ID:CC0".$booking_id;
+					$mail->AddAttachment($file_name);  
+					$mail->Body = $body;
+					$mail->IsHTML(true);
+					$mail->CharSet = 'UTF-8';
+					$mail->send();
+					$_SESSION['noti'] = "Email has been Sent!";
+					header("location:book_done");
 					break;
 					case "news":
 					
-if ($_GET['page']==''){$_GET['page']=1;}
-	$page = ($_GET['page']-1)*8;
-	$newslist = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"],"status"=>"y","LIMIT"=>[$page,8]]);
-	$allnews = $database->count("news","*",["status"=>"y"]);
+					if ($_GET['page']==''){$_GET['page']=1;}
+						$page = ($_GET['page']-1)*8;
+						$newslist = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"],"status"=>"y","LIMIT"=>[$page,8]]);
+						$allnews = $database->count("news","*",["status"=>"y"]);
 
 						
 					break;

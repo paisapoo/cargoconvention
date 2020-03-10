@@ -117,7 +117,7 @@ function sponserCal(){
 	$coffee = $_SESSION['booking2'][0]['coffee']=='true'?'Coffee Break Sponsor':'';
 	$beer = $_SESSION['booking2'][0]['beer']=='true'?'Beer-zone Sponsor':'';
 	$shirt = $_SESSION['booking2'][0]['shirt']=='true'?'T-shirt Sponsor':'';
-	$landyard= $_SESSION['booking2'][0]['landyard']=='true'?'Landyard Sponsor':'';
+	$lanyard= $_SESSION['booking2'][0]['lanyard']=='true'?'Lanyard Sponsor':'';
 
 	
 
@@ -145,8 +145,8 @@ function sponserCal(){
 	if($shirt != ''){
 		$dataSpon[] = $database->get("sponsor","*",["name[~]"=>$shirt]);
 	}
-	if($landyard != ''){
-		$dataSpon[] = $database->get("sponsor","*",["name[~]"=>$landyard]);
+	if($lanyard != ''){
+		$dataSpon[] = $database->get("sponsor","*",["name[~]"=>$lanyard]);
 	}
 		return $dataSpon;
 }
@@ -189,7 +189,9 @@ function getSponsor($x){
 	$spon = $database->get("sponsor","*",['input'=>$x]);
 	return $spon;
 }
-function freeFixed(){
-
+function getCountry($x){
+		global $database;
+		$country = $database->get("countries","name",["id"=>$x]);
+		return $country;
 	}
 ?>

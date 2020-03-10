@@ -160,15 +160,15 @@
                      <tr>
                 <td>
                   <label class="check-input">
-                  <input type="checkbox" name="landyard" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['landyard']=='true'?"checked":""?>>
+                  <input type="checkbox" name="lanyard" class="form-check-input" value="true" <?=$_SESSION['booking2'][0]['lanyard']=='true'?"checked":""?>>
                   <span class="checkmark"></span>
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('landyard')['name']?> (x<?=getSponsor('landyard')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('lanyard')['name']?> (x<?=getSponsor('lanyard')['quetity']?>)</span>
                 </td>
                 <td>
-                  <span class="label-t-form">$<?=number_format(getSponsor('landyard')['price'])?></span>
+                  <span class="label-t-form">$<?=number_format(getSponsor('lanyard')['price'])?></span>
                 </td>
                 <td></td>
               </tr>
@@ -195,7 +195,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('insideFront')['name']?> (x<?=getSponsor('insideFront')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('insideFront')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('insideFront')['price'])?></span>
@@ -210,7 +210,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('insideBack')['name']?> (x<?=getSponsor('insideBack')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('insideBack')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('insideBack')['price'])?></span>
@@ -225,7 +225,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('spread')['name']?> (x<?=getSponsor('spread')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('spread')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('spread')['price'])?></span>
@@ -240,7 +240,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('fullPage')['name']?> (x<?=getSponsor('fullPage')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('fullPage')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('fullPage')['price'])?></span>
@@ -255,7 +255,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('halfPage')['name']?> (x<?=getSponsor('halfPage')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('halfPage')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('halfPage')['price'])?></span>
@@ -270,7 +270,7 @@
                 </label>
                 </td>
                 <td>
-                  <span class="label-t-form"><?=getSponsor('quarterPage')['name']?> (x<?=getSponsor('quarterPage')['quetity']?>)</span>
+                  <span class="label-t-form"><?=getSponsor('quarterPage')['name']?></span>
                 </td>
                 <td>
                   <span class="label-t-form">$<?=number_format(getSponsor('quarterPage')['price'])?></span>
