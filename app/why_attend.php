@@ -146,6 +146,9 @@ FREIGHT FORWARDERS</span>
 				</div>
 			</div>
 		</div>
+		<p class="text-center mt-4">
+		<a href="register"><button class="btn0 btn6">register Now</button></a>
+		</p>
 	</div>
 
 </section>

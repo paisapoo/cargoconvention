@@ -15,7 +15,7 @@
 			  </li>
 			  
 		</ul>
-		<button class="btn0 btn3"> register now <img src="images/icon/home-icons/register-arrow.svg" class="reg-arrow"/></button>
+		<a href="register"><button class="btn0 btn3"> register now <img src="images/icon/home-icons/register-arrow.svg" class="reg-arrow"/></button></a>
 	</div>
 	<div class="shape-white">
 		<img src="images/home/top-whiteshape.svg">
@@ -90,52 +90,64 @@
 		<!-- row/ -->
 		<div class="row">
 			<div class="col-md-2">
+				<a href="register">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-register.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>register</span>
 					  </div>
 				</div>
+			</a>
 			</div>
 				<div class="col-md-2">
+				<a href="agenda">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-agenda.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>agenda</span>
 					  </div>
 				</div>
+			</a>
 			</div>
 				<div class="col-md-2">
+				<a href="practical">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-accomodation.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>traveling & lodging</span>
 					  </div>
 				</div>
+				</a>
 			</div>
 				<div class="col-md-2">
+				<a href="howtoget">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-how-there.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>how to get there</span>
 					  </div>
 				</div>
+				</a>
 			</div>
 				<div class="col-md-2">
+				<a href="attraction">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-attractions.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>attractions</span>
 					  </div>
 				</div>
+			</a>
 			</div>
 				<div class="col-md-2">
+					<a href="why_sponsor">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-sponsorship.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <span>sponsorship</span>
 					  </div>
 				</div>
+			</a>
 			</div>
 		</div>
 	</div>
@@ -214,62 +226,26 @@
 		<p class="t-title c-blue t-40 text-center">Industry News</p>
 		<hr class="or-line" >
 		 <div class="row">
+		 	<?php foreach($newslist as $news){?>
+		 		<?php $date = new DateTime($news['date_time']);
+				$formattime= $date->format('dS F Y');?>
 		 	<div class="col-md-3">
-		 		<a href="" class="link-news">
+		 		<a href="singlenews?id=<?=$news['id']?>" class="link-news">
 		 		<div class="card">
-				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
+		 			<div class="news-flame">
+				  <img src="<?=$news['image']?>" class="card-img-top" alt="...">
+				</div>
 				  <div class="card-body">
-				    <p class="news-date"><?=Date("dS F Y")?></p>
-				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
+				    <p class="news-date"><?=$formattime?></p>
+				    <p class="news-title"><?=$news['title']?>
 </p>
-				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
-				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
+				    <p class="news-conent"><?php echo preg_replace("/<(.*?)>/", "", $news['content']);?></p>
+				    <p class="read-m">read more  <img src="images/icon/home-icons/blue-arrow.svg" class="expl-arrow"/></p>
 				  </div>
 				</div>
 				</a>
 		 	</div>
-		 	<div class="col-md-3">
-		 		<a href="" class="link-news">
-		 		<div class="card">
-				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
-				  <div class="card-body">
-				    <p class="news-date"><?=Date("dS F Y")?></p>
-				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
-</p>
-				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
-				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
-				  </div>
-				</div>
-			</a>
-		 	</div>
-		 	<div class="col-md-3">
-		 		<a href="" class="link-news">
-		 		<div class="card">
-				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
-				  <div class="card-body">
-				    <p class="news-date"><?=Date("dS F Y")?></p>
-				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
-</p>
-				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
-				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
-				  </div>
-				</div>
-				</a>
-		 	</div>
-		 	<div class="col-md-3">
-		 		<a href="" class="link-news">
-		 		<div class="card">
-				  <img src="images/home/home_why.jpg" class="card-img-top" alt="...">
-				  <div class="card-body">
-				    <p class="news-date"><?=Date("dS F Y")?></p>
-				    <p class="news-title">PK Interfrieght's special mission to supply food to MS Amsterdam Cruise
-</p>
-				    <p class="news-conent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet…</p>
-				    <p class="read-m">read more  <img src="images/icon/home-icons/register-arrow.svg" class="expl-arrow"/></p>
-				  </div>
-				</div>
-			</a>
-		 	</div>
+		 	<?php } ?>
 		 </div>
 		 <!-- row -->
 	</div>

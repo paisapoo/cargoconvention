@@ -111,8 +111,9 @@
                    $multi = $_SESSION['booking1'][0]['multi'];
                   
                     $passTime = $attendee*$multi;
+                    $discounts = $database->get("avalible","*",["name"=>'discount']);
                   if($multi > 1){
-                    $passTime = $passTime-($passTime * $database->get("avalible","*",["name"=>'discount']));  
+                    $passTime = $passTime-($passTime * number_format($discounts['detail'],2));  
                   }?>
                 <span class="price">$<?=number_format($passTime,2)?></span> <?=$multi>1?'<span class="text-success">(10% discount)</span>':''?>
 

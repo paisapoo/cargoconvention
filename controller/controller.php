@@ -11,13 +11,39 @@ if($alias == 'admin'){
 				if ($alias == '') {$alias = 'dashboard';}else {
 					$alias = $alias;}
 					// admin switch 
+
 					switch ($alias) {
-							case "logout_admin":
+
+					case "logout_admin":
 					session_destroy();
 					header('location:home');
-					
 					break;
+					case "dashboard":
+
+					break;
+					case "attendee_list":
+							$attendees = $database->select("attendee","*");
+					break;
+					case"edit_attendee":
+						$attendee = $_GET['id'];
+						$getitem = $database->get("attendee","*",["id"=>$attendee]);
+						$getCom = $database->select("companies","*");
+
+					break;
+					case "delete_item":
+						$table = $_GET['table'];
+						$item = $_GET['id'];
+						$location = $_GET['loca'];
+						$database->delete($table,['id'=>$item]);
+
+						$_SESSION['msg'] = "Item has been Deleted!";
+						header("location:".$location);
+					break;
+
+
+
 					}
+
 					// end switch admin
 				include('admin_path/index.php');
 			}
@@ -31,9 +57,10 @@ if($alias == 'admin'){
 
 			case "login_admin":
 
-			if($database->has("userinfo",["AND" => ["OR"=>["username"=>$_POST['username'],"email"=>$_POST['username']], "password"=>md5($_POST['pass'])]])){
+			if($database->has("admin",["AND" => ["OR"=>["username"=>$_POST['username'],"email"=>$_POST['username']], "password"=>md5($_POST['pass'])]])){
 
 							$_SESSION["user"] = 'admin';
+							$_SESSION['userinfo'] = $database->get("admin","*",["AND" => ["OR"=>["username"=>$_POST['username'],"email"=>$_POST['username']], "password"=>md5($_POST['pass'])]]);
 							header('location:dashboard');
 						}else{
 							header('location:admin');
@@ -41,7 +68,7 @@ if($alias == 'admin'){
 
 					break;
 					case "home":
-
+						$newslist = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"],"status"=>"y","LIMIT"=>4]);	
 					break;
 					case"save_step1":
 					$multi = $_POST['multiple-number']== 0 || $_POST['multiple-number']==''?1:$_POST['multiple-number'];
@@ -184,7 +211,8 @@ header("location:book_step4");
 					$fix_table = array("quitity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass']));
 					$sponsor = sponserCal();
 					$advertiser = advertiser();
-					$discount = $_SESSION['booking1'][0]['multi']>1?($_SESSION['booking1'][0]['pass'][0]*$_SESSION['booking1'][0]['multi'])*$database->get("avalible","*",["name"=>'discount']):0;
+					$dis = $database->get("avalible","*",["name"=>'discount']);
+					$discount = $_SESSION['booking1'][0]['multi']>1?($_SESSION['booking1'][0]['pass'][0]*$_SESSION['booking1'][0]['multi'])*number_format($dis['detail'],2):0;
 
 					$database->insert("booking",[
 						"company_id"=>1,
@@ -196,7 +224,7 @@ header("location:book_step4");
 						"discount"=>$discount,
 						"amount"=>$_SESSION['amount'],
 						"datetime"=>Date("Y-m-d H:i:s"),
-						"status"=>"yes"
+						"status"=>"No"
 					
 					]);
 					$booking_id = $database->id();
@@ -204,15 +232,17 @@ header("location:book_step4");
 
 					// insert attendee
 				 for($i = 0; $i < $_SESSION['booking1'][0]['multi']; $i++){
-				 			$detail_att[] = "Size T-shirt:".$_SESSION['booking3'][0]['attendee_t-shirt'][$i];
-							$detail_att[] = $_SESSION['booking3'][0]['vegetarian'][$i]=='true'?'vegetarian':'';
-							$detail_att[] = $_SESSION['booking3'][0]['vegan'][$i]=='true'?'vegan':'';
-							$detail_att[] = $_SESSION['booking3'][0]['halal'][$i]=='true'?'halal':'';
-							$detail_att[] = $_SESSION['booking3'][0]['kosher'][$i]=='true'?'kosher':'';
-							$detail_att[] = $_SESSION['booking3'][0]['glute'][$i]=='true'?'glute':'';
-							$detail_att[] = $_SESSION['booking3'][0]['lactose'][$i]=='true'?'lactose':'';
-							$detail_att[] = "other:".$_SESSION['booking3'][0]['otherStep3'][$i];
-							$detail_att[] = "Allergies:".$_SESSION['booking3'][0]['allergies'][$i];
+				 			
+							$detail_att = array(
+								"vegetarian"=>$_SESSION['booking3'][0]['vegetarian'][$i],
+								"vegan"=>$_SESSION['booking3'][0]['vegan'][$i],
+								"halal"=>$_SESSION['booking3'][0]['halal'][$i],
+								"kosher"=>$_SESSION['booking3'][0]['kosher'][$i],
+								"glute"=>$_SESSION['booking3'][0]['glute'][$i],
+								"lactose"=>$_SESSION['booking3'][0]['lactose'][$i],
+								"other"=>$_SESSION['booking3'][0]['otherStep3'][$i]
+						);
+							
 							
 						      
 						$database->insert("attendee",[
@@ -222,32 +252,36 @@ header("location:book_step4");
 							"position_name"=>$_SESSION['booking3'][0]['attendee_position'][$i],
 							"company_id"=>$company_id,
 							"type_member"=>'attendee',
+							"size_shirt"=>$_SESSION['booking3'][0]['attendee_t-shirt'][$i],
+							"allergies"=>$_SESSION['booking3'][0]['allergies'][$i],
 							"detail"=> json_encode($detail_att),
-							"status"=>"yes"
+							"status"=>"no"
 					]);
 
 					 }
 					 					// insert spouse
 				 for($i = 0; $i < $_SESSION['booking1'][0]['multi']; $i++){
 				 			
-							$detail_spo[] = $_SESSION['booking3'][0]['vegetarianS'][$i]=='true'?'vegetarian':'';
-							$detail_spo[] = $_SESSION['booking3'][0]['veganS'][$i]=='true'?'vegan':'';
-							$detail_spo[] = $_SESSION['booking3'][0]['halalS'][$i]=='true'?'halal':'';
-							$detail_spo[] = $_SESSION['booking3'][0]['kosherS'][$i]=='true'?'kosher':'';
-							$detail_spo[] = $_SESSION['booking3'][0]['gluteS'][$i]=='true'?'glute':'';
-							$detail_spo[] = $_SESSION['booking3'][0]['lactoseS'][$i]=='true'?'lactose':'';
-							$detail_spo[] = "other:".$_SESSION['booking3'][0]['otherStep3S'][$i];
-							$detail_spo[] = "Allergies:".$_SESSION['booking3'][0]['allergiesS'][$i];
-							
-						    
+							$detail_spo = array(
+									"vegetarian"=>$_SESSION['booking3'][0]['vegetarianS'][$i],
+									"vegan"=>$_SESSION['booking3'][0]['veganS'][$i],
+									"halal"=>$_SESSION['booking3'][0]['halalS'][$i],
+									"kosher"=>$_SESSION['booking3'][0]['kosherS'][$i],
+									"glute"=>$_SESSION['booking3'][0]['gluteS'][$i],
+									"lactose"=>$_SESSION['booking3'][0]['lactoseS'][$i],
+									"other"=>$_SESSION['booking3'][0]['otherStep3S'][$i]
+
+							);
+				
 							$database->insert("attendee",[
 							"title"=>$_SESSION['booking3'][0]['spouse_title'][$i],
 							"first_name"=>$_SESSION['booking3'][0]['spouse_name'][$i],
 							"last_name"=>$_SESSION['booking3'][0]['spouse_last'][$i],
 							"company_id"=>$company_id,
 							"type_member"=>'spouse',
+							"allergies"=>$_SESSION['booking3'][0]['allergiesS'][$i],
 							"detail"=> json_encode($detail_spo),
-							"status"=>"yes"
+							"status"=>"no"
 					]);
 
 					 }
@@ -302,8 +336,35 @@ header("location:book_step4");
 						$right_news = $database->select("news","*",["id[!]"=>$_GET['id'],"status"=>'y',"LIMIT"=>4,"ORDER"=>["date_time"=>"DESC"]]);
 						
 					break;
+					case "sendContact":
+
+				    if($_POST['firstName'] != '' || $_POST['LastName'] != "" || $_POST['country'] != '' || $_POST['email'] || $_POST['phone']){
+				    	$body = "Full Name : ".$_POST['firstName'];
+				    	$body .= "<br>Country : ".$_POST['country'];
+				    	$body .= "<br>Email : ".$_POST['email'];
+				    	$body .= "<br>Phone : ".$_POST['phone'];
+				    	$body .= "<br>Message : ".$_POST['con_message'];
+				    $mail->setFrom($adminemail, "Cargo Convention");
+					$mail->addAddress($toemail,"Admin Cargo Convention");
+				
+					// $mail->AddCC($_SESSION['booking4'][0]['emailCom']);
+					$mail->Subject = "Cargo Convention Contact Form";
+					
+					$mail->Body = $body;
+					$mail->IsHTML(true);
+					$mail->CharSet = 'UTF-8';
+					$mail->send();
+					$_SESSION['noti'] = "Email has been Sent!";
+					
+				    }
+				    header("location:contact");
+				    break;
+				    case "faq":
+				    $faqs = $database->get("content","*",["name"=>'faq']);
+				    break;
 			
 				}
+				
 				// end switch 
 
 				include 'app/index.php';

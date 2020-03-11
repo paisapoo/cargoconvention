@@ -194,4 +194,18 @@ function getCountry($x){
 		$country = $database->get("countries","name",["id"=>$x]);
 		return $country;
 	}
+function unsetSeSSION($x){
+		unset($_SESSION[$x]);
+	};
+
+function getAvalible($x){
+	global $database;
+	$avalible = $database->get("avalible","*",['name'=>$x]);
+	return $avalible;
+}
+function getCompany($id){
+	global $database;
+	$company = $database->get("companies","*",["id"=>$id]);
+	return $company;
+}
 ?>

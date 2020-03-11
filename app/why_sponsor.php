@@ -109,5 +109,8 @@ generation for all leader in the logistics sector.</p>
 				
 			</div>
 		</div>
+		<p class="text-center mt-4">
+		<a href="become"><button class="btn0 btn6">Sponsor Now</button></a>
+		</p>
 	</div>
 </section>

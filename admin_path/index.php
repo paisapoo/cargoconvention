@@ -14,6 +14,7 @@ if (file_exists(stream_resolve_include_path($alias . ".php"))) {$countpage .= +1
 
     
 }
+   
 
 if ($countpage == 0 or empty($countpage) ) {
 	?>
@@ -26,4 +27,7 @@ if ($countpage == 0 or empty($countpage) ) {
 			<?php
 
  include "footer.php";
-?>
+ ?>
+			
+    
+      

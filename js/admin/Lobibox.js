@@ -1419,6 +1419,7 @@ var Lobibox = Lobibox || {};
                     next._init();
                 }
             }, 500);
+            
             return me;
         };
         me._init = function () {

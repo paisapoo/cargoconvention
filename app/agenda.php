@@ -109,7 +109,10 @@
 				<tr>
 					<td><span class="agen-title">15:00 - 17:00</span></td>
 					<td>
-						<span class="agen-title">Beer Zone</span>
+						<span class="agen-title">Beer Zone</span><br>
+						<span class="agen-des">
+							The Beer Zone will act as an informal meeting/networking or a place to kick back and escape the noise of the One to One Meetings. There will be free flow beer on offer thanks to our partners at Singha.
+						</span>
 					</td>
 				</tr>
 				<tr>

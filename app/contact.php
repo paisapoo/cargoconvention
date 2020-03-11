@@ -37,7 +37,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<textarea class="form-textarea" rows="5" placeholder="Type your messages here..."></textarea>
+						<textarea class="form-textarea" rows="5" placeholder="Type your messages here..." name="con_message"></textarea>
 					</div>
 				</div>
 				<p class="if-contact">

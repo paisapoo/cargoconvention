@@ -28,6 +28,10 @@
     <!-- mCustomScrollbar CSS
     ============================================ -->
     <link rel="stylesheet" href="css/admin/jquery.mCustomScrollbar.min.css">
+     <!-- notifications CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/admin/Lobibox.min.css">
+    <link rel="stylesheet" href="css/admin/notifications.css">
     <!-- animate CSS
     ============================================ -->
     <link rel="stylesheet" href="css/admin/animate.css">

@@ -1,4 +1,14 @@
-
+    <div class="footer-copyright-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright &#169; 2020 Cargo Convention. by X2Global Media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- wrapper-pro -->
 
@@ -49,6 +59,11 @@
 		============================================ -->
     <script src="js/admin/flot/Chart.min.js"></script>
     <script src="js/admin/flot/dashtwo-flot-active.js"></script>
+
+     <!-- notification JS
+        ============================================ -->
+    <script src="js/admin/Lobibox.js"></script>
+    <script src="js/admin/notification-active.js"></script>
     <!-- data table JS
 		============================================ -->
     <script src="js/admin/data-table/bootstrap-table.js"></script>
@@ -62,6 +77,7 @@
     <!-- main JS
 		============================================ -->
     <script src="js/admin/main.js"></script>
+    <?php if (file_exists(stream_resolve_include_path($alias . "_SCR.php"))) {include $alias . "_SCR.php";} ?>
 </body>
 
 </html>
