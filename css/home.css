@@ -115,8 +115,12 @@ video.has-media-controls-hidden::-webkit-media-controls {
 }
 
 .home4{
-	margin-top:3em;
+	padding-top:3em;
 	background-color:transparent;
+	background-image: url("../images/shape/orange_home.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
 }
 .why-should{
 	
@@ -125,7 +129,7 @@ video.has-media-controls-hidden::-webkit-media-controls {
 	z-index: 1;
 }
 .why-left{
-	border-left:5px solid #fff;
+	border-left:5px solid #fff0;
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
@@ -137,7 +141,7 @@ video.has-media-controls-hidden::-webkit-media-controls {
 	width: 100%;
 }
 .why-right{
-	border-right:5px solid #fff;
+	border-right:5px solid #fff0;
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
@@ -158,10 +162,10 @@ video.has-media-controls-hidden::-webkit-media-controls {
 	animation: move-arrow 1s ease infinite;
 }
 .home5{
-	margin-top:25px;
+	margin-top:0;
 	padding:40px 0;
 	background-color: #e8f0f7;
-	background-image: url("../images/home/orange-shape.svg");
+	background-image: url("../images/shape/orange_home.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;

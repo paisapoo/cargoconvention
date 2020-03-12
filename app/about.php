@@ -71,7 +71,7 @@
 </section>
 <section class="button-regis">
 	<div class="container">
-		<button class="btn0 btn6">register now</button>
+		<a href="register"><button class="btn0 btn6">register now</button></a>
 	</div>
 </section>
 <section class="sec-content">

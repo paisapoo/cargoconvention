@@ -217,7 +217,7 @@
 				</div>
 
 			</div>
-			<button class="btn0 btn4">register now</button>
+			<a href="register"><button class="btn0 btn4">register now</button></a>
 		</div>
 	</div>
 </section>

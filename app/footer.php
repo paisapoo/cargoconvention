@@ -19,6 +19,18 @@
 	</div>
 	<div class="foot2">
 		<div class="container">
-			<span>Copyright © 2020. All rights reserved. Cargo Convention</span>
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<span>Copyright © 2020. All rights reserved. Cargo Convention</span>
+				</div>
+				<div class="col-md-6">
+				<ul class="list-inline text-right">
+				   <li class="list-inline-item"><a href="" target="_blank"><img src="images/icon/social-icons/facebook.svg" alt=""></a></li>
+				  <li class="list-inline-item"><a href="" target="_blank"><img src="images/icon/social-icons/twter.svg" alt=""></a></li>
+				  <li class="list-inline-item"><a href="" target="_blank"><img src="images/icon/social-icons/linkedin.svg" alt=""></a></li>
+				</ul>
+			 </div>
+			</div>
+			
 		</div>
 	</div>

@@ -35,30 +35,14 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach($dataItem as $item){?>
 					<tr>
-						<td>Patty Jomaone</td>
+						<td><?=$item['title']." ".$item['first_name']." ".$item['last_name']?></td>
 						<td>CEO</td>
-						<td>X2 Bitchy</td>
-						<td>Vietnam</td>
+						<td><?=getCompany($item['company_id'])['companyname']?></td>
+						<td><?=getCompany($item['company_id'])['country']?></td>
 					</tr>
-					<tr>
-						<td>Trung Naka</td>
-						<td>CEO</td>
-						<td>X2 Bitchy</td>
-						<td>Thailand</td>
-					</tr>
-					<tr>
-						<td>Minh Hee</td>
-						<td>CEO</td>
-						<td>X2 Bitchy</td>
-						<td>USA</td>
-					</tr>
-					<tr>
-						<td>Jenny Fineout</td>
-						<td>CEO</td>
-						<td>X2 Bitchy</td>
-						<td>Bangkok</td>
-					</tr>
+					<?php } ?>
 				</tbody>
 			</table>
 		</div>

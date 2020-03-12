@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 40 0 40 40 0 40"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-992.000000, -5880.000000)">
+            <g id="Footer" transform="translate(0.000000, 5759.000000)">
+                <g id="facebook" transform="translate(992.000000, 121.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M25.5112636,12.2360124 L22.6061187,12.2360124 C22.1288353,12.2360124 21.4585886,12.4744312 21.4585886,13.4878228 L21.4585886,16.1928742 L25.5010138,16.1928742 L25.0272956,20.7834399 L21.4585886,20.7834399 L21.4585886,33.856815 L16.0520511,33.856815 L16.0520511,20.7834399 L13.4806925,20.7834399 L13.4806925,16.1875265 L16.0520511,16.1875265 L16.0520511,13.2146438 C16.0520511,11.088928 17.0614319,7.7586399 21.5076093,7.7586399 L25.5112636,7.77601996 L25.5112636,12.2360124 Z M20,0 C8.95474498,0 0,8.95474498 0,20 C0,31.045255 8.95474498,40 20,40 C31.045255,40 40,31.045255 40,20 C40,8.95474498 31.045255,0 20,0 L20,0 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

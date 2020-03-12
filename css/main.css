@@ -57,7 +57,9 @@ body {
     background-color: #0a395a;
     color: #fff;
 }
-
+.foot2 .list-inline.text-right img{
+    width: 30px;
+}
 .foot1 .list-inline {
     text-align: right;
 }

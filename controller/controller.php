@@ -70,6 +70,9 @@ if($alias == 'admin'){
 					case "home":
 						$newslist = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"],"status"=>"y","LIMIT"=>4]);	
 					break;
+					case "attendee":
+						$dataItem = $database->select("attendee","*",["type_member"=>'attendee',"status"=>"yes"]);
+					break;
 					case"save_step1":
 					$multi = $_POST['multiple-number']== 0 || $_POST['multiple-number']==''?1:$_POST['multiple-number'];
 						$_SESSION['booking1']= array(["pass"=>$_POST['att_pass'],
@@ -320,6 +323,7 @@ header("location:book_step4");
 					$mail->CharSet = 'UTF-8';
 					$mail->send();
 					$_SESSION['noti'] = "Email has been Sent!";
+					unlink($file_name);
 					header("location:book_done");
 					break;
 					case "news":

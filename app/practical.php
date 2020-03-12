@@ -36,7 +36,7 @@ Here is what you need to know.
 				  <img src="images/icon/practical-icons/event-icon-1.svg" class="align-self-center mr-3" alt="">
 				  <div class="media-body">
 				    <p class="c-org t-30 t-bold mt-0">Monday,<br>28 SEPT</p>
-				    <p class="t-time">19:00 - 21:00</p>
+				    <p class="t-time">09:00 - 17:00</p>
 				  			
 				  </div>
 				</div>
@@ -46,7 +46,7 @@ Here is what you need to know.
 				  <img src="images/icon/practical-icons/event-icon-1.svg" class="align-self-center mr-3" alt="">
 				  <div class="media-body">
 				    <p class="c-org t-30 t-bold mt-0">Tuesday,<br>29 SEPT</p>
-				    <p class="t-time">19:00 - 21:00</p>
+				    <p class="t-time">09:00 - 17:00</p>
 				  			
 				  </div>
 				</div>
@@ -60,7 +60,7 @@ Here is what you need to know.
 				  <img src="images/icon/practical-icons/event-icon-2.svg" class="align-self-center mr-3" alt="">
 				  <div class="media-body">
 				    <p class="c-org t-30 t-bold mt-0">Sunday,<br>27 SEPT</p>
-				    <p class="t-time">19:00 - 21:00</p>
+				    <p class="t-time">14:00 - 19:00</p>
 				  			
 				  </div>
 				</div>
@@ -70,7 +70,7 @@ Here is what you need to know.
 				  <img src="images/icon/practical-icons/event-icon-2.svg" class="align-self-center mr-3" alt="">
 				  <div class="media-body">
 				    <p class="c-org t-30 t-bold mt-0">Monday,<br>28 SEPT</p>
-				    <p class="t-time">19:00 - 21:00</p>
+				    <p class="t-time">08:00 - 09:00</p>
 				  			
 				  </div>
 				</div>
@@ -80,7 +80,7 @@ Here is what you need to know.
 				  <img src="images/icon/practical-icons/event-icon-2.svg" class="align-self-center mr-3" alt="">
 				  <div class="media-body">
 				    <p class="c-org t-30 t-bold mt-0">Tuesday,<br>29 SEPT</p>
-				    <p class="t-time">19:00 - 21:00</p>
+				    <p class="t-time">08:00 - 09:00</p>
 				  			
 				  </div>
 				</div>

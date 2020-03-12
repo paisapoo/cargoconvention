@@ -2,6 +2,12 @@
 	background-image: url("../images/banner/about.jpg");
 
 }
+.home2{
+	background-image: url("../images/shape/orange_home.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+}
 .home2 .card{
 	border:none;
 	text-align: center;
@@ -24,16 +30,17 @@
   color: #0a395a;
 }
 .button-regis{
-	margin-top:3em;
+	margin-top:0em;
 	padding:80px 0; 
 	text-align: center;
-	background-image: url("../images/about/blue-shape.svg");
+	background-image: url("../images/shape/orange_home.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
 }
-.btn3{
+.btn0.btn6{
 	position: static;
+	background-color: #0A395A;
 }
 .onemo-logo{
 	width: 200px;
