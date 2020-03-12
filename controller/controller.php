@@ -4,8 +4,7 @@ include "function.php";
 
 $alias = $_GET['alias'];
 if($alias == 'admin'){
-	include "login.php";
-	
+include "login.php";
 }else{
 		if ($_SESSION["user"]=='admin') {
 				if ($alias == '') {$alias = 'dashboard';}else {
@@ -21,13 +20,54 @@ if($alias == 'admin'){
 					case "dashboard":
 
 					break;
+					case"company_list":
+						$getitem = $database->select("companies","*");
+					break;
+					case "edit_company":
+						if($_GET['id']!="new"){
+						
+						$attendee = $_GET['id'];
+						$getitem = $database->get("companies","*",["id"=>$attendee]);
+						}
+					break;
+					case"update_company":
+					if($_POST['type_form']=="new"){
+						$database->insert("companies",["companyname"=>$_POST['companyname']]);
+								$id = $database->id();
+					}else{
+							$id = $_POST['type_form'];
+					}
+						$database->update("companies",[
+							"companyname"=>$_POST['companyname'],
+							"email"=>$_POST['email'],
+							"address"=>$_POST['address'],
+							"city"=>$_POST['city'],
+							"country"=>$_POST['country'],
+							"phone"=>$_POST['phone'],
+							"mobile"=>$_POST['mobile'],
+							"specialization"=>$_POST['specialization'],
+							"services"=>$_POST['services'],
+							"comment"=>$_POST['comment'],
+							"status"=>$_POST['status']
+						],["id"=>$id]);
+
+						if($_POST['logo_path']){
+							$database->update("companies",["image"=>$_POST['logo_path']],["id"=>$id]);
+						}
+						$_SESSION["msg"]= "Item has been Updated!";
+						header("location:company_list");
+
+					break;
 					case "attendee_list":
 							$attendees = $database->select("attendee","*");
 					break;
 					case"edit_attendee":
+						if($_GET['id']!="new"){
+						
 						$attendee = $_GET['id'];
 						$getitem = $database->get("attendee","*",["id"=>$attendee]);
 						$getCom = $database->select("companies","*");
+						}
 
 					break;
 					case "delete_item":
@@ -39,11 +79,48 @@ if($alias == 'admin'){
 						$_SESSION['msg'] = "Item has been Deleted!";
 						header("location:".$location);
 					break;
+					case "upload_image":
+						    $data = $_POST['image'];
+        list($type, $data) = explode(';', $data);
+        list(, $data)      = explode(',', $data);
+        $data = base64_decode($data);
+        $imageName = time().'.jpg';
+        file_put_contents('attendee_pic/'.$imageName, $data);
+        // echo $siteLink ."/attendee_pic/".$imageName;
+        echo"attendee_pic/".$imageName;
+        exit;
+		break;
 
+					case "update_attendee":
+						if($_POST['type_form']=="new"){
+								$database->insert("attendee",["first_name"]);
+								$id = $database->id();
+						}else{
+								$id = $_POST['type_form'];
+						}
+						$database->update("attendee",[
+							"title"=>$_POST["title"],
+							"first_name"=>$_POST['first_name'],
+							"last_name"=>$_POST['last_name'],
+							"position_name"=>$_POST['position_name'],
+							"email"=>$_POST['email'],
+							"mobile_no"=>$_POST['mobile_no'],
+							"company_id"=>$_POST['company_id'],
+							"type_member"=>$_POST['member_type'],
+							"allergies"=>$_POST['allergies'],
+							"size_shirt"=>$_POST['size_shirt'],
+							"comment"=>$_POST['comment'],
+							"status"=>$_POST['status']
+						],["id"=>$id]);
 
+						if($_POST['logo_path']){
+							$database->update("attendee",["image"=>$_POST['logo_path']],["id"=>$id]);
+						}
+						$_SESSION["msg"]= "Item has been Updated!";
+						header("location:attendee_list");
 
+					break;
 					}
-
 					// end switch admin
 				include('admin_path/index.php');
 			}
@@ -188,7 +265,7 @@ header("location:book_step4");
 					// insert company
 
 					$specialization = specialization();
-					$sevices = services();
+					$services = services();
 					$detail_com= array("How Learn"=>$_SESSION['booking4'][0]['howLearn'],"Message"=>$_SESSION['booking4'][0]['textMessage'],
 						"Current Network"=>$_SESSION['booking4'][0]['currentNetCom'],
 						"IATA"=>$_SESSION['booking4'][0]['iataCom']
@@ -202,8 +279,9 @@ header("location:book_step4");
 						"phone"=>$_SESSION['booking4'][0]['phoneCom'],
 						"mobile"=>$_SESSION['booking4'][0]['mobileCom'],
 						"specialization"=>json_encode($specialization),
-						"sevices"=>json_encode($sevices),
-						"detail"=>json_encode($detail_com)
+						"services"=>json_encode($services),
+						"detail"=>json_encode($detail_com),
+						"status"=>'no'
 					]);
 
 					$company_id = $database->id();
@@ -227,8 +305,7 @@ header("location:book_step4");
 						"discount"=>$discount,
 						"amount"=>$_SESSION['amount'],
 						"datetime"=>Date("Y-m-d H:i:s"),
-						"status"=>"No"
-					
+						"status"=>"no"
 					]);
 					$booking_id = $database->id();
 

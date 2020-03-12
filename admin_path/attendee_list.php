@@ -34,9 +34,10 @@
                                     <div class="main-sparkline13-hd">
                                         <h1>Projects <span class="table-project-n">Data</span> Table</h1>
                                         <div class="sparkline13-outline-icon">
+                                              <a href="edit_attendee?id=new"><span class="btn btn-custon-rounded-three btn-success" style="color:#fff;">ADD +</span></a>
                                             <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                             <span><i class="fa fa-wrench"></i></span>
-                                            <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
+                                            <!-- <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span> -->
                                         </div>
                                     </div>
                                 </div>

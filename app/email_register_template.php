@@ -174,8 +174,8 @@
                                         </div>
                                       </div>
                                       
-                                        <div class="col-md-12">
-                                          <div class="form-group" style="padding:0 3em;position:relative;width:100%;padding-right:15px;padding-left:15px;margin-bottom: 1rem;">
+                                        <div class="col-md-12" style="margin-bottom:2em;position:relative;width:100%;padding-right:15px;padding-left:15px;">
+                                          <div class="form-group" style="padding:0 3em;position:relative;width:93%;padding-right:15px;padding-left:15px;margin-bottom: 1rem;margin:0 auto;">
                                             <p class="form-title-sec text-bold" style="font-size:25px;color:#0a395a;font-weight:500;line-height:1.8;cursor:pointer;">Total: $<?=number_format($amount,2)?></p>
                                             <table class="table-100" style="width:100% !important;">
                                               <tr>

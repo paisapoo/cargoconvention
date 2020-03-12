@@ -1,17 +1,17 @@
-<style>@page { margin: 2cm; } </style>
+<style>@page { margin:10px; } </style>
  <div class="form-steps" style="background-color:#e8f0f7; color:#000">
       <div class="container">
         <div class="w-80" style="width: 100%; margin:0 auto">
           <div id="msform" style="background-color:#fff;padding-top:2em;box-shadow:0 0 14px 5px rgba(0, 0, 0, 0.1);">
             <div class="col-md-12 form-boder" style="border-bottom:1px solid #d8d8d8;margin-bottom:0.5em;">
-           <img src="images/logo/cargocon_logo-02.png" class="invoice-logo" style="width:100px;margin:0 auto;position:absolute;top:2rem;right: 0;left:0; vertical-align: middle;
+           <img src="images/logo/cargocon_logo-02.png" class="invoice-logo" style="width:100px;margin:0 auto;position:static;top:2rem;right: 0;left:0; vertical-align: middle;
     border-style: none;">
                   <p class="form-title" style="font-size:30px;font-weight:500;line-height:1.5;color:#0a395a;text-align:center;">Registration Form</p>
                   <hr class="or-line" style="width: 200px;margin-bottom:2em;
     height: 4px;
     background-color: #f37422;">
      <div class="form-group" id="show-attendee" style="padding:0 3em;margin-bottom: 1rem;">
-                <p style="text-align: left;font-size: 25px;font-weight: 700;">Booking ID: CC0<?=$booking_id?></p>
+                <p style="text-align: left;font-size: 20px;font-weight: 700;">Booking ID: CC0<?=$booking_id?></p>
               </div>
               <div class="form-group" id="show-attendee" style="padding:0 3em;margin-bottom: 1rem;">
                 <?php for($i = 0;$i < $_SESSION['booking1'][0]['multi'];$i++){?>
@@ -174,7 +174,7 @@
                                       </div>
                                       <?php $amount = $passTime+$pass2+$pass3+$sponTotal+$adverTotal;?>
                                         <div class="col-md-12">
-                                          <div class="form-group" style="padding:0 3em;position:relative;width:100%;padding-right:15px;padding-left:15px;margin-bottom: 1rem;">
+                                          <div class="form-group" style="padding:0 3em;position:relative;width:95%;padding-right:15px;padding-left:15px;margin-bottom: 1rem;margin-left:auto;margin-right: auto;">
                                             <p class="form-title-sec text-bold" style="font-size:25px;color:#0a395a;font-weight:500;line-height:1.8;cursor:pointer;">Total: $<?=number_format($amount,2)?></p>
                                             <table class="table-100" style="width:100% !important;">
                                               <tr>
