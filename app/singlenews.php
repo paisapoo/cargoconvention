@@ -12,12 +12,12 @@
 		<div class="w-80">
 			<img src="<?=$news['image']?>" class="news-img">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-6">
 			
 		 		<?php $date = new DateTime($news['date_time']);
 				echo $date->format('dS F Y');?>
 				</div>
-				<div class="col-md-6">
+				<div class="col-6">
 					<ul class="list-inline share-social">
 						<li class="list-inline-item">share</li>
 						  <li class="list-inline-item">

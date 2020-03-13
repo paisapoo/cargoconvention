@@ -10,7 +10,7 @@
 				  <li class="list-inline-item"><a href="" class="foot-link">Accessibility</a>|</li>
 				  <li class="list-inline-item"><a href="" class="foot-link">Privacy Policy</a>|</li>
 				  <li class="list-inline-item"><a href="" class="foot-link">Cookie Policy</a>|</li>
-				    <li class="list-inline-item"><a href="" class="foot-link">Terms of Use</a>|</li>
+				   <li class="list-inline-item"><a href="" class="foot-link">Terms of Use</a>|</li>
 				  <li class="list-inline-item"><a href="" class="foot-link">Vistor Terms And Conditions</a></li>
 				</ul>
 			</div>

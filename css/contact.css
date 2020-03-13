@@ -51,3 +51,15 @@
 	margin-right: auto;
 	margin-top:3em;
 }
+@media screen and (max-width: 768px){
+    .sec-content .t-title.c-blue.t-40.text-center{
+        font-size: 25px;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    .map{
+    width: 100%;
+    margin-top: 1em;
+   }
+}

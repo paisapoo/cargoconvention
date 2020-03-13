@@ -56,3 +56,20 @@
 	border:1px solid #f37422;
 	background-color: #fff;
 }
+@media screen and (max-width: 768px){
+	.sec-content .t-bold.text-center.c-blue.t-40{
+		font-size: 25px;
+	}
+	.sec-content .w-60, .sec-content .w-80{
+		width: 100%;
+	}
+	.media-benefit{
+		padding: 1rem;
+	}
+	.media-benefit img{
+		width: 50px;
+	}
+	.media-benefit .media-body{
+		padding-right: 0;
+	}
+}

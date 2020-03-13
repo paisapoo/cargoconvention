@@ -21,14 +21,16 @@
     color: #ffffff;
     font-size: 14px;
     background-color: #1b3857;
-    padding: 1em; 
+    padding: 1em;
     cursor: pointer;
 }
-#datatable tbody tr:nth-of-type(odd){
-	background-color: #eaedef;
+
+#datatable tbody tr:nth-of-type(odd) {
+    background-color: #eaedef;
 }
-#datatable td{
-	padding:0.5em 1em; 
+
+#datatable td {
+    padding: 0.5em 1em;
 }
 
 .search-box {
@@ -55,6 +57,16 @@
     font-style: italic;
     line-height: 1.43;
 }
-#sorttable_sortfwdind{
-	color:#f37422;
+
+#sorttable_sortfwdind {
+    color: #f37422;
+}
+
+@media screen and (max-width: 768px) {
+    .sec-content .text-center.t-bold.t-40.c-blue {
+        font-size: 25px;
+    }
+    #datatable th, #datatable td{
+        font-size: 12px;
+    }
 }

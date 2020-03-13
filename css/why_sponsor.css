@@ -45,3 +45,11 @@
 .btn0.btn6{
     margin-top:2em;
 }
+@media screen and (max-width: 768px){
+    .sec-content .t-40.t-title.c-blue.text-center{
+        font-size: 25px;
+    }
+    .sec-content .expland .col-md-6:last-child{
+        padding-top:2rem;
+    }
+}

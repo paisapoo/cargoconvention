@@ -39,3 +39,18 @@ table tr td:first-child {
 .sec-content{
 	padding-bottom: 4em;
 }
+@media screen and (max-width: 768px){
+    .agen-title, .agen-title-org{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .sec-content{
+        padding-top:1.5rem;
+    }
+    .sec-content .t-bolder.c-blue.t-40.text-center{
+        font-size: 25px;
+    }
+    table tr td:first-child{
+        width: 100px;
+    }
+}

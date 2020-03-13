@@ -51,3 +51,32 @@
 	bottom: 0;
 	z-index: 0;
 }
+@media screen and (max-width: 768px){
+	.sec-content .t-title.c-blue.t-40.text-center{
+		font-size: 25px;
+	}
+	.sec-content .w-60{
+		width: 100%;
+	}
+	.home5{
+		margin-top: 0px;
+		padding-top:20px;
+		padding-bottom: 2rem;
+	}
+	.counting{
+		width: 100%;
+		 padding: 1.2em;
+	}
+	.box-clock span:first-child{
+		font-size: 20px;
+
+	}
+	.counting .col-md-3{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.counting .row .col-md-3{
+		max-width: 25%;
+	}
+	
+}

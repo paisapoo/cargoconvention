@@ -2,15 +2,30 @@
     background-image: url("../images/banner/howtoget.jpg");
 
 }
-.attract{
-	margin-top:2em;
+
+.attract {
+    margin-top: 2em;
 }
-.attract .card{
-	border-radius: 0;
-	border:1px solid transparent;
-	margin-top:1em;
-	margin-bottom: 1em;
+
+.attract .card {
+    border-radius: 0;
+    border: 1px solid transparent;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-.attract .card .card-body{
-	padding-left:0;
+
+.attract .card .card-body {
+    padding-left: 0;
+}
+
+@media screen and (max-width:768px) {
+    .sec-content .t-bold.t-40.c-blue.text-center{
+        font-size: 25px;
+    }
+     .sec-content .w-70{
+     	width: 100%;
+     }
+     .attract .card-body .c-blue.t-title.t-28{
+     	font-size: 18px;
+     }
 }

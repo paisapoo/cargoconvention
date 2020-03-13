@@ -46,3 +46,27 @@
 	width: 200px;
 	margin:0 auto;
 }
+
+@media screen and (max-width: 768px){
+	.w-80{
+		width: 100%;
+	}
+	.home2{
+		padding-top:2rem;
+		background-size: cover;
+	}
+	.home2 .card{
+		margin:1rem 0;
+	}
+	.home2 .card .card-body span:first-child{
+		font-size: 30px;
+	}
+	.home3 .t-40.t-title.c-blue{
+		font-size: 25px;
+	}
+	.button-regis{
+		background-size: cover;
+		margin-top: -5em;
+	}
+
+}

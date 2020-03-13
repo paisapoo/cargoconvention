@@ -56,3 +56,29 @@
 	border:1px solid #f37422;
 	padding:3rem;
 }
+@media screen and (max-width:768px){
+	.sec-content .t-title.t-40.text-center.c-blue{
+		font-size: 25px;
+	}
+	.sec-content .w-70, .hotel-info .w-70{
+		width: 100%;
+	}
+	.hotel-info{
+		background-size: cover;
+	}
+	.hotel-info .t-title.t-40.text-title.text-white.text-center{
+		font-size: 25px;
+	}
+	.hotel-info .list-inline-item:not(:last-child){
+		margin-top:1rem;
+		margin-bottom: 1.5rem;
+
+	}
+	.flight .t-40.text-center.c-blue.t-title{
+		font-size: 25px;
+	}
+	.flight .w-80{
+		width: 100%;
+		padding: 2rem;
+	}
+}

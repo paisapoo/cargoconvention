@@ -24,7 +24,7 @@
 <section class="home2">
 	<div class="container">
 		<div class="row ">
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-delegates.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -33,7 +33,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-companies.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -42,7 +42,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-countries.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -51,7 +51,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-meetings.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -89,7 +89,7 @@
 		</div>
 		<!-- row/ -->
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-2 col-6">
 				<a href="register">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-register.svg" class="card-img-top" alt="...">
@@ -99,7 +99,7 @@
 				</div>
 			</a>
 			</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-6">
 				<a href="agenda">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-agenda.svg" class="card-img-top" alt="...">
@@ -109,7 +109,7 @@
 				</div>
 			</a>
 			</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-6">
 				<a href="practical">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-accomodation.svg" class="card-img-top" alt="...">
@@ -119,7 +119,7 @@
 				</div>
 				</a>
 			</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-6">
 				<a href="howtoget">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-how-there.svg" class="card-img-top" alt="...">
@@ -129,7 +129,7 @@
 				</div>
 				</a>
 			</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-6">
 				<a href="attraction">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-attractions.svg" class="card-img-top" alt="...">
@@ -139,7 +139,7 @@
 				</div>
 			</a>
 			</div>
-				<div class="col-md-2">
+				<div class="col-md-2 col-6">
 					<a href="why_sponsor">
 				<div class="card">
 					  <img src="images/icon/home-icons/icons-sponsorship.svg" class="card-img-top" alt="...">

@@ -30,3 +30,14 @@
 .restaurant .card .card-body{
 	padding-left:0;
 }
+@media screen and (max-width: 768px){
+	.sec-content .t-40.t-title.c-blue.text-center{
+        font-size: 25px;
+    }
+    .w-70{
+    	width: 100%;
+    }
+    .hotel-img-full{
+    	height: 100px;
+    }
+}

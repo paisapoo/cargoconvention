@@ -1,56 +1,62 @@
-.header{
-	padding-top:2em;
-}
-.h-button{
-	text-align: right;
-}
-.navbar{
-	background-color: #fff;
-	margin-bottom: 1em;
-
-}
-.navbar-light .navbar-nav .nav-link{
-	color: #0A395A;
-	font-weight: 500;
-	overflow-x: hidden;
-	font-size: 16px;
+.header {
+    padding-top: 2em;
 }
 
-.navbar-light .navbar-nav .nav-link:hover{
-	
-	color: #f37422;
-}
-.navbar-light .navbar-nav .active>.nav-link{
-	color: #f37422;
-	
-}
-.navbar-brand img{
-	width: 230px;
-	height: auto;
-	position: absolute;
-	top:-75px;
+.h-button {
+    text-align: right;
 }
 
-.fixed-head{
-  position: fixed;
-  top: 0; 
-  width: 100%;
-  margin: 0 auto;
-  z-index: 99;
-  background-color:#fff;
-  
+.navbar {
+    background-color: #fff;
+    margin-bottom: 1em;
+
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: #0A395A;
+    font-weight: 500;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+
+    color: #f37422;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #f37422;
+
+}
+
+.navbar-brand img {
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: -75px;
+}
+
+.fixed-head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 99;
+    background-color: #fff;
+
+}
+
 .dropdown-menu {
 
     position: absolute;
-    top:2em;
+    top: 2em;
     left: 0;
     z-index: 1000;
     display: none;
     float: left;
     min-width: 15rem;
     padding: 1rem 0.5rem;
-    padding-top:2em;
+    padding-top: 2em;
     margin: .125rem 0 0;
     font-size: 1rem;
     color: #0a395a;
@@ -60,11 +66,41 @@
     background-clip: padding-box;
     border: none;
     border-radius: 0;
-   box-shadow: 0 9px 7px -6px rgba(0,0,0,0.2);
-    
+    box-shadow: 0 9px 7px -6px rgba(0, 0, 0, 0.2);
+
 }
-.dropdown-item{
-	color:#0a395a;
-	font-size: 16px;
-	font-weight: 500;
+
+.dropdown-item {
+    color: #0a395a;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand img {
+        width: 130px;
+        height: auto;
+        position: absolute;
+        top: -46px;
+    }
+    .h-button .btn0.h-btn2, .h-button .btn0.h-btn1{
+      display: none;
+    }
+    .navbar button.navbar-toggler{
+      position: absolute;
+      right: 1em;
+      top:-32px;
+
+    }
+    .navbar-collapse.collapse.show{
+      margin-top:2em;
+    }
+    .dropdown-menu{
+      padding-top:0.5rem;
+      
+    }
+    .dropdown-item{
+      font-size: 14px;
+      padding:0.35rem 0;
+    }
 }

@@ -42,3 +42,25 @@
 .btn0.btn6{
     margin-top:2em;
 }
+
+@media screen and (max-width: 768px){
+	 .sec-content .t-40.t-title.c-blue.text-center{
+        font-size: 25px;
+    }
+    .home2{
+		padding-top:2rem;
+	}
+	.home2 .card .card-body span:first-child{
+		font-size: 30px;
+	}
+	.expland .col-md-6:last-child{
+		padding-top:2em;
+	}
+	.home2.why-icon{
+		margin-top:0;
+		margin-bottom: 1em;
+	} 
+	.why-icon .card .card-body span:first-child{
+		font-size: 14px;
+	}
+}

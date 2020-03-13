@@ -28,7 +28,7 @@
 <section class="home2">
 	<div class="container">
 		<div class="row ">
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-delegates.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -37,7 +37,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-companies.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -46,7 +46,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-countries.svg" class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -55,7 +55,7 @@
 					  </div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-6">
 				<div class="card">
 					  <img src="images/icon/home-icons/icon-meetings.svg" class="card-img-top" alt="...">
 					  <div class="card-body">

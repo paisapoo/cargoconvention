@@ -8,8 +8,6 @@
 
 }
 
-
-
 .home1 .container{
 	
 	padding-top: 5em;
@@ -272,4 +270,70 @@ video.has-media-controls-hidden::-webkit-media-controls {
 .expl-arrow{
 	width: 8px;
 	margin-left:5px;
+}
+
+
+
+@media screen and (max-width: 768px){
+	.list-inline.orenge-class li{
+		width: 50%;
+	}
+	.list-inline.orenge-class .t-40{
+		font-size: 25px;
+
+	}
+	.list-inline.orenge-class .t-20{
+		font-size: 16px;
+	}
+	.home1 .btn0.btn3{
+		width: 100%;
+		position: relative;
+		left:0;
+
+	}
+	.shape-white{
+		display: none;
+	}
+	.home2{
+		padding-top:2rem;
+	}
+	.home2 .card .card-body span:first-child{
+		font-size: 30px;
+	}
+	.home3 .t-40.t-title.c-blue{
+		font-size: 25px;
+	}
+	.home4{
+		    background-size: cover;
+	}
+	.why-should{
+		padding: 1em 1em 2em 1em;
+
+	}
+	.why-right{
+		    border-right: 0px solid #fff0;
+		    margin-bottom: 1em;
+	}
+	.why-left{
+		border-left: 0px solid #fff0;
+		padding-left:0;
+	}
+	.why-should .t-title.t-40.text-white{
+		font-size: 25px;
+	}
+	.counting{
+		width: 100%;
+		 padding: 1.2em;
+	}
+	.box-clock span:first-child{
+		font-size: 20px;
+
+	}
+	.counting .col-md-3{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.counting .row .col-md-3{
+		max-width: 25%;
+	}
 }

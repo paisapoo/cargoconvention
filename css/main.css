@@ -119,6 +119,7 @@ body {
 
 }
 
+
 .sponsors {
     padding-top: 3em;
     padding-bottom: 2em;
@@ -179,4 +180,29 @@ body {
 .w-60 {
     width: 60%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){
+
+       .foot1{
+        text-align: center;
+       } 
+       .foot1 .list-inline{
+        margin-top:1rem;
+        text-align: center;
+       }
+       .foot2{
+        text-align: center;
+        background-size: cover;
+       }
+       .foot2 .text-right{
+        margin-top:1.5rem;
+        text-align: center!important;
+       }
+       .newletter .t-40.t-title.text-white{
+        font-size: 25px;
+       }
+       .sponsors .t-title.t-40.c-blue{
+        font-size: 25px;
+       }
 }

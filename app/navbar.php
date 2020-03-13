@@ -35,7 +35,7 @@
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 			          <a class="dropdown-item" href="why_attend">Why Attend </a>
-			           <a class="dropdown-item" href="why_sponsor">Why Sponsor </a>
+			          
 			          <a class="dropdown-item" href="pricing">Pricing</a>
 			           <a class="dropdown-item" href="venue">Venue</a>
 			            <a class="dropdown-item" href="accommadation">Accommadation</a>
@@ -57,6 +57,7 @@
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 			          <a class="dropdown-item" href="become">Sponsors</a>
+			           <a class="dropdown-item" href="why_sponsor">Why Sponsor </a>
 			          <a class="dropdown-item" href="mediapart">Media Partner</a>
 			          <a class="dropdown-item" href="endorsementpart">Endorsement Partner</a>
 			          
