@@ -320,7 +320,7 @@ header("location:book_step4");
 					$discount = $_SESSION['booking1'][0]['multi']>1?($_SESSION['booking1'][0]['pass'][0]*$_SESSION['booking1'][0]['multi'])*number_format($dis['detail'],2):0;
 
 					$database->insert("booking",[
-						"company_id"=>1,
+						"company_id"=>$company_id,
 						"attendee"=>json_encode($attendee_booking),
 						"spouse"=>json_encode($spouse_booking),
 						"fix_table"=>json_encode($fix_table),
