@@ -19,6 +19,7 @@
     <!-- Bootstrap CSS
     ============================================ -->
     <link rel="stylesheet" href="css/admin/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/30cfa4516b.js" crossorigin="anonymous"></script>
     <!-- adminpro icon CSS
     ============================================ -->
     <link rel="stylesheet" href="css/admin/adminpro-custon-icon.css">

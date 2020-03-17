@@ -20,6 +20,19 @@ include "login.php";
 					case "dashboard":
 
 					break;
+					case "booking_list":
+						$getitem = $database->select("booking","*");
+					 break;
+					 case "edit_booking":
+					 	if($_GET['id']!="new"){
+						
+						$item = $_GET['id'];
+						$getitem = $database->get("booking","*",["id"=>$item]);
+						$getCom = $database->get("companies","*",["id"=>$getitem['company_id']]);
+						$getAtt = $database->select("attendee","*",["company_id"=>$getitem['company_id']]);
+						}
+						$getComAll = $database->select("companies","*");
+					 break;
 					case"company_list":
 						$getitem = $database->select("companies","*");
 					break;
@@ -30,6 +43,17 @@ include "login.php";
 						$getitem = $database->get("companies","*",["id"=>$attendee]);
 						}
 					break;
+					case "upload_image_company":
+						    $data = $_POST['image'];
+					        list($type, $data) = explode(';', $data);
+					        list(, $data)      = explode(',', $data);
+					        $data = base64_decode($data);
+					        $imageName = time().'.jpg';
+					        file_put_contents('company_pic/'.$imageName, $data);
+					        // echo $siteLink ."/company_pic/".$imageName;
+					        echo"company_pic/".$imageName;
+					        exit;
+							break;
 					case"update_company":
 					if($_POST['type_form']=="new"){
 						$database->insert("companies",["companyname"=>$_POST['companyname']]);
@@ -287,9 +311,9 @@ header("location:book_step4");
 					$company_id = $database->id();
 
 					//insert booking
-					$attendee_booking = array("quitity"=>$_SESSION['booking1'][0]['multi'],"price"=> $_SESSION['booking1'][0]['pass'][0]);
-					$spouse_booking = array("quitity"=>$_SESSION['booking1'][0]['spouse']==""?0:$_SESSION['booking1'][0]['spouse'],"price"=>$database->get("book_price","price",['type'=>'spo_pass']));
-					$fix_table = array("quitity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass']));
+					$attendee_booking = array("quantity"=>$_SESSION['booking1'][0]['multi'],"price"=> $_SESSION['booking1'][0]['pass'][0]);
+					$spouse_booking = array("quantity"=>$_SESSION['booking1'][0]['spouse']==""?0:$_SESSION['booking1'][0]['spouse'],"price"=>$database->get("book_price","price",['type'=>'spo_pass']));
+					$fix_table = array("quantity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass']));
 					$sponsor = sponserCal();
 					$advertiser = advertiser();
 					$dis = $database->get("avalible","*",["name"=>'discount']);

@@ -78,6 +78,9 @@
 		============================================ -->
     <script src="js/admin/main.js"></script>
     <?php if (file_exists(stream_resolve_include_path($alias . "_SCR.php"))) {include $alias . "_SCR.php";} ?>
+
+
+
 </body>
 
 </html>
