@@ -165,22 +165,22 @@ function advertiser(){
 	
 
 		if($insideFront != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$insideFront]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$insideFront,"type"=>'advertiser']);
 		}
 		if($insideBack != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$insideBack]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$insideBack,"type"=>'advertiser']);
 		}
 		if($spread != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$spread]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$spread,"type"=>'advertiser']);
 		}
 		if($fullPage != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$fullPage]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$fullPage,"type"=>'advertiser']);
 		}
 		if($halfPage != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$halfPage]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$halfPage,"type"=>'advertiser']);
 		}
 		if($quarterPaget != ''){
-		$dataAdd[] = $database->get("advertiser","*",["name[~]"=>$quarterPaget]);
+		$dataAdd[] = $database->get("sponsor","*",["name[~]"=>$quarterPaget,"type"=>'advertiser']);
 		}
 	return $dataAdd;
 	}

@@ -50,6 +50,7 @@
                                                                     <div class="col-md-6">
                                                                         <?php $spons = $database->select("sponsor","*",["type"=>'sponsor']);?>
                                                                         <table class="text-left">
+                                                                            <input type="hidden" name="allspon" value='<?=json_encode($spons)?>'>
                                                                             <tr>
                                                                                 <th></th>
                                                                                 <th>Sponsors</th>
@@ -57,10 +58,12 @@
                                                                             </tr>
                                                                             <?php foreach($spons as $spon){?>
                                                                             <tr>
-                                                                                <td><input type="checkbox" class="checkspon"  value="<?=$spon?>"></td>
+
+                                                                                <td><input type="checkbox" class="checkspon"  value='<?=json_encode($spon)?>'></td>
                                                                                 <td>&nbsp;&nbsp;&nbsp;<?=$spon['name']?></td>
                                                                             </tr>
                                                                         <?php } ?>
+
                                                                         </table>
                                                                     </div>
                                                                       <div class="col-md-6">
@@ -73,7 +76,7 @@
                                                                             </tr>
                                                                             <?php foreach($spons as $spon){?>
                                                                             <tr>
-                                                                                <td><input type="checkbox"  value="<?=$spon['name']?>"></td>
+                                                                                <td><input type="checkbox" class="checkadver"  value='<?=json_encode($spon)?>'></td>
                                                                                 <td>&nbsp;&nbsp;&nbsp;<?=$spon['name']?></td>
                                                                             </tr>
                                                                         <?php } ?>
@@ -103,7 +106,7 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group-inner">
                                                             <label>Booking ID : CC0<?=$getitem['id']?></label>
-                                                            <table class="table">
+                                                            <table class="table" id="moreSpon">
                                                                 <tr>
                                                                     <th>Item</th>
                                                                     <th>Quantity</th>
@@ -134,18 +137,18 @@
                                                                 </tr>
                                                                                                                                     
                                                                     <?php foreach(json_decode($getitem['sponsor'])as $key=>$val){
-                                                                        echo "<tr>
+                                                                        echo "<tr class='$val->input'>
 ";                                                                          echo "<input name='sponsorName[]' class='form-control' type='hidden' value='".$val->name."'/>";
                                                                             echo "<td>".$val->name."</td>";
                                                                             echo "<td>1</td>";
                                                                             echo "<td><input name='' type='text' class='form-control' value='".$val->price."'/></td>";
                                                                             echo " </tr>";
                                                                     }?>
-                                                               
-                                                                 
+                                                                        
+                                                                      
                                                                      <?php foreach(json_decode($getitem['advertiser'])as $key=>$val){
 
-                                                                         echo "<tr>
+                                                                         echo "<tr class='$val->input'>
 ";
                                                                             echo "<input name='advertiserName[]' class='form-control' type='hidden' value='".$val->name."'/>";
                                                                             echo "<td>".$val->name."</td>";
@@ -154,7 +157,11 @@
                                                                             echo "</tr>";
                                                                     }?>
                                                                    
-                                                                    <tr>
+                                                                
+                                                            </table>
+                                                            <table class="table">
+                                                                <tr>
+                                                                       
                                                                         <td><span class="text-danger"><b>Discount</b></span></td>
                                                                         <td></td>
                                                                         <td><span class="text-danger"><input type="text" name="discounts" value="<?=$getitem['discount']?>" class="form-control" /> </span></td>
@@ -164,7 +171,6 @@
                                                                         <td></td>
                                                                         <td><b><input type="text" class="form-control" name="amount" value='<?=$getitem['amount']?>' /></b></td>
                                                                     </tr>
-                                                                
                                                             </table>
                                                             </div>
                                                         </div>

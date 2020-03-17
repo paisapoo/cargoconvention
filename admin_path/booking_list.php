@@ -65,6 +65,7 @@
                                                     <th data-field="discount">Discount</th>
                                                      <th data-field="amount">Amount</th>
                                                      <th data-field="datetime">Date</th>
+                                                     <th data-field="status">Status</th>
                                                     <th data-field="edit"></th>
                                                     <th data-field="delete"></th>
                                                 </tr>
@@ -80,7 +81,7 @@
 
                                                     }?></td>
                                                     <td><?php 
-                                                        if(json_decode($attend['spouse'])->quitity!=0){
+                                                        if(json_decode($attend['spouse'])->quantity!=0){
                                                     foreach(json_decode($attend['spouse']) as $key => $value){
                                                        
                                                         echo $key." : ".$value."<br>";
@@ -88,7 +89,7 @@
                                                     }}?></td>
                                                     <td><?php 
                                                   
-                                                    if(json_decode($attend['fix_table'])->quitity!=0){
+                                                    if(json_decode($attend['fix_table'])->quantity!=0){
                                                     foreach(json_decode($attend['fix_table']) as $key => $value){
                                                       
                                                         echo $key." : ".$value."<br>";
@@ -109,7 +110,7 @@
                                                     <td><?=$attend['datetime']?></td>
                                                     <td><?=$attend['status']?></td>
                                                     <td><a target="_blank" href="edit_booking?id=<?=$attend['id']?>"><button type="button" class="btn btn-custon-rounded-three btn-success"> <i class="fa fa-edit"></i></button></a></td>
-                                                    <td><a onclick="return confirm('Are you sure you want to delete this item?');" href="delete_item?table=companies&&id=<?=$attend['id']?>&&loca=booking_list"><button type="button" class="btn btn-custon-rounded-three btn-danger"></span> <i class="fa fa-trash-o"></i></button></td>
+                                                    <td><a onclick="return confirm('Are you sure you want to delete this item?');" href="delete_item?table=companies&&id=<?=$attend['id']?>&&loca=booking_list"><button type="button" class="btn btn-custon-rounded-three btn-danger"></span> <i class="fa fa-trash-o"></i></button></a></td>
                                                 </tr>
                                             <?php } ?>
                                             </tbody>
