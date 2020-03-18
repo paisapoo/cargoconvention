@@ -38,7 +38,7 @@
 					<?php foreach($dataItem as $item){?>
 					<tr>
 						<td><?=$item['title']." ".$item['first_name']." ".$item['last_name']?></td>
-						<td>CEO</td>
+						<td><?=$item['position_name']?></td>
 						<td><?=getCompany($item['company_id'])['companyname']?></td>
 						<td><?=getCompany($item['company_id'])['country']?></td>
 					</tr>

@@ -26,7 +26,7 @@
                 </div>
             </div>
             <!-- Breadcome End-->
-<form action="update_company" class="text-left" method="POST" enctype="multipart/form-data">
+<form action="update_booking" class="text-left" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="type_form" value="<?=$_GET['id']?>">
 
             <div class="basic-form-area mg-b-15">
@@ -54,19 +54,25 @@
                                                                             <tr>
                                                                                 <th></th>
                                                                                 <th>Sponsors</th>
-                                                                              
+                                                                                  
                                                                             </tr>
-                                                                            <?php foreach($spons as $spon){?>
+
+                                                                            <?php
+                                                                             foreach(json_decode($getitem['sponsor']) as $adver){
+                                                                                $ss[] = $adver->name;
+                                                                            };
+                                                                             foreach($spons as $spon){?>
                                                                             <tr>
 
-                                                                                <td><input type="checkbox" class="checkspon"  value='<?=json_encode($spon)?>'></td>
+                                                                                <td><input type="checkbox" class="checkspon"  value='<?=json_encode($spon)?>' <?=in_array($spon['name'],$ss)?'checked':''?>></td>
                                                                                 <td>&nbsp;&nbsp;&nbsp;<?=$spon['name']?></td>
                                                                             </tr>
-                                                                        <?php } ?>
+                                                                        <?php  } ?>
 
                                                                         </table>
                                                                     </div>
                                                                       <div class="col-md-6">
+                                                                         
                                                                         <?php $spons = $database->select("sponsor","*",["type"=>'advertiser']);?>
                                                                         <table class="text-left">
                                                                             <tr>
@@ -74,12 +80,17 @@
                                                                                 <th>Advertiser</th>
                                                                               
                                                                             </tr>
-                                                                            <?php foreach($spons as $spon){?>
+                                                                            <?php 
+                                                                            foreach(json_decode($getitem['advertiser']) as $adver){
+                                                                                $advers[] = $adver->name;
+                                                                            };
+
+                                                                            foreach($spons as $spon){?>
                                                                             <tr>
-                                                                                <td><input type="checkbox" class="checkadver"  value='<?=json_encode($spon)?>'></td>
-                                                                                <td>&nbsp;&nbsp;&nbsp;<?=$spon['name']?></td>
+                                                                                <td><input type="checkbox" class="checkadver"  value='<?=json_encode($spon)?>' <?=in_array($spon['name'],$advers)?'checked':''?>></td>
+                                                                                <td>&nbsp;&nbsp;&nbsp;<?=$spon['name'].$r?></td>
                                                                             </tr>
-                                                                        <?php } ?>
+                                                                        <?php  } ?>
                                                                         </table>
                                                                     </div>
                                                                 </div>
@@ -110,7 +121,7 @@
                                                                 <tr>
                                                                     <th>Item</th>
                                                                     <th>Quantity</th>
-                                                                    <th>Price</th>
+                                                                    <th>Price / 1</th>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
@@ -138,10 +149,10 @@
                                                                                                                                     
                                                                     <?php foreach(json_decode($getitem['sponsor'])as $key=>$val){
                                                                         echo "<tr class='$val->input'>
-";                                                                          echo "<input name='sponsorName[]' class='form-control' type='hidden' value='".$val->name."'/>";
+";                                                                          echo "<input name='$val->input' class='form-control' type='hidden' value='".$val->name."'/>";
                                                                             echo "<td>".$val->name."</td>";
                                                                             echo "<td>1</td>";
-                                                                            echo "<td><input name='' type='text' class='form-control' value='".$val->price."'/></td>";
+                                                                            echo "<td><input type='text' class='form-control' name='".$val->input."_pr' value='".$val->price."'/></td>";
                                                                             echo " </tr>";
                                                                     }?>
                                                                         
@@ -150,10 +161,10 @@
 
                                                                          echo "<tr class='$val->input'>
 ";
-                                                                            echo "<input name='advertiserName[]' class='form-control' type='hidden' value='".$val->name."'/>";
+                                                                            echo "<input name='$val->input' class='form-control' type='hidden' value='".$val->name."'/>";
                                                                             echo "<td>".$val->name."</td>";
-                                                                            echo "<td><input type='number' class='form-control'  name='quantityAdver[]' value='1' /></td>";
-                                                                            echo "<td><input type='text' class='form-control' name='priceAdver[]' value='".$val->price."'/></td>";
+                                                                            echo "<td><input type='number' class='form-control'  name='".$val->input."_qu' value='".$val->quantity."' /></td>";
+                                                                            echo "<td><input type='text' class='form-control' name='".$val->input."_pr' value='".$val->price."'/></td>";
                                                                             echo "</tr>";
                                                                     }?>
                                                                    
@@ -178,7 +189,7 @@
                                                         <div class="col-md-12">
                                                              <div class="form-group-inner">
                                                                 <label>Comment</label>
-                                                                <textarea class="form-control" rows="3"></textarea>
+                                                                <textarea name="comment" class="form-control" rows="3"><?=$getitem['detail']?></textarea>
                                                              </div>
                                                         </div>
                                                  
@@ -207,254 +218,26 @@
                     </div>
                 </div>
             </div>
-<div class="basic-form-area mg-b-15">
+
+
+  <div class="basic-form-area mg-b-15">
                 <div class="container-fluid"> 
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="sparkline12-list shadow-reset">
-                                <div class="sparkline12-hd">
-                                    <div class="main-sparkline12-hd">
-                                        <h1 class="text-uppercase">Company Form Element</h1>
-                                        <div class="sparkline12-outline-icon">
-                                            <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                            <span><i class="fa fa-wrench"></i></span>
-
-                                            <!-- <span class="sparkline12-collapse-close"><i class="fa fa-times"></i></span> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sparkline12-graph">
-                                    <div class="basic-login-form-ad">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="all-form-element-inner text-left">
-                                                
-                                                    <div class="row">
-                                                        <div class="col-md-2">
-                                                             <div class="form-group-inner">
-                                                            <label>Profile</label>
-                                                            <style>
-                                                                .btn-upload{
-                                                                   margin:1em 0;
-                                                                }
-                                                            </style>
-                                                             <div id="upload-demo" style="width:100%"></div>
-                                                            <div id="upload-demo-i" style="width:100%"></div>
-                                                             <img id="show_current"  src='<?=$getCom['image']?>' style='max-width:100%;'> 
-                                                            <input type="file" id="upload" name="logo" class="btn-upload">
-                                                            <input type="hidden" id="path_file" name="logo_path" value="">
-                                                             <span class="btn btn-success upload-result">Upload Image</span>
-                                                            <p class="help-block hidden">Example Text Here.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                        <div class="row">
-                                            
-                                                        <div class="col-md-6">
-                                                            <div class="form-group-inner">
-                                                            <label>Company Name</label>
-                                                            <input type="text" name="companyname" class="form-control" placeholder="Company Name" value="<?=$getCom['companyname']?>">
-                                                            </div>
-                                                        </div>
-                                                           <div class="col-md-6">
-                                                            <div class="form-group-inner">
-                                                            <label>Email</label>
-                                                            <input type="email" class="form-control" placeholder="Put E-mail" name="email" value="<?=$getCom['email']?>">
-                                                            </div>
-                                                        </div>
-                                                            <div class="col-md-6">
-                                                            <div class="form-group-inner">
-                                                            <label>Address</label>
-                                                            <input name="address" type="text" class="form-control" placeholder="Address" value="<?=$getCom['address']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                            <div class="form-group-inner">
-                                                            <label>City</label>
-                                                            <input type="text" name="city" class="form-control" placeholder="Cities" value="<?=$getCom['city']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                            <div class="form-group-inner">
-                                                            <label>Country</label>
-                                                            <input type="text" name="country" class="form-control" placeholder="Countries" value="<?=$getCom['country']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Phone</label>
-                                                             <input type="text" name="phone" class="form-control" placeholder="Phone" value="<?=$getCom['phone']?>">
-                                                            </div>
-                                                            </div>
-                                                             <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Mobile No.</label>
-                                                            <input type="text" name="mobile" class="form-control" placeholder="Mobile No." value="<?=$getCom['mobile']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Status</label>
-                                                            <select class="form-control custom-select-value" name="status">
-                                                                <option value="">choose..</option>
-                                                                <option value="yes" <?=$getCom['status']=='yes'?'selected':''?>>Yes</option>
-                                                                <option value="no" <?=$getCom['status']=='no'?'selected':''?>>No</option>
-                                                                         
-                                                            </select>
-                                                            </div>
-                                                            </div>
-                                                    </div>
-                                                    <!-- row -->
-
-                                                        
-                                                        </div>
-                                                        <!-- right col-md-10 -->
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-lg-12 text-center">
+                            <input type="submit" class="btn btn-success" value="Submit">
                         </div>
                     </div>
                 </div>
             </div>
-            <?php foreach($getAtt as $att){?>
-           <div class="basic-form-area mg-b-15">
-                <div class="container-fluid"> 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="sparkline12-list shadow-reset">
-                                <div class="sparkline12-hd">
-                                    <div class="main-sparkline12-hd">
-                                        <h1 class="text-uppercase"><?=$att['type_member']?> Form Element</h1>
-                                        <div class="sparkline12-outline-icon">
-                                            <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                            <span><i class="fa fa-wrench"></i></span>
-
-                                            <!-- <span class="sparkline12-collapse-close"><i class="fa fa-times"></i></span> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sparkline12-graph">
-                                    <div class="basic-login-form-ad">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="all-form-element-inner text-left">
-                                                
-                                                    <div class="row">
-                                                        <div class="col-md-2">
-                                                             <div class="form-group-inner">
-                                                            <label>Profile</label>
-                                                            <style>
-                                                                .btn-upload{
-                                                                   margin:1em 0;
-                                                                }
-                                                            </style>
-                                                             <div id="upload-demo" style="width:100%"></div>
-                                                            <div id="upload-demo-i" style="width:100%"></div>
-                                                             <img id="show_current"  src='<?=$att['image']?>' style='max-width:100%;'> 
-                                                            <input type="file" id="upload" name="logo" class="btn-upload">
-                                                            <input type="hidden" id="path_file" name="logo_path" value="">
-                                                             <span class="btn btn-success upload-result">Upload Image</span>
-                                                            <p class="help-block hidden">Example Text Here.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                        <div class="row">
-                                                        <div class="col-md-2">
-                                                            <div class="form-group-inner">
-                                                            <label>Title</label>
-                                                            <input type="text" name="title" class="form-control" placeholder="Title" value="<?=$att['title']?>">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <div class="form-group-inner">
-                                                            <label>First Name</label>
-                                                            <input type="text" name="first_name" class="form-control" placeholder="First Name" value="<?=$att['first_name']?>">
-                                                            </div>
-                                                        </div>
-                                                           <div class="col-md-5">
-                                                            <div class="form-group-inner">
-                                                            <label>Last Name</label>
-                                                            <input type="text" class="form-control" placeholder="Last Name" name="last_name" value="<?=$att['last_name']?>">
-                                                            </div>
-                                                        </div>
-                                                            <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Email</label>
-                                                            <input name="email" type="email" class="form-control" placeholder="Email" value="<?=$att['email']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Position</label>
-                                                            <input type="text" name="position_name" class="form-control" placeholder="Position" value="<?=$att['position_name']?>">
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                            <div class="form-group-inner">
-                                                            <label>Mobile No.</label>
-                                                            <input type="text" name="mobile_no" class="form-control" placeholder="Mobile No." value="<?=$att['mobile_no']?>">
-                                                            </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                            <div class="form-group-inner">
-                                                            <label>Company Name</label>
-                                                            <select class="form-control custom-select-value" name="company_id">     <option value="">Choose..</option>
-                                                                <?php foreach($getComAll as $com){?>
-                                                                            <option value="<?=$com['id']?>" <?=$com['id']==$att['company_id']?'selected':''?>><?=$com['companyname']." ".$com['city']." ".$com['country']?></option>
-                                                                      <?php } ?>     
-                                                            </select>
-                                                            </div>
-                                                            </div>
-                                                             <div class="col-md-3">
-                                                            <div class="form-group-inner">
-                                                            <label>Member Type</label>
-                                                            <select class="form-control custom-select-value" name="member_type">
-                                                                <option value="">Choose..</option>
-                                                                <?php foreach(json_decode(getAvalible('member_type')['detail']) as $com){?>
-                                                                            <option value="<?=$com?>" <?=$com==$att['type_member']?'selected':''?>><?=$com?></option>
-                                                                      <?php } ?>     
-                                                            </select>
-                                                            </div>
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                            <div class="form-group-inner">
-                                                            <label>Status</label>
-                                                            <select class="form-control custom-select-value" name="status">
-                                                                
-                                                                <option value="yes" <?=$att['status']=='yes'?'selected':''?>>Yes</option>
-                                                                <option value="no" <?=$att['status']=='no'?'selected':''?>>No</option>
-                                                                         
-                                                            </select>
-                                                            </div>
-                                                            </div>
-                                                    </div>
-                                                    <!-- row -->
-
-                                                        
-                                                        </div>
-                                                        <!-- right col-md-10 -->
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php }?>
-        <!-- end foreach attendee -->
-
-
  </form>
+  <div class="basic-form-area mg-b-15">
+                <div class="container-fluid"> 
+                     <div class="all-form-element-inner text-left"> 
+                                                     
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -8,10 +8,11 @@
 		if(this.checked){
 	
 		var html = '<tr class='+sponItem.input+'>'+
+		"<input name='"+sponItem.input+"' class='form-control' type='hidden' value='"+sponItem.input+"'/>"+
 		'<td>'+sponItem.name+'</td>'+
 					'<td>1</td>'+
 					'<td><input type="text" class="form-control" name="'+sponItem.
-					input+'"></td>'+
+					input+'_pr"></td>'+
 					'</tr>';
 
 		$('#moreSpon').append(html);	
@@ -27,10 +28,12 @@
 		if(this.checked){
 	
 		var html2 = '<tr class='+sponItem2.input+'>'+
+		       "<input name='"+sponItem2.input+"' class='form-control' type='hidden' value='"+sponItem2.input+"'/>"+
 		'<td>'+sponItem2.name+'</td>'+
-					'<td><input type="number" class="form-control" name="ok"></td>'+
+					'<td><input type="number" class="form-control" name="'+sponItem2.
+					input+'_qu"></td>'+
 					'<td><input type="text" class="form-control" name="'+sponItem2.
-					input+'"></td>'+
+					input+'_pr"></td>'+
 					'</tr>';
 
 		$('#moreSpon').append(html2);	

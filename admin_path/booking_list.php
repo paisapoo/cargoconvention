@@ -65,7 +65,7 @@
                                                     <th data-field="discount">Discount</th>
                                                      <th data-field="amount">Amount</th>
                                                      <th data-field="datetime">Date</th>
-                                                     <th data-field="status">Status</th>
+                                                     <th data-field="status">Paid</th>
                                                     <th data-field="edit"></th>
                                                     <th data-field="delete"></th>
                                                 </tr>

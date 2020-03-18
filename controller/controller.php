@@ -33,6 +33,12 @@ include "login.php";
 						}
 						$getComAll = $database->select("companies","*");
 					 break;
+					 case "update_booking":
+					 		include "update_booking.php";
+
+
+
+					 break;
 					case"company_list":
 						$getitem = $database->select("companies","*");
 					break;
@@ -311,9 +317,9 @@ header("location:book_step4");
 					$company_id = $database->id();
 
 					//insert booking
-					$attendee_booking = array("quantity"=>$_SESSION['booking1'][0]['multi'],"price"=> $_SESSION['booking1'][0]['pass'][0]);
-					$spouse_booking = array("quantity"=>$_SESSION['booking1'][0]['spouse']==""?0:$_SESSION['booking1'][0]['spouse'],"price"=>$database->get("book_price","price",['type'=>'spo_pass']));
-					$fix_table = array("quantity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass']));
+					$attendee_booking = array("quantity"=>$_SESSION['booking1'][0]['multi'],"price"=> $_SESSION['booking1'][0]['pass'][0]*$_SESSION['booking1'][0]['multi']);
+					$spouse_booking = array("quantity"=>$_SESSION['booking1'][0]['spouse']==""?0:$_SESSION['booking1'][0]['spouse'],"price"=>$database->get("book_price","price",['type'=>'spo_pass'])*$_SESSION['booking1'][0]['spouse']);
+					$fix_table = array("quantity"=>$_SESSION['booking1'][0]['fixed'],"price"=> $database->get("book_price","price",['type'=>'fix_pass'])*$_SESSION['booking1'][0]['fixed']);
 					$sponsor = sponserCal();
 					$advertiser = advertiser();
 					$dis = $database->get("avalible","*",["name"=>'discount']);
