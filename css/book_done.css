@@ -30,7 +30,7 @@
 	
 }
 .setup-content .btn{
-	width:160px; 
+	width:170px; 
 	text-transform: uppercase;
 }
 .btn-active-form
@@ -39,4 +39,25 @@
     color: #fff;
     border-radius: 0;
 
+}
+.setup-content .btn img{
+       width: 20px;
+       margin-right: 5px;
+    }
+
+@media screen and (max-width: 768px){
+    .form-steps .w-80{
+        width: 100%;
+    }
+
+    .stepwizard .t-title.t-40.text-white.text-center{
+        font-size: 25px;
+    }
+    .setup-content{
+        padding:1em ;
+    }
+    .setup-content .btn{
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
 }

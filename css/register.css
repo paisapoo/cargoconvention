@@ -323,3 +323,29 @@
  color:#0a395a;
 
 }
+@media screen and (max-width: 768px){
+    .form-steps .w-80{
+        width: 100%;
+    }
+    .stepwizard{
+        padding:1em;
+    }
+    .stepwizard-step{
+        width: 100%;
+    }
+    .btn-circle{
+        font-size: 14px;
+
+    height: 20px;
+    line-height: 0;
+    }
+    .stepwizard-step p{
+        display: none;
+    }
+    .setup-content .form-group{
+        padding:0;
+    }
+    .setup-content table{
+        width: 100%;
+    }
+}

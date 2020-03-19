@@ -236,6 +236,14 @@
                                                      
                     <div class="row">
                         <div class="col-lg-12 text-center">
+                            <table class="table">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>City</th>
+                                    <th>Country</th>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>

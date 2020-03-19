@@ -23,8 +23,8 @@
 						In the meantime please click on the below buttons to download your “Im Attending” image for you to share on all social media or add to your email signature for greater exposure before the start of the Cargo Convention.
 					</p>
 					<p class="b-center">
-          <button class="btn btn-active-form" type="button">I’m Attending</button>
-          <button class="btn btn-active-form" type="button">Email signature</button>
+          <a href="images/attend/CARGOCON-2020-IM-ATTENDING FINAL-19.jpg" download=""><button class="btn btn-active-form" type="button"><img src="images/icon/attending-icon.svg">I’m Attending</button></a>
+          <a href="images/attend/CARGOCON-2020-Email-Signature-18.png" download=""><button class="btn btn-active-form" type="button"><img src="images/icon/attending-icon.svg">Email signature</button></a>
       	</p>
 				</div>
 
