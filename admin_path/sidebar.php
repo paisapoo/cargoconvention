@@ -26,6 +26,11 @@
                             <a href="attendee_list"  role="button" aria-expanded="false" class="nav-link"><i class="fa big-icon fa-table"></i> <span class="mini-dn">Attendee List</span></a>
                            
                         </li>
+                        <li class="nav-item">
+                            <a href="news_list"  role="button" aria-expanded="false" class="nav-link"><i class="fa big-icon fa-table"></i> <span class="mini-dn">News List</span></a>
+                           
+                        </li>
+                       
                        
                     </ul>
                 </div>

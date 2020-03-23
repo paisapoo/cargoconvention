@@ -25,6 +25,12 @@ include "login.php";
 						$booking_amount_unpaid = $database->sum("booking","amount",["status"=>'no']);
 						$total = $booking_amount_paid + $booking_amount_unpaid;
 					break;
+					case "news_list":
+						$getitem = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"]]);
+					break;
+					case "edit_news":
+						$item = $database->get("news","*",["id"=>$_GET['id']]);
+					break;
 					case "booking_list":
 						$getitem = $database->select("booking","*");
 					 break;
