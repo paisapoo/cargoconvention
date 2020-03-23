@@ -45,7 +45,7 @@ $('.nav-item').find('a').each(function() {
 
   });
 
-$('.stepwizard-step').find('a').each(function() {
+$('.stepwizard-step').find('button').each(function() {
      var link = "/"+$(this).attr('href');
          if(loca == "/"){
       loca = "/home";

@@ -18,7 +18,12 @@ include "login.php";
 					header('location:home');
 					break;
 					case "dashboard":
-
+						$booking_count = $database->count("booking");
+						$booking_count_paid = $database->count("booking",["status"=>'yes']);
+						$booking_amount_paid = $database->sum("booking","amount",["status"=>'yes']);
+						$booking_count_unpaid = $database->count("booking",["status"=>'no']);
+						$booking_amount_unpaid = $database->sum("booking","amount",["status"=>'no']);
+						$total = $booking_amount_paid + $booking_amount_unpaid;
 					break;
 					case "booking_list":
 						$getitem = $database->select("booking","*");
@@ -29,9 +34,9 @@ include "login.php";
 						$item = $_GET['id'];
 						$getitem = $database->get("booking","*",["id"=>$item]);
 						$getCom = $database->get("companies","*",["id"=>$getitem['company_id']]);
-						$getAtt = $database->select("attendee","*",["company_id"=>$getitem['company_id']]);
+						$getAtts = $database->select("attendee","*",["company_id"=>$getitem['company_id']]);
 						}
-						$getComAll = $database->select("companies","*");
+						
 					 break;
 					 case "update_booking":
 					 		include "update_booking.php";

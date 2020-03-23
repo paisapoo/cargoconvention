@@ -1,11 +1,39 @@
 <?php
 
+if($_POST['type_form']=="new"){
+						$database->insert("companies",["companyname"=>$_POST['companyname']]);
+								$Comid = $database->id();
+					}else{
+							$Comid = $getCom['id'];
+					}
+						$database->update("companies",[
+							"companyname"=>$_POST['companyname'],
+							"email"=>$_POST['email'],
+							"address"=>$_POST['address'],
+							"city"=>$_POST['city'],
+							"country"=>$_POST['country'],
+							"phone"=>$_POST['phone'],
+							"mobile"=>$_POST['mobile'],
+							"specialization"=>$_POST['specialization'],
+							"services"=>$_POST['services'],
+							"comment"=>$_POST['comment'],
+							"status"=>$_POST['status']
+						],["id"=>$Comid]);
+
+						if($_POST['logo_path']){
+							$database->update("companies",["image"=>$_POST['logo_path']],["id"=>$Comid]);
+						}
+
+
+
 $attendee = array("quantity"=>$_POST['attendee'][0],"price"=>$_POST['attendee'][1]);
 $spouse = array("quantity"=>$_POST["spount"][0],"price"=>$_POST['spount'][1]);
 $fixTa = array("quantity"=>$_POST['fix_table'][0],"price"=>$_POST['fix_table'][1]);
 	if($_POST['type_form']=='new'){
 			$database->insert("booking",[
-				"company_id"=>$_POST['company']]);
+				"company_id"=>$Comid,
+				"datetime"=>date("Y-m-d H:i:s")
+			]);
 			$bookingID = $database->id();
 	}else{
 		$bookingID = $_POST['type_form'];

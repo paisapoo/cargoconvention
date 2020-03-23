@@ -95,16 +95,23 @@
                                                         echo $key." : ".$value."<br>";
 
                                                     }}?></td>
-                                                    <td><?php foreach(json_decode($attend['sponsor']) as $key => $value){
+                                                     <td>
+                                                    <?php if(json_decode($attend['sponsor']) != ''){?>
+                                                   <?php foreach(json_decode($attend['sponsor']) as $key => $value){
                                                         echo "name: ".$value->name."<br>";
                                                         echo "price: ".$value->price;
 
-                                                    }?></td>
-                                                    <td><?php foreach(json_decode($attend['advertiser']) as $key => $value){
+                                                    }?>
+                                                <?php } ?>
+                                                </td><td>
+                                                <?php if(json_decode($attend['advertiser']) != ''){?>
+                                                    <?php foreach(json_decode($attend['advertiser']) as $key => $value){
                                                         echo "name: ".$value->name."<br>";
                                                         echo "price: ".$value->price."<br>";
 
-                                                    }?></td>
+                                                    }?>
+                                                      <?php } ?>
+                                                      </td>
                                                     <td><?=$attend['discount']?></td>
                                                     <td><?=$attend['amount']?></td>
                                                     <td><?=$attend['datetime']?></td>

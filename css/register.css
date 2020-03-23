@@ -331,7 +331,7 @@
         padding:1em;
     }
     .stepwizard-step{
-        width: 100%;
+        width: auto;
     }
     .btn-circle{
         font-size: 14px;
