@@ -44,9 +44,9 @@
     <script src="js/admin/counterup/counterup-active.js"></script>
     <!-- jvectormap JS
 		============================================ -->
-    <script src="js/admin/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<!--     <script src="js/admin/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="js/admin/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="js/admin/jvectormap/jvectormap-active.js"></script>
+    <script src="js/admin/jvectormap/jvectormap-active.js"></script> -->
     <!-- peity JS
 		============================================ -->
     <script src="js/admin/peity/jquery.peity.min.js"></script>
@@ -57,8 +57,8 @@
     <script src="js/admin/sparkline/sparkline-active.js"></script>
     <!-- flot JS
 		============================================ -->
-    <script src="js/admin/flot/Chart.min.js"></script>
-    <script src="js/admin/flot/dashtwo-flot-active.js"></script>
+<!--     <script src="js/admin/flot/Chart.min.js"></script>
+    <script src="js/admin/flot/dashtwo-flot-active.js"></script> -->
 
      <!-- notification JS
         ============================================ -->

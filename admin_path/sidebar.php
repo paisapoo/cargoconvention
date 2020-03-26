@@ -30,6 +30,10 @@
                             <a href="news_list"  role="button" aria-expanded="false" class="nav-link"><i class="fa big-icon fa-table"></i> <span class="mini-dn">News List</span></a>
                            
                         </li>
+                         <li class="nav-item">
+                            <a href="image_file"  role="button" aria-expanded="false" class="nav-link"><i class="fa big-icon fa-table"></i> <span class="mini-dn">Image file</span></a>
+                           
+                        </li>
                        
                        
                     </ul>

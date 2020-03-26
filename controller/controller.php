@@ -18,18 +18,95 @@ include "login.php";
 					header('location:home');
 					break;
 					case "dashboard":
+					// booking 
 						$booking_count = $database->count("booking");
 						$booking_count_paid = $database->count("booking",["status"=>'yes']);
 						$booking_amount_paid = $database->sum("booking","amount",["status"=>'yes']);
 						$booking_count_unpaid = $database->count("booking",["status"=>'no']);
 						$booking_amount_unpaid = $database->sum("booking","amount",["status"=>'no']);
 						$total = $booking_amount_paid + $booking_amount_unpaid;
+					// company
+						$company_count = $database->count("companies");
+					// attendee
+						$attendee_count = $database->count("attendee",["type_member"=>"attendee"]);
+						// spouse
+						$spouse_count = $database->count("attendee",["type_member"=>"spouse"]);
 					break;
+					case "getimage":
+					$folder_name = 'uploads/photos/';
+
+						if(!empty($_FILES))
+						{
+						 $temp_file = $_FILES['file']['tmp_name'];
+						 $location = $folder_name . $_FILES['file']['name'];
+						 move_uploaded_file($temp_file, $location);
+						}
+
+						if(isset($_POST["name"]))
+						{
+						 $filename = $folder_name.$_POST["name"];
+						 unlink($filename);
+						}
+
+						$result = array();
+
+
+
+						$files = scandir('uploads/photos');
+
+						if(false !== $files)
+						{
+						asort($files);
+						 foreach($files as $file)
+						 {
+						  if('.' !=  $file && '..' != $file)
+						  {
+						     $path = $siteLink."/".$folder_name.$file;
+						   $output .= '
+						   <tr">
+						   <td>
+						    <img src="'.$folder_name.$file.'" class="img-thumbnail" width="150px"  />
+						 </td>
+						    <td><span class="">'.$path.'</span></td>
+						    <td><button type="button" class="btn btn-danger remove_image" id="'.$file.'">Remove</button></td>
+						   </tr>
+						   ';
+						  }
+						 }
+						}
+
+						echo $output;
+						exit;
+    break;
 					case "news_list":
 						$getitem = $database->select("news","*",["ORDER"=>["date_time"=>"DESC"]]);
 					break;
 					case "edit_news":
 						$item = $database->get("news","*",["id"=>$_GET['id']]);
+					break;
+					case "update_news":
+					if($_POST['type_form']=='new'){
+						$database->insert("news",[
+							"title"=>$_POST['title_news']]);
+						$newsid = $database->id();
+					}else{
+						$newsid = $_POST['type_form'];
+
+					}
+						$database->update("news",[
+								"title"=>$_POST['title_news'],
+								"content"=>$_POST['content'],
+								"date_time"=>date("Y-m-d H:i:s"),
+								"status"=>$_POST['status']
+						],['id'=>$newsid]);
+						if(!empty($_FILES["news_banner"]['tmp_name'])){
+							$folder_name = 'news/';
+							 $temp_file = $_FILES['news_banner']['tmp_name'];
+							 $location = $folder_name . $_FILES['news_banner']['name'];
+							 move_uploaded_file($temp_file, $location);	
+							 $database->update("news",["image"=>$siteLink.$location],["id"=>$newsid]);
+						}
+						header("location:news_list");
 					break;
 					case "booking_list":
 						$getitem = $database->select("booking","*");

@@ -1,6 +1,6 @@
 <?php
 $siteTitle = "Cargo Convention";
-$siteLink = "https://www.x2group.com/";
+$siteLink = "https://www.cargoconvention.com/";
 $mainImage = "";
 $youtube = "https://www.youtube.com/channel/UCoAQBzkP7K3qfjVvlMPR1Rw/";
 $facebook = "https://www.facebook.com/TheX2Group/";

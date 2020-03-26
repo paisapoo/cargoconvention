@@ -49,15 +49,25 @@
                                                 <div class="all-form-element-inner text-left">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <img src="<?=$item['image']?>">
-                                                            <br>
+                                                            <img src="<?=$item['image']?>" class="img-thumbnail">
+                                                            <div class="form-gromp">
                                                             <input type="file" class="" name="news_banner">
+                                                           </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <lable>News Title</lable>
                                                             <input type="text" name="title_news" class="form-control" value="<?=$item['title']?>">
                                                         </div>
+                                                         <div class="form-group-inner">
+                                                            <label>Status</label>
+                                                            <select class="form-control custom-select-value" name="status">
+                                                                <option value="">choose..</option>
+                                                                <option value="yes" <?=$item['status']=='yes'?'selected':''?>>Yes</option>
+                                                                <option value="no" <?=$item['status']=='no'?'selected':''?>>No</option>
+                                                                         
+                                                            </select>
+                                                            </div>
                                                         </div>
                                                          <div class="col-md-12">
                                                                     <div class="form-group">
@@ -72,6 +82,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-12" align="right">
+                                <br>
+                                <button class="btn btn-success" type ="sumbit">Submit</button>
+
                             </div>
                         </div>
                     </div>
